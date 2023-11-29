@@ -8,6 +8,14 @@ public class PM extends Students {
             int discount)
     {super(studentId, studentName, previouslyFinishedThisSchool, discount)}
 
+    public String getFieldPM() {
+        return fieldPM;
+    }
+
+    public void setFieldPM(String fieldPM) {
+        this.fieldPM = fieldPM;
+    }
+
     @Override
     void message(){System.out.println("There are available Courses: 1100.Project Manager");}
 }
