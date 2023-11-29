@@ -1,7 +1,10 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println();
-        System.out.println("DISCOUNT PROGRAM:");
+        System.out.println("D I S C O U N T   P R O G R A M :");
+        System.out.println("Students, who has been finished one of our courses before - gets 10% discount!");
+        System.out.println();
+
         PM id1100_001 = new PM(1, "Anna", true, 10);
         PM id1100_002 = new PM(2, "Brook", false, 0);
         PM id1100_003 = new PM(3, "Claus", false, 0);
