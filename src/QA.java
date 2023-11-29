@@ -1,12 +1,20 @@
 public class QA extends Students {
     String fieldQA;
 
-    public Dev(
+    public QA(
             int studentId,
             String studentName,
             boolean previouslyFinishedThisSchool,
             int discount)
     {super(studentId, studentName, previouslyFinishedThisSchool, discount)}
+
+    public String getFieldQA() {
+        return fieldQA;
+    }
+
+    public void setFieldQA(String fieldQA) {
+        this.fieldQA = fieldQA;
+    }
 
     @Override
     void message(){
