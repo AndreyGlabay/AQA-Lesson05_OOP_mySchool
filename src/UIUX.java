@@ -17,5 +17,8 @@ public class UIUX extends Students {
     }
 
     @Override
-    void message(){System.out.println("There are available Courses: 1300.UI/UX designer");}
+    void message(){
+        System.out.println("There are available Courses: ");
+        System.out.println("   1300.UI/UX designer");
+    }
 }
