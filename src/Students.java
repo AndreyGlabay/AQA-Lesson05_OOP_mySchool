@@ -3,7 +3,6 @@ public class Students { // create new super-class
     private final String studentFirstName;
     private final String studentLastName;
     private boolean previouslyFinishedThisSchool;
-    private short qtyOfPreviousCourses;
     private int discount;
 
     public Students(
@@ -17,7 +16,6 @@ public class Students { // create new super-class
         this.studentFirstName = studentFirstName;
         this.studentLastName = studentLastName;
         setPreviouslyFinishedThisSchool(previouslyFinishedThisSchool);
-        setQtyOfPreviousCourses(qtyOfPreviousCourses);
         setDiscount(discount);
     }
 
@@ -29,10 +27,16 @@ public class Students { // create new super-class
 
     public boolean isPreviouslyFinishedThisSchool() {return previouslyFinishedThisSchool;}
 
-    public short getQtyOfPreviousCourses() {return qtyOfPreviousCourses;}
-
     public int getDiscount() {return discount;}
 
+public void setPreviouslyFinishedThisSchool(boolean previouslyFinishedThisSchool) {
+        if (previouslyFinishedThisSchool = false) {
+            throw new IllegalArgumentException("Unfortunately you don't have discount for the your Course");
+        } else {
+            this.discount = discount;
+        }
+}
 
+void message() {System.out.println("Your teacher on the Course is _");}
 
 }
