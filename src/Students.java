@@ -1,29 +1,24 @@
 public class Students { // create new super-class
     private final int studentId;
-    private final String studentFirstName;
-    private final String studentLastName;
+    private final String studentName;
     private boolean previouslyFinishedThisSchool;
     private int discount;
 
     public Students(
             int studentId,
-            String studentFirstName,
-            String studentLastName,
+            String studentName,
             boolean previouslyFinishedThisSchool,
             short qtyOfPreviousCourses,
             int discount) {
         this.studentId = studentId;
-        this.studentFirstName = studentFirstName;
-        this.studentLastName = studentLastName;
+        this.studentName = studentName;
         setPreviouslyFinishedThisSchool(previouslyFinishedThisSchool);
         setDiscount(discount);
     }
 
     public int getStudentId() {return studentId;}
 
-    public String getStudentFirstName() {return studentFirstName;}
-
-    public String getStudentLastName() {return studentLastName;}
+    public String getStudentName() {return studentName;}
 
     public boolean isPreviouslyFinishedThisSchool() {return previouslyFinishedThisSchool;}
 
