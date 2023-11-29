@@ -12,21 +12,21 @@ public class Main {
         QA id1400_512 = new QA(512, "Lianne", false, 0);
         QA id1400_571 = new AQA_Java(571, "Michael", false, 0);
 
-        System.out.println("Student id1400_511 like to know which courses are available in their QA-Field?");
+        System.out.println("Student id1400_511 (" + id1400_511.getStudentName() + ") like to know which courses are available in their QA-Field?");
         id1400_511.message();
-        System.out.println("Student id1100_002 like to know which courses are available in their QA-Field?");
+        System.out.println("Student id1100_002 (" + id1100_002.getStudentName() + ") like to know which courses are available in their QA-Field?");
         id1100_002.message();
-        System.out.println("Student id1300_338 like to know which courses are available in their QA-Field?");
+        System.out.println("Student id1300_338 (" + id1300_338.getStudentName() + ") like to know which courses are available in their QA-Field?");
         id1300_338.message();
 
-        System.out.println("Info about person id1400_512");
-        System.out.println(id1400_512 instanceof Students);
-        System.out.println(id1400_512 instanceof QA);
-
-        System.out.println("Info about person id1400_571");
-        System.out.println(id1400_571 instanceof Students);
-        System.out.println(id1400_571 instanceof QA);
-        System.out.println(id1400_571 instanceof AQA_Java);
+//        System.out.println("Info about person id1400_512");
+//        System.out.println(id1400_512 instanceof Students);
+//        System.out.println(id1400_512 instanceof QA);
+//
+//        System.out.println("Info about person id1400_571");
+//        System.out.println(id1400_571 instanceof Students);
+//        System.out.println(id1400_571 instanceof QA);
+//        System.out.println(id1400_571 instanceof AQA_Java);
 
     }
 }
