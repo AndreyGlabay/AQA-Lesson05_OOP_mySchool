@@ -17,5 +17,8 @@ public class PM extends Students {
     }
 
     @Override
-    void message(){System.out.println("There are available Courses: 1100.Project Manager");}
+    void message(){
+        System.out.println("There are available Courses: ");
+        System.out.println("   1100.Project Management");
+    }
 }
