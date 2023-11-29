@@ -4,6 +4,7 @@ public class Students { // create new super-class
     private boolean previouslyFinishedThisSchool;
     private int discount;
 
+
     public Students(
             int studentId,
             String studentName,
