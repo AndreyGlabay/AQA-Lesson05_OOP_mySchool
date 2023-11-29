@@ -1,6 +1,6 @@
 public class Dev extends Students {
     String course;
-    public PM(
+    public Dev(
             int studentId,
             String studentName,
             boolean previouslyFinishedThisSchool,
