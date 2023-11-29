@@ -1,5 +1,6 @@
 public class Dev extends Students {
-    String course;
+    String fieldDev;
+
     public Dev(
             int studentId,
             String studentName,

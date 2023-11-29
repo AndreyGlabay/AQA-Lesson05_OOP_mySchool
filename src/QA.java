@@ -1,5 +1,6 @@
 public class QA extends Students {
-    String course;
+    String fieldQA;
+
     public Dev(
             int studentId,
             String studentName,

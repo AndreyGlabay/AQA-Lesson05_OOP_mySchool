@@ -1,5 +1,6 @@
 public class PM extends Students {
-    String course;
+    String fieldPM;
+
     public PM(
             int studentId,
             String studentName,

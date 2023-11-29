@@ -1,5 +1,6 @@
 public class UIUX extends Students {
-    String course;
+    String fieldUIUX;
+
     public UIUX(
             int studentId,
             String studentName,
