@@ -8,6 +8,14 @@ public class UIUX extends Students {
             int discount)
     {super(studentId, studentName, previouslyFinishedThisSchool, discount)}
 
+    public String getFieldUIUX() {
+        return fieldUIUX;
+    }
+
+    public void setFieldUIUX(String fieldUIUX) {
+        this.fieldUIUX = fieldUIUX;
+    }
+
     @Override
     void message(){System.out.println("There are available Courses: 1300.UI/UX designer");}
 }
