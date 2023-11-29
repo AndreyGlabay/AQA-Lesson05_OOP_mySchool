@@ -8,6 +8,14 @@ public class Dev extends Students {
             int discount)
     {super(studentId, studentName, previouslyFinishedThisSchool, discount)}
 
+    public String getFieldDev() {
+        return fieldDev;
+    }
+
+    public void setFieldDev(String fieldDev) {
+        this.fieldDev = fieldDev;
+    }
+
     @Override
     void message(){
         System.out.println("There are available Courses: ");
