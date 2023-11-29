@@ -1,2 +1,2 @@
-public class QA {
+public class QA extends Students {
 }

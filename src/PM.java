@@ -1,2 +1,2 @@
-public class PM {
+public class PM extends Students {
 }

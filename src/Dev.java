@@ -1,2 +1,2 @@
-public class Dev {
+public class Dev extends Students {
 }

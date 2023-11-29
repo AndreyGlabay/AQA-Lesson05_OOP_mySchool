@@ -1,2 +1,2 @@
-public class UIUX {
+public class UIUX extends Students {
 }

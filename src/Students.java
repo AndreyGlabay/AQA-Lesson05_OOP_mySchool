@@ -37,6 +37,6 @@ public void setPreviouslyFinishedThisSchool(boolean previouslyFinishedThisSchool
         }
 }
 
-void message() {System.out.println("Your teacher on the Course is _");}
+void message() {System.out.println("There are available Courses: _______");}
 
 }
