@@ -27,6 +27,9 @@ public class Main {
         System.out.println("Student id1300_338 (" + id1300_338.getStudentName() + ") like to know which courses are available in their QA-Field?");
         id1300_338.message();
         System.out.println();
+        System.out.println("Student id1200_225 (" + id1200_225.getStudentName() + ") like to know which courses are available in their QA-Field?");
+        id1200_225.message();
+        System.out.println();
 
 //        System.out.println("Info about person id1400_512");
 //        System.out.println(id1400_512 instanceof Students);
