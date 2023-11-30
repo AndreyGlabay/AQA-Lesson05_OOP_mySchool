@@ -1,6 +1,8 @@
 public abstract class Students { // create new super-class
     private final int studentId;
     private final String studentName;
+    private String studentPhone;
+    private String studentMail;
     private boolean previouslyFinishedThisSchool;
     private int discount;
 
@@ -8,6 +10,8 @@ public abstract class Students { // create new super-class
     public Students(
             int studentId,
             String studentName,
+            String studentPhone,
+            String studentMail,
             boolean previouslyFinishedThisSchool,
             int discount) {
         this.studentId = studentId;
@@ -19,6 +23,10 @@ public abstract class Students { // create new super-class
     public int getStudentId() {return studentId;}
 
     public String getStudentName() {return studentName;}
+
+    public String getStudentPhone() {return studentPhone;}
+
+    public String getStudentMail() {return studentMail;}
 
     public boolean isPreviouslyFinishedThisSchool() {return previouslyFinishedThisSchool;}
 

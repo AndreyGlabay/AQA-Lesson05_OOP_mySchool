@@ -1,8 +1,8 @@
 public class UIUX extends Students {
     String fieldUIUX;
 
-    public UIUX(int studentId, String studentName, boolean previouslyFinishedThisSchool, int discount)
-    {super(studentId, studentName, previouslyFinishedThisSchool, discount);}
+    public UIUX(int studentId, String studentName, String studentPhone, String studentMail, boolean previouslyFinishedThisSchool, int discount)
+    {super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);}
 
     public String getFieldUIUX() {
         return fieldUIUX;

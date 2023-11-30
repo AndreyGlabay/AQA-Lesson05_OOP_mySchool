@@ -1,8 +1,8 @@
 public class PM extends Students {
     String fieldPM;
 
-    public PM(int studentId, String studentName, boolean previouslyFinishedThisSchool, int discount)
-    {super(studentId, studentName, previouslyFinishedThisSchool, discount);}
+    public PM(int studentId, String studentName, String studentPhone, String studentMail, boolean previouslyFinishedThisSchool, int discount)
+    {super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);}
 
     public String getFieldPM() {
         return fieldPM;
