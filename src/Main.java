@@ -1,8 +1,8 @@
-public class Main {
+public class Main { //implement class "Main"
     public static void main(String[] args) {
         System.out.println();
         System.out.println("D I S C O U N T   P R O G R A M :");
-        System.out.println("Students, who has been finished one of our courses before - gets 10% discount!");
+        System.out.println("Students, who have been finished one of our courses before - get 10% discount!");
         System.out.println();
 
         PM id1100_001 = new PM(1, "Anna", "+18007584412", "anna@example.com", true, 10);

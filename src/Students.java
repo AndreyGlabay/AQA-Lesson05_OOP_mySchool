@@ -1,11 +1,12 @@
-public abstract class Students { // create new super-class
-    private final int studentId;
+public abstract class Students { // create new super-class "Students"
+    private final int studentId; //(*) see comment below
     private final String studentName;
     private String studentPhone;
     private String studentMail;
     private boolean previouslyFinishedThisSchool;
     private int discount;
-
+    // Implement vars with access modifier "private" (access only in this class);
+    // (*) Access modifier "final" - possibility to set var property only one time
 
     public Students(
             int studentId,
@@ -19,6 +20,7 @@ public abstract class Students { // create new super-class
         setPreviouslyFinishedThisSchool(previouslyFinishedThisSchool);
         setDiscount(discount);
     }
+    //implement constructor, which create the instance of "Students"-class
 
     public int getStudentId() {return studentId;}
 
@@ -42,11 +44,13 @@ public void setPreviouslyFinishedThisSchool(boolean previouslyFinishedThisSchool
            setDiscount(0);
         }
 }
+// implements function with operator "if-else" : if the student finished courses before - give to them 10% discount
 
     public void setDiscount(int discount) {
         this.discount = discount;
     }
+    // implements accessor (setter) for var "discount"
 
     void message() {System.out.println("There are available Courses: _______");}
-
+    // implements method "message" which return example of first part of the message
 }
