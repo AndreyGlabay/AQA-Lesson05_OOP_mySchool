@@ -30,15 +30,22 @@ public class Main {
         System.out.println("Student id1200_225 (" + id1200_225.getStudentName() + ") like to know which courses are available in their IT-Field?");
         id1200_225.message();
         System.out.println();
+        System.out.println();
 
-//        System.out.println("Info about person id1400_512");
-//        System.out.println(id1400_512 instanceof Students);
-//        System.out.println(id1400_512 instanceof QA);
-//
-//        System.out.println("Info about person id1400_571");
-//        System.out.println(id1400_571 instanceof Students);
-//        System.out.println(id1400_571 instanceof QA);
-//        System.out.println(id1400_571 instanceof AQA_Java);
+        System.out.println("INFO ABOUT PERSON id1400_512");
+        System.out.print("Is the person is Student? :: ");
+        System.out.println(id1400_512 instanceof Students);
+        System.out.print("Is the person in QA field? :: ");
+        System.out.println(id1400_512 instanceof QA);
+        System.out.println();
+
+        System.out.println("INFO ABOUT PERSON id1400_571");
+        System.out.print("Is the person is Student? :: ");
+        System.out.println(id1400_571 instanceof Students);
+        System.out.print("Is the person in QA field? :: ");
+        System.out.println(id1400_571 instanceof QA);
+        System.out.print("Is the person is studieng on AQA_Java course? :: ");
+        System.out.println(id1400_571 instanceof AQA_Java);
 
     }
 }
