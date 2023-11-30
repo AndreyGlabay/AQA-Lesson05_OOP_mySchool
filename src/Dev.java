@@ -1,11 +1,7 @@
 public class Dev extends Students {
     String fieldDev;
 
-    public Dev(
-            int studentId,
-            String studentName,
-            boolean previouslyFinishedThisSchool,
-            int discount)
+    public Dev(int studentId, String studentName, boolean previouslyFinishedThisSchool, int discount)
     {super(studentId, studentName, previouslyFinishedThisSchool, discount);}
 
     public String getFieldDev() {

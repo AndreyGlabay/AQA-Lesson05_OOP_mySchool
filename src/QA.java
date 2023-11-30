@@ -1,12 +1,10 @@
 public class QA extends Students {
     String fieldQA;
 
-    public QA(
-            int studentId,
-            String studentName,
-            boolean previouslyFinishedThisSchool,
-            int discount)
-    {super(studentId, studentName, previouslyFinishedThisSchool, discount);}
+    public QA(int studentId, String studentName, boolean previouslyFinishedThisSchool, int discount, String fieldQA) {
+        super(studentId, studentName, previouslyFinishedThisSchool, discount);
+        this.fieldQA = fieldQA;
+    }
 
     public String getFieldQA() {
         return fieldQA;

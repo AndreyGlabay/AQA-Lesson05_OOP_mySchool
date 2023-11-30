@@ -13,21 +13,21 @@ public class Main {
         Dev id1200_227 = new Dev(227, "Charles", false, 0);
         UIUX id1300_338 = new UIUX(338, "Io", false, 0);
         UIUX id1300_339 = new UIUX(339, "John", false, 0);
-        QA id1400_511 = new QA(511, "Kennet", false, 0);
-        QA id1400_512 = new QA(512, "Lianne", false, 0);
-        QA id1400_571 = new AQA_Java(571, "Michael", false, 0);
+        QA id1400_511 = new QA(511, "Kennet", false, 0, "QA");
+        QA id1400_512 = new QA(512, "Lianne", false, 0, "QA");
+        QA id1400_571 = new AQA_Java(571, "Michael", false, 0, "QA");
 
         System.out.println();
-        System.out.println("Student id1400_511 (" + id1400_511.getStudentName() + ") like to know which courses are available in their QA-Field?");
+        System.out.println("Student id1400_511 (" + id1400_511.getStudentName() + ") like to know which courses are available in their IT-Field?");
         id1400_511.message();
         System.out.println();
-        System.out.println("Student id1100_002 (" + id1100_002.getStudentName() + ") like to know which courses are available in their QA-Field?");
+        System.out.println("Student id1100_002 (" + id1100_002.getStudentName() + ") like to know which courses are available in their IT-Field?");
         id1100_002.message();
         System.out.println();
-        System.out.println("Student id1300_338 (" + id1300_338.getStudentName() + ") like to know which courses are available in their QA-Field?");
+        System.out.println("Student id1300_338 (" + id1300_338.getStudentName() + ") like to know which courses are available in their IT-Field?");
         id1300_338.message();
         System.out.println();
-        System.out.println("Student id1200_225 (" + id1200_225.getStudentName() + ") like to know which courses are available in their QA-Field?");
+        System.out.println("Student id1200_225 (" + id1200_225.getStudentName() + ") like to know which courses are available in their IT-Field?");
         id1200_225.message();
         System.out.println();
 
