@@ -102,5 +102,19 @@ public class Main { //implement class "Main"
         System.out.println("Which English Group has been appointed to the Student id1300_339 ?");
         id1300_339.sundayEnglishGroup("Group-2");
         System.out.println();
+        System.out.println();
+
+        // QA students //
+        System.out.println(" --------------- QA field --------------- ");
+        System.out.println();
+
+        System.out.println("Which English Group has been appointed to the Student id1400_511 ?");
+        id1400_511.saturdayEnglishGroup("Group-3");
+        System.out.println();
+
+        System.out.println("Which English Group has been appointed to the Student id1400_512 ?");
+        id1400_512.sundayEnglishGroup("Group-4");
+        System.out.println();
+        System.out.println();
     }
 }
