@@ -1,8 +1,15 @@
 public class UIUX extends Student { // create new sub-class "UIUX", which extends super-class "Students"
     String fieldUIUX;
 
-    public UIUX(int studentId, String studentName, String studentPhone, String studentMail, boolean previouslyFinishedThisSchool, int discount)
-    {super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);}
+    public UIUX(
+            int studentId,
+            String studentName,
+            String studentPhone,
+            String studentMail,
+            boolean previouslyFinishedThisSchool,
+            int discount) {
+        super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
+    }
     //implement constructor, which create the instance of "UIUX"-class
 
     public String getFieldUIUX() {
