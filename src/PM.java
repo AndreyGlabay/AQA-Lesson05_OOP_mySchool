@@ -1,8 +1,15 @@
 public class PM extends Student { // create new sub-class "PM", which extends super-class "Students"
     String fieldPM;
 
-    public PM(int studentId, String studentName, String studentPhone, String studentMail, boolean previouslyFinishedThisSchool, int discount)
-    {super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);}
+    public PM(
+            int studentId,
+            String studentName,
+            String studentPhone,
+            String studentMail,
+            boolean previouslyFinishedThisSchool,
+            int discount) {
+        super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
+    }
     //implement constructor, which create the instance of "PM"-class
 
     public String getFieldPM() {
