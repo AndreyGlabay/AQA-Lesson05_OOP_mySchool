@@ -4,7 +4,14 @@ public class AQA_Java extends QA { // create new sub-class "AQA_Java", which ext
     int yearsOfComExperience;
     // add new variables especially for this class
 
-    public AQA_Java(int studentId, String studentName, String studentPhone, String studentMail, boolean previouslyFinishedThisSchool, int discount, String fieldQA) {
+    public AQA_Java(
+            int studentId,
+            String studentName,
+            String studentPhone,
+            String studentMail,
+            boolean previouslyFinishedThisSchool,
+            int discount,
+            String fieldQA) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount, fieldQA);
         this.hasComExperienceInTheField = hasComExperienceInTheField;
         this.yearsOfComExperience = yearsOfComExperience;
