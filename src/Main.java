@@ -51,6 +51,19 @@ public class Main { //implement class "Main"
         System.out.println("What is name and previous experience of the Student id1400_571 ?");
         System.out.println("Student name is :: " + id1400_571.getStudentName());
         id1400_571.experience();
+        System.out.println("Relevant IT-Field :: " + id1400_571.getFieldQA());
+        System.out.println();
+
+        // ******** ADD NEW PRINTOUTS FOR LESSON-6 -> HOMEWORK-5 "Abstract classes and interfaces" ******** //
+
+        System.out.println("Which English Groups available for the Student id1100_002 ?");
+        id1100_002.saturdayEnglishGroup("Group-1");
+        System.out.println();
+
+        System.out.println("Which English Groups available for the Student id1100_001 ?");
+        id1100_001.sundayEnglishGroup("Group-2");
+        System.out.println();
+
 
     }
 }
