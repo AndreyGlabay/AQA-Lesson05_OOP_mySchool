@@ -48,6 +48,6 @@ public void setPreviouslyFinishedThisSchool(boolean previouslyFinishedThisSchool
         this.discount = discount;
     }
 
-    abstract void message();
+     abstract void message();
     // change method "message()" to the abstract -> current class 'Student' automatically becomes an abstract (L1)
 }
