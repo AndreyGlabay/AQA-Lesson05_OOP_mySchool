@@ -25,7 +25,6 @@ public class PM extends Student implements EnglishCourse { // implements "Englis
         System.out.println("   1100.Project Management");
     }
 
-
     @Override //add annotation for override "saturdayEnglishGroup()" method
     public void saturdayEnglishGroup(String satEnglishMessage) {
         System.out.println("Welcome to " + satEnglishMessage + "! Your lessons will be each Saturday 11:00-12:00 AM PST");

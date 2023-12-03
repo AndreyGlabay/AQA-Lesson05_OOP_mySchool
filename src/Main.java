@@ -48,29 +48,59 @@ public class Main { //implement class "Main"
         System.out.println(id1400_571 instanceof AQA_Java);
         System.out.println();
 
+        // Use accessors which were absent and then add to the subclass "AQA_Java" acc. to the tutor remark //
+        System.out.println("****************************************************************");
+        System.out.println();
         System.out.println("What is name and previous experience of the Student id1400_571 ?");
         System.out.println("Student name is :: " + id1400_571.getStudentName());
         id1400_571.experience();
         System.out.println("Relevant IT-Field :: " + id1400_571.getFieldQA());
         System.out.println();
 
-        // ******** ADD NEW PRINTOUTS FOR LESSON-6 -> HOMEWORK-5 "Abstract classes and interfaces" ******** //
+        // ********* LESSON-6 -> HOMEWORK-5 "Abstract classes and interfaces" ********* //
+        System.out.println("****************************************************************");
+        System.out.println();
+        System.out.println();
+
+        // (FYI: PM-students and UI/UX-students been appointed to the Groups 1,2 and use same i/f)
+        // (FYI: Dev-students and QA-students been appointed to the Groups 3,4 and use same i/f)
+
         // PM students //
-        System.out.println("Which English Groups available for the Student id1100_002 ?");
+        System.out.println(" --------------- PM field --------------- ");
+        System.out.println();
+
+        System.out.println("Which English Group has been appointed to the Student id1100_002 ?");
         id1100_002.saturdayEnglishGroup("Group-1");
         System.out.println();
 
-        System.out.println("Which English Groups available for the Student id1100_001 ?");
-        id1100_001.sundayEnglishGroup("Group-2");
+        System.out.println("Which English Group has been appointed to the Student id1100_003 ?");
+        id1100_003.sundayEnglishGroup("Group-2");
+        System.out.println();
         System.out.println();
 
         // Dev students //
-        System.out.println("Which English Groups available for the Student id1200_226 ?");
+        System.out.println(" --------------- DEV field --------------- ");
+        System.out.println();
+
+        System.out.println("Which English Group has been appointed to the Student id1200_226 ?");
         id1200_226.saturdayEnglishGroup("Group-3");
         System.out.println();
 
-        System.out.println("Which English Groups available for the Student id1200_227 ?");
+        System.out.println("Which English Group has been appointed to the Student id1200_227 ?");
         id1200_227.sundayEnglishGroup("Group-4");
+        System.out.println();
+        System.out.println();
+
+        // UI/UX students //
+        System.out.println(" --------------- UX/UI field --------------- ");
+        System.out.println();
+
+        System.out.println("Which English Group has been appointed to the Student id1300_338 ?");
+        id1300_338.saturdayEnglishGroup("Group-1");
+        System.out.println();
+
+        System.out.println("Which English Group has been appointed to the Student id1300_339 ?");
+        id1300_339.sundayEnglishGroup("Group-2");
         System.out.println();
     }
 }

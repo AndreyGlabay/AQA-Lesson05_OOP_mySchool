@@ -1,4 +1,4 @@
-public class UIUX extends Student { // create new sub-class "UIUX", which extends super-class "Students"
+public class UIUX extends Student implements EnglishCourse { // implements "EnglishCourse" interface
     String fieldUIUX;
 
     public UIUX(
@@ -10,22 +10,28 @@ public class UIUX extends Student { // create new sub-class "UIUX", which extend
             int discount) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
     }
-    //implement constructor, which create the instance of "UIUX"-class
 
     public String getFieldUIUX() {
         return fieldUIUX;
     }
-    // implements getter for the field "fieldQA" for get any String-type argument from this field;
 
     public void setFieldUIUX(String fieldUIUX) {
         this.fieldUIUX = fieldUIUX;
     }
-    // implements setter for the field "fieldUIUX" for set any String-type argument;
 
     @Override
     void message(){
         System.out.println("There are available Courses: ");
         System.out.println("   1300.UI/UX designer");
-        // implement annotation, which redefines corresponding method "message" in the super-class
+    }
+
+    @Override //add annotation for override "saturdayEnglishGroup()" method
+    public void saturdayEnglishGroup(String satEnglishMessage) {
+        System.out.println("Welcome to " + satEnglishMessage + "! Your lessons will be each Saturday 11:00-12:00 AM PST");
+    }
+
+    @Override //add annotation for override "sundayEnglishGroup()" method
+    public void sundayEnglishGroup(String sunEnglishMessage) {
+        System.out.println("Welcome to " + sunEnglishMessage + "! Your lessons will be each Sunday 3:00-4:00 PM PST");
     }
 }
