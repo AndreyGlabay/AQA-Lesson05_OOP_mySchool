@@ -1,5 +1,5 @@
 public abstract class Student {
-// class "Student" becomes abstract due to transformation of the method "message()" to an abstract (L50)
+// class "Student" becomes abstract due to transformation of the method "message()" to an abstract (L51)
     private final int studentId;
     private final String studentName;
     private String studentPhone;
