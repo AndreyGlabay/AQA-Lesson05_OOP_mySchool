@@ -69,11 +69,11 @@ public class Main { //implement class "Main"
         System.out.println(" --------------- PM field --------------- ");
         System.out.println();
 
-        System.out.println("Which English Group has been appointed to the Student id1100_002 ?");
+        System.out.println("My student ID is id1100_002 - Which English Group has been appointed to me?");
         id1100_002.saturdayEnglishGroup("Group-1");
         System.out.println();
 
-        System.out.println("Which English Group has been appointed to the Student id1100_003 ?");
+        System.out.println("My student ID is id1100_003 - Which English Group has been appointed to me?");
         id1100_003.sundayEnglishGroup("Group-2");
         System.out.println();
         System.out.println();
@@ -82,11 +82,11 @@ public class Main { //implement class "Main"
         System.out.println(" --------------- DEV field --------------- ");
         System.out.println();
 
-        System.out.println("Which English Group has been appointed to the Student id1200_226 ?");
+        System.out.println("My student ID is id1200_226 - Which English Group has been appointed to me?");
         id1200_226.saturdayEnglishGroup("Group-3");
         System.out.println();
 
-        System.out.println("Which English Group has been appointed to the Student id1200_227 ?");
+        System.out.println("WMy student ID is id1200_227 - Which English Group has been appointed to me?");
         id1200_227.sundayEnglishGroup("Group-4");
         System.out.println();
         System.out.println();
@@ -95,11 +95,11 @@ public class Main { //implement class "Main"
         System.out.println(" --------------- UX/UI field --------------- ");
         System.out.println();
 
-        System.out.println("Which English Group has been appointed to the Student id1300_338 ?");
+        System.out.println("My student ID is id1300_338 - Which English Group has been appointed to me?");
         id1300_338.saturdayEnglishGroup("Group-1");
         System.out.println();
 
-        System.out.println("Which English Group has been appointed to the Student id1300_339 ?");
+        System.out.println("My student ID is id1300_339 - Which English Group has been appointed to me?");
         id1300_339.sundayEnglishGroup("Group-2");
         System.out.println();
         System.out.println();
@@ -108,11 +108,11 @@ public class Main { //implement class "Main"
         System.out.println(" --------------- QA field --------------- ");
         System.out.println();
 
-        System.out.println("Which English Group has been appointed to the Student id1400_511 ?");
+        System.out.println("My student ID is id1400_511 - Which English Group has been appointed to me?");
         id1400_511.saturdayEnglishGroup("Group-3");
         System.out.println();
 
-        System.out.println("Which English Group has been appointed to the Student id1400_512 ?");
+        System.out.println("My student ID is id1400_512 - Which English Group has been appointed to me?");
         id1400_512.sundayEnglishGroup("Group-4");
         System.out.println();
         System.out.println();
