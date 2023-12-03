@@ -1,12 +1,11 @@
-public abstract class Student { // create new super-class "Students"
-    private final int studentId; //(*) see comment below
+public abstract class Student {
+// class "Student" becomes abstract due to transformation of the method "message()" to an abstract (L50)
+    private final int studentId;
     private final String studentName;
     private String studentPhone;
     private String studentMail;
     private boolean previouslyFinishedThisSchool;
     private int discount;
-    // Implement vars with access modifier "private" (access only in this class);
-    // (*) Access modifier "final" - possibility to set var property only one time
 
     public Student(
             int studentId,
@@ -20,7 +19,6 @@ public abstract class Student { // create new super-class "Students"
         setPreviouslyFinishedThisSchool(previouslyFinishedThisSchool);
         setDiscount(discount);
     }
-    //implement constructor, which create the instance of "Students"-class
 
     public int getStudentId() {return studentId;}
 
@@ -49,8 +47,7 @@ public void setPreviouslyFinishedThisSchool(boolean previouslyFinishedThisSchool
     public void setDiscount(int discount) {
         this.discount = discount;
     }
-    // implements accessor (setter) for var "discount"
 
-    void message() {System.out.println("There are available Courses: _______");}
-    // implements method "message" which return example of first part of the message
+    abstract void message();
+    // change method "message()" to the abstract -> current class 'Student' automatically becomes an abstract (L1)
 }
