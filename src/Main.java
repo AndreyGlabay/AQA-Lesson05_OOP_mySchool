@@ -55,7 +55,7 @@ public class Main { //implement class "Main"
         System.out.println();
 
         // ******** ADD NEW PRINTOUTS FOR LESSON-6 -> HOMEWORK-5 "Abstract classes and interfaces" ******** //
-
+        // PM students //
         System.out.println("Which English Groups available for the Student id1100_002 ?");
         id1100_002.saturdayEnglishGroup("Group-1");
         System.out.println();
@@ -64,6 +64,13 @@ public class Main { //implement class "Main"
         id1100_001.sundayEnglishGroup("Group-2");
         System.out.println();
 
+        // Dev students //
+        System.out.println("Which English Groups available for the Student id1200_226 ?");
+        id1200_226.saturdayEnglishGroup("Group-3");
+        System.out.println();
 
+        System.out.println("Which English Groups available for the Student id1200_227 ?");
+        id1200_227.sundayEnglishGroup("Group-4");
+        System.out.println();
     }
 }

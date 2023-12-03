@@ -1,4 +1,4 @@
-public class Dev extends Student { // create new sub-class "Dev", which extends super-class "Students"
+public class Dev extends Student implements EnglishCourse { // implements "EnglishCourse" interface
     String fieldDev;
 
     public Dev(
@@ -30,5 +30,14 @@ public class Dev extends Student { // create new sub-class "Dev", which extends 
         System.out.println("   1202.Software Developer (JavaScript);");
         System.out.println("   1203.Software Developer (Python);");
         // implement annotation, which redefines corresponding method "message" in the super-class
+    }
+    @Override //add annotation for override "saturdayEnglishGroup()" method
+    public void saturdayEnglishGroup(String satEnglishMessage) {
+        System.out.println("Welcome to " + satEnglishMessage + "! Your lessons will be each Saturday 12:00-1:00 PM PST");
+    }
+
+    @Override //add annotation for override "sundayEnglishGroup()" method
+    public void sundayEnglishGroup(String sunEnglishMessage) {
+        System.out.println("Welcome to " + sunEnglishMessage + "! Your lessons will be each Sunday 4:00-5:00 PM PST");
     }
 }
