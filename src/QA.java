@@ -1,7 +1,14 @@
 public class QA extends Student { // create new sub-class "QA", which extends super-class "Students"
     String fieldQA;
 
-    public QA(int studentId, String studentName, String studentPhone, String studentMail, boolean previouslyFinishedThisSchool, int discount, String fieldQA) {
+    public QA(
+            int studentId,
+            String studentName,
+            String studentPhone,
+            String studentMail,
+            boolean previouslyFinishedThisSchool,
+            int discount,
+            String fieldQA) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
         this.fieldQA = fieldQA;
     }
