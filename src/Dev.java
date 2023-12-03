@@ -1,8 +1,15 @@
 public class Dev extends Student { // create new sub-class "Dev", which extends super-class "Students"
     String fieldDev;
 
-    public Dev(int studentId, String studentName, String studentPhone, String studentMail, boolean previouslyFinishedThisSchool, int discount)
-    {super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);}
+    public Dev(
+            int studentId,
+            String studentName,
+            String studentPhone,
+            String studentMail,
+            boolean previouslyFinishedThisSchool,
+            int discount) {
+        super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
+    }
     //implement constructor, which create the instance of "Dev"-class
 
     public String getFieldDev() {
