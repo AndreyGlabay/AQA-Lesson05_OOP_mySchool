@@ -34,14 +34,14 @@ public class Main { //implement class "Main"
 
         System.out.println("INFO ABOUT PERSON id1400_512");
         System.out.print("Is the person is Student? :: ");
-        System.out.println(id1400_512 instanceof Students);
+        System.out.println(id1400_512 instanceof Student);
         System.out.print("Is the person in QA field? :: ");
         System.out.println(id1400_512 instanceof QA);
         System.out.println();
 
         System.out.println("INFO ABOUT PERSON id1400_571");
         System.out.print("Is the person is Student? :: ");
-        System.out.println(id1400_571 instanceof Students);
+        System.out.println(id1400_571 instanceof Student);
         System.out.print("Is the person in QA field? :: ");
         System.out.println(id1400_571 instanceof QA);
         System.out.print("Is the person is studieng on AQA_Java course? :: ");

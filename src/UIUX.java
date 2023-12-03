@@ -1,4 +1,4 @@
-public class UIUX extends Students { // create new sub-class "UIUX", which extends super-class "Students"
+public class UIUX extends Student { // create new sub-class "UIUX", which extends super-class "Students"
     String fieldUIUX;
 
     public UIUX(int studentId, String studentName, String studentPhone, String studentMail, boolean previouslyFinishedThisSchool, int discount)

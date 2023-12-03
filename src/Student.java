@@ -1,4 +1,4 @@
-public abstract class Students { // create new super-class "Students"
+public abstract class Student { // create new super-class "Students"
     private final int studentId; //(*) see comment below
     private final String studentName;
     private String studentPhone;
@@ -8,7 +8,7 @@ public abstract class Students { // create new super-class "Students"
     // Implement vars with access modifier "private" (access only in this class);
     // (*) Access modifier "final" - possibility to set var property only one time
 
-    public Students(
+    public Student(
             int studentId,
             String studentName,
             String studentPhone,

@@ -1,4 +1,4 @@
-public class PM extends Students { // create new sub-class "PM", which extends super-class "Students"
+public class PM extends Student { // create new sub-class "PM", which extends super-class "Students"
     String fieldPM;
 
     public PM(int studentId, String studentName, String studentPhone, String studentMail, boolean previouslyFinishedThisSchool, int discount)
