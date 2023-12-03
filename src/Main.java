@@ -15,7 +15,7 @@ public class Main { //implement class "Main"
         UIUX id1300_339 = new UIUX(339, "John", "+18205463321", "john@sample.net", false, 0);
         QA id1400_511 = new QA(511, "Kennet", "+18604005067", "kennet@mynet.com", false, 0, "QA");
         QA id1400_512 = new QA(512, "Lianne", "+16801203334", "lianne@example.com",false, 0, "QA");
-        QA id1400_571 = new AQA_Java(571, "Michael", "+13800021549", "michael@wexample.com", false, 0, "QA");
+        AQA_Java id1400_571 = new AQA_Java(571, "Michael", "+13800021549", "michael@wexample.com", false, 0, "QA", true, 2);
 
         System.out.println();
         System.out.println("Student id1400_511 (" + id1400_511.getStudentName() + ") like to know which courses are available in their IT-Field?");
@@ -46,6 +46,11 @@ public class Main { //implement class "Main"
         System.out.println(id1400_571 instanceof QA);
         System.out.print("Is the person is studieng on AQA_Java course? :: ");
         System.out.println(id1400_571 instanceof AQA_Java);
+        System.out.println();
+
+        System.out.println("What is name and previous experience of the Student id1400_571 ?");
+        System.out.println("Student name is :: " + id1400_571.getStudentName());
+        id1400_571.Experience();
 
     }
 }
