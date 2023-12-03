@@ -50,7 +50,7 @@ public class Main { //implement class "Main"
 
         System.out.println("What is name and previous experience of the Student id1400_571 ?");
         System.out.println("Student name is :: " + id1400_571.getStudentName());
-        id1400_571.Experience();
+        id1400_571.experience();
 
     }
 }

@@ -45,7 +45,7 @@ public class AQA_Java extends QA { // create new sub-class "AQA_Java", which ext
         }
     }
 
-    void Experience() {
+    void experience() {
         System.out.println("Previous experience in the related IT-Field is :: " + yearsOfComExperience + " years");
     }
 }
