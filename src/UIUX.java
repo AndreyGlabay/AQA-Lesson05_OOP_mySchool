@@ -1,5 +1,7 @@
 public class UIUX extends Student implements EnglishCourse { // implements "EnglishCourse" interface
     String fieldUIUX;
+    String englishLevel;
+    boolean weekendIsSuitable;
 
     public UIUX(
             int studentId,
@@ -7,7 +9,9 @@ public class UIUX extends Student implements EnglishCourse { // implements "Engl
             String studentPhone,
             String studentMail,
             boolean previouslyFinishedThisSchool,
-            int discount) {
+            int discount,
+            String englishLevel,
+            boolean weekendIsSuitable) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
     }
 

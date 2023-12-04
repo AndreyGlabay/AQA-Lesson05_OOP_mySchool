@@ -12,9 +12,11 @@ public class AQA_Java extends QA {
             boolean previouslyFinishedThisSchool,
             int discount,
             String fieldQA,
+                     String englishLevel,
+                     boolean weekendIsSuitable,
             boolean hasComExperienceInTheField,
             int yearsOfComExperience) {
-        super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount, fieldQA);
+        super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount, fieldQA, englishLevel, weekendIsSuitable);
         this.hasComExperienceInTheField = hasComExperienceInTheField;
         this.yearsOfComExperience = yearsOfComExperience;
     }

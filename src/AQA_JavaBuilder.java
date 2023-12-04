@@ -6,6 +6,8 @@ public class AQA_JavaBuilder { //Replace constructor 'AQA_Java' with builder 'AQ
     private boolean previouslyFinishedThisSchool;
     private int discount;
     private String fieldQA = "QA";
+    private String englishLevel;
+    private boolean weekendIsSuitable = true;
     private boolean hasComExperienceInTheField;
     private int yearsOfComExperience;
 
@@ -44,6 +46,18 @@ public class AQA_JavaBuilder { //Replace constructor 'AQA_Java' with builder 'AQ
         return this;
     }
 
+    public AQA_JavaBuilder setEnglishLevel(String englishLevel) {
+        this.englishLevel = englishLevel;
+        return this;
+    }
+
+
+
+    public AQA_JavaBuilder setWeekendIsSuitable(boolean weekendIsSuitable) {
+        this.weekendIsSuitable = weekendIsSuitable;
+        return this;
+    }
+
     public AQA_JavaBuilder setHasComExperienceInTheField(boolean hasComExperienceInTheField) {
         this.hasComExperienceInTheField = hasComExperienceInTheField;
         return this;
@@ -55,6 +69,6 @@ public class AQA_JavaBuilder { //Replace constructor 'AQA_Java' with builder 'AQ
     }
 
     public AQA_Java createAQA_Java() {
-        return new AQA_Java(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount, fieldQA, hasComExperienceInTheField, yearsOfComExperience);
+        return new AQA_Java(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount, fieldQA, englishLevel, weekendIsSuitable, hasComExperienceInTheField, yearsOfComExperience);
     }
 }

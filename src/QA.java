@@ -1,5 +1,7 @@
 public class QA extends Student implements EnglishCourse {
     String fieldQA;
+    String englishLevel;
+    boolean weekendIsSuitable;
 
     public QA(
             int studentId,
@@ -8,7 +10,9 @@ public class QA extends Student implements EnglishCourse {
             String studentMail,
             boolean previouslyFinishedThisSchool,
             int discount,
-            String fieldQA) {
+            String fieldQA,
+            String englishLevel,
+            boolean weekendIsSuitable) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
         this.fieldQA = fieldQA;
     }

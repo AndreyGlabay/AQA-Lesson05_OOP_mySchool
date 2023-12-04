@@ -1,5 +1,7 @@
 public class Dev extends Student implements EnglishCourse { // implements "EnglishCourse" interface
     String fieldDev;
+    String englishLevel;
+    boolean weekendIsSuitable;
 
     public Dev(
             int studentId,
@@ -7,8 +9,12 @@ public class Dev extends Student implements EnglishCourse { // implements "Engli
             String studentPhone,
             String studentMail,
             boolean previouslyFinishedThisSchool,
-            int discount) {
+            int discount,
+            String englishLevel,
+            boolean weekendIsSuitable) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
+        this.englishLevel = englishLevel;
+        this.weekendIsSuitable = weekendIsSuitable;
     }
 
     public String getFieldDev() {
