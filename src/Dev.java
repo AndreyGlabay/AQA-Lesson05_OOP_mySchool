@@ -35,11 +35,11 @@ public class Dev extends Student implements EnglishCourse { // implements "Engli
 
     @Override //add annotation for override "saturdayEnglishGroup()" method
     public void saturdayEnglishGroup(String satEnglishMessage) {
-        System.out.println("Welcome to " + EnglishGroups.Group_3 + "! Your lessons will be each Saturday 1:00-2:00 PM PST");
+        System.out.println("Welcome to " + EnglishGroup.Group_3 + "! Your lessons will be each Saturday 1:00-2:00 PM PST");
     }
 
     @Override //add annotation for override "sundayEnglishGroup()" method
     public void sundayEnglishGroup(String sunEnglishMessage) {
-        System.out.println("Welcome to " + EnglishGroups.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
+        System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
     }
 }

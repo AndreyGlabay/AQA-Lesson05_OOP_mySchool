@@ -1,4 +1,4 @@
-public enum EnglishGroups {
+public enum EnglishGroup {
     Group_1,
     Group_2,
     Group_3,
