@@ -70,11 +70,11 @@ public class Main { //implement class "Main"
         System.out.println();
 
         System.out.println("My student ID is id1100_002 - Which English Group has been appointed to me?");
-        id1100_002.saturdayEnglishGroup("Group-1");
+        id1100_002.saturdayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
         System.out.println();
 
         System.out.println("My student ID is id1100_003 - Which English Group has been appointed to me?");
-        id1100_003.sundayEnglishGroup("Group-2");
+        id1100_003.sundayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
         System.out.println();
         System.out.println();
 
@@ -83,11 +83,11 @@ public class Main { //implement class "Main"
         System.out.println();
 
         System.out.println("My student ID is id1200_226 - Which English Group has been appointed to me?");
-        id1200_226.saturdayEnglishGroup("Group-3");
+        id1200_226.saturdayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
         System.out.println();
 
         System.out.println("WMy student ID is id1200_227 - Which English Group has been appointed to me?");
-        id1200_227.sundayEnglishGroup("Group-4");
+        id1200_227.sundayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
         System.out.println();
         System.out.println();
 
@@ -96,11 +96,11 @@ public class Main { //implement class "Main"
         System.out.println();
 
         System.out.println("My student ID is id1300_338 - Which English Group has been appointed to me?");
-        id1300_338.saturdayEnglishGroup("Group-1");
+        id1300_338.saturdayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
         System.out.println();
 
         System.out.println("My student ID is id1300_339 - Which English Group has been appointed to me?");
-        id1300_339.sundayEnglishGroup("Group-2");
+        id1300_339.sundayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
         System.out.println();
         System.out.println();
 
@@ -109,11 +109,11 @@ public class Main { //implement class "Main"
         System.out.println();
 
         System.out.println("My student ID is id1400_511 - Which English Group has been appointed to me?");
-        id1400_511.saturdayEnglishGroup("Group-3");
+        id1400_511.saturdayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
         System.out.println();
 
         System.out.println("My student ID is id1400_512 - Which English Group has been appointed to me?");
-        id1400_512.sundayEnglishGroup("Group-4");
+        id1400_512.sundayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
         System.out.println();
         System.out.println();
     }

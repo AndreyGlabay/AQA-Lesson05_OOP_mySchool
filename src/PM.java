@@ -27,11 +27,11 @@ public class PM extends Student implements EnglishCourse { // implements "Englis
 
     @Override //add annotation for override "saturdayEnglishGroup()" method
     public void saturdayEnglishGroup(String satEnglishMessage) {
-        System.out.println("Welcome to " + satEnglishMessage + "! Your lessons will be each Saturday 11:00-12:00 AM PST");
+        System.out.println("Welcome to " + EnglishGroups.Group_1 + "! Your lessons will be each Saturday 11:00-12:00 AM PST");
     }
 
     @Override //add annotation for override "sundayEnglishGroup()" method
     public void sundayEnglishGroup(String sunEnglishMessage) {
-        System.out.println("Welcome to " + sunEnglishMessage + "! Your lessons will be each Sunday 3:00-4:00 PM PST");
+        System.out.println("Welcome to " + EnglishGroups.Group_2 + "! Your lessons will be each Sunday 3:00-4:00 PM PST");
     }
 }
