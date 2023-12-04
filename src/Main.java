@@ -117,5 +117,16 @@ public class Main { //implement class "Main"
         id1400_512.sundayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
         System.out.println();
         System.out.println();
+
+        // Add usage of 2 vars: "englishLevel" and "weekendIsSuitable" implemented in the interface
+        System.out.println("************** USE OF VARS FROM THE INTERFACE ***********************");
+        System.out.println();
+        System.out.println("What is the name of the Student id1100_001 ?");
+        System.out.println("What is the english level of the Student id1100_001 ?");
+        System.out.println("Is the student available at weekends for the English Courses?");
+        System.out.println("Student name is :: " + id1100_001.getStudentName());
+        System.out.println("English level is :: " + id1100_001.englishLevel);
+        System.out.println("Available at weekends :: " + id1100_001.weekendIsSuitable);
+        System.out.println();
     }
 }
