@@ -15,7 +15,7 @@ public class Main { //implement class "Main"
         UIUX id1300_339 = new UIUX(339, "John", "+18205463321", "john@sample.net", false, 0, "" + EnglishLevel.B1_INTERMEDIATE, true);
         QA id1400_511 = new QA(511, "Kennet", "+18604005067", "kennet@mynet.com", false, 0, "QA", "" + EnglishLevel.A2_PRE_INTERMEDIATE, true);
         QA id1400_512 = new QA(512, "Lianne", "+16801203334", "lianne@example.com",false, 0, "QA", "" + EnglishLevel.B1_INTERMEDIATE, true);
-        AQA_Java id1400_571 = new AQA_JavaBuilder().setStudentId(571).setStudentName("Michael").setStudentPhone("+13800021549").setStudentMail("michael@wexample.com").setPreviouslyFinishedThisSchool(false).setDiscount(0).setFieldQA("QA").setHasComExperienceInTheField(true).setYearsOfComExperience(2).createAQA_Java();
+        AQA_Java id1400_571 = new AQA_JavaBuilder().setStudentId(571).setStudentName("Michael").setStudentPhone("+13800021549").setStudentMail("michael@wexample.com").setPreviouslyFinishedThisSchool(false).setDiscount(0).setFieldQA("QA").setEnglishLevel(""+EnglishLevel.C1_ADVANCED).setWeekendIsSuitable(true).setHasComExperienceInTheField(true).setYearsOfComExperience(2).createAQA_Java();
         // The Line above ^ :: In the class "AQA_Java" - constructor "AQA_Java" has been replaced with builder "AQA_JavaBuilder"
 
         System.out.println();
