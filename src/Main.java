@@ -5,9 +5,9 @@ public class Main { //implement class "Main"
         System.out.println("Students, who have been finished one of our courses before - get 10% discount!");
         System.out.println();
 
-        PM id1100_001 = new PM(1, "Anna", "+18007584412", "anna@example.com", true, 10);
-        PM id1100_002 = new PM(2, "Brook", "+18008542502", "brook@sample.net", false, 0);
-        PM id1100_003 = new PM(3, "Claus", "+18602584697", "claus@example.com", false, 0);
+        PM id1100_001 = new PM(1, "Anna", "+18007584412", "anna@example.com", true, 10, "" + EnglishLevel.B1_INTERMEDIATE, true);
+        PM id1100_002 = new PM(2, "Brook", "+18008542502", "brook@sample.net", false, 0, "" + EnglishLevel.A1_BASIC, true);
+        PM id1100_003 = new PM(3, "Claus", "+18602584697", "claus@example.com", false, 0, "" + EnglishLevel.A2_PRE_INTERMEDIATE, true);
         Dev id1200_225 = new Dev(225, "Alice", "+16501203345", "alice@example.com",true, 10);
         Dev id1200_226 = new Dev(226, "Bob", "+1870854112283", "bob@sample.net", true, 10);
         Dev id1200_227 = new Dev(227, "Charles", "+16801254679", "charles@mynet.com",false, 0);

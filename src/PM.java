@@ -1,5 +1,7 @@
 public class PM extends Student implements EnglishCourse { // implements "EnglishCourse" interface
     String fieldPM;
+    String englishLevel;
+    boolean weekendIsSuitable;
 
     public PM(
             int studentId,
@@ -7,8 +9,12 @@ public class PM extends Student implements EnglishCourse { // implements "Englis
             String studentPhone,
             String studentMail,
             boolean previouslyFinishedThisSchool,
-            int discount) {
+            int discount,
+            String englishLevel,
+            boolean weekendIsSuitable) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
+        this.englishLevel = englishLevel;
+        this.weekendIsSuitable = weekendIsSuitable;
     }
 
     public String getFieldPM() {
