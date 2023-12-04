@@ -1,10 +1,10 @@
-public class AQA_Java extends QA { // create new sub-class "AQA_Java", which extends parent-class "QA"
+public class AQA_Java extends QA {
 
     boolean hasComExperienceInTheField;
     int yearsOfComExperience;
     // add new variables especially for this class
 
-    public AQA_Java(
+    public AQA_Java( // Replace constructor "AQA_Java" with builder "AQA_JavaBuilder"
             int studentId,
             String studentName,
             String studentPhone,
@@ -18,7 +18,6 @@ public class AQA_Java extends QA { // create new sub-class "AQA_Java", which ext
         this.hasComExperienceInTheField = hasComExperienceInTheField;
         this.yearsOfComExperience = yearsOfComExperience;
     }
-    //implement constructor, which create the instance of "AQA_Java"-class with additional fields
 
     public boolean isHasComExperienceInTheField() {
         return hasComExperienceInTheField;
