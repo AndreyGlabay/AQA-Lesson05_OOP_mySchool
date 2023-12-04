@@ -15,7 +15,7 @@ public class Main { //implement class "Main"
         UIUX id1300_339 = new UIUX(339, "John", "+18205463321", "john@sample.net", false, 0);
         QA id1400_511 = new QA(511, "Kennet", "+18604005067", "kennet@mynet.com", false, 0, "QA");
         QA id1400_512 = new QA(512, "Lianne", "+16801203334", "lianne@example.com",false, 0, "QA");
-        AQA_Java id1400_571 = new AQA_Java(571, "Michael", "+13800021549", "michael@wexample.com", false, 0, "QA", true, 2);
+        AQA_Java id1400_571 = new AQA_JavaBuilder().setStudentId(571).setStudentName("Michael").setStudentPhone("+13800021549").setStudentMail("michael@wexample.com").setPreviouslyFinishedThisSchool(false).setDiscount(0).setFieldQA("QA").setHasComExperienceInTheField(true).setYearsOfComExperience(2).createAQA_Java();
 
         System.out.println();
         System.out.println("Student id1400_511 (" + id1400_511.getStudentName() + ") like to know which courses are available in their IT-Field?");
