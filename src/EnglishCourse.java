@@ -6,10 +6,10 @@ public interface EnglishCourse {
 
     void sundayEnglishGroup (String sunEnglishMessage);
     default void eveningEnglishGroup(){
-        if(weekendIsSuitable){
+        if(!weekendIsSuitable){
             System.out.println("Please, wait on your assignment to the one of English groups");
         } else {
-            System.out.println("FYI: evening English Group is also available on weekdays 8:00-9:00 PM PST");
+            System.out.println("FYI: evening English Group is also available on Fridays 8:00-9:00 PM PST");
         }
     }
 }
