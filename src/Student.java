@@ -16,8 +16,7 @@ public abstract class Student {
             int discount) {
         this.studentId = studentId;
         this.studentName = studentName;
-        setPreviouslyFinishedThisSchool(previouslyFinishedThisSchool);
-        setDiscount(discount);
+
     }
 
     public int getStudentId() {return studentId;}
@@ -42,7 +41,6 @@ public void setPreviouslyFinishedThisSchool(boolean previouslyFinishedThisSchool
            setDiscount(0);
         }
 }
-// implements function with operator "if-else" : if the student finished courses before - give to them 10% discount
 
     public void setDiscount(int discount) {
         this.discount = discount;
