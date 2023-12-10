@@ -1,10 +1,14 @@
+package com.example.school.section.course;
+
+import com.example.school.section.QA;
+
 public class AQA_Java extends QA {
 
     boolean hasComExperienceInTheField;
     int yearsOfComExperience;
     // add new variables especially for this class
 
-    public AQA_Java( // Replace constructor "AQA_Java" with builder "AQA_JavaBuilder"
+    public AQA_Java( // Replace constructor "com.example.school.section.course.AQA_Java" with builder "com.example.school.section.course.AQA_JavaBuilder"
             int studentId,
             String studentName,
             String studentPhone,
@@ -46,7 +50,7 @@ public class AQA_Java extends QA {
         }
     }
 
-    void experience() {
+    public void experience() {
         System.out.println("Previous experience in the related IT-Field is :: " + yearsOfComExperience + " years");
     }
 }

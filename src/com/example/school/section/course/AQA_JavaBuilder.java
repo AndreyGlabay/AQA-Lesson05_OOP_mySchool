@@ -1,11 +1,13 @@
-public class AQA_JavaBuilder { //Replace constructor 'AQA_Java' with builder 'AQA_JavaBuilder'"
+package com.example.school.section.course;
+
+public class AQA_JavaBuilder { //Replace constructor 'com.example.school.section.course.AQA_Java' with builder 'com.example.school.section.course.AQA_JavaBuilder'"
     private int studentId;
     private String studentName;
     private String studentPhone;
     private String studentMail;
     private boolean previouslyFinishedThisSchool;
     private int discount;
-    private String fieldQA = "QA";
+    private String fieldQA = "com.example.school.section.QA";
     private String englishLevel;
     private boolean weekendIsSuitable = true;
     private boolean hasComExperienceInTheField;

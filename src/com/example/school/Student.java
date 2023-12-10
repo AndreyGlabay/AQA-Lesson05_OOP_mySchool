@@ -1,5 +1,7 @@
+package com.example.school;
+
 public abstract class Student {
-// class "Student" becomes abstract due to transformation of the method "message()" to an abstract (L51)
+// class "com.example.school.Student" becomes abstract due to transformation of the method "message()" to an abstract (L51)
     private final int studentId;
     private final String studentName;
     private String studentPhone;
@@ -46,6 +48,5 @@ public void setPreviouslyFinishedThisSchool(boolean previouslyFinishedThisSchool
         this.discount = discount;
     }
 
-     abstract void message();
-    // change method "message()" to the abstract -> current class 'Student' automatically becomes an abstract (L1)
+    public abstract void message();
 }

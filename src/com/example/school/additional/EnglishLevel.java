@@ -1,3 +1,5 @@
+package com.example.school.additional;
+
 public enum EnglishLevel {
     C2_FLUENT,
     C1_ADVANCED,

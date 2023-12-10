@@ -1,3 +1,5 @@
+package com.example.school.additional;
+
 public interface EnglishCourse {
     String englishLevel = null;
     boolean weekendIsSuitable = true;
@@ -9,7 +11,7 @@ public interface EnglishCourse {
         if(!weekendIsSuitable){
             System.out.println("Please, wait on your assignment to the one of English groups");
         } else {
-            System.out.println("FYI: evening English Group is also available on Fridays 8:00-9:00 PM PST");
+            System.out.println("FYI: evening English Group is also available on Fridays 8:00-9:00 com.example.school.section.PM PST");
         }
     }
 }

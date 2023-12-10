@@ -1,9 +1,15 @@
-public class Main { //implement class "Main"
+import com.example.school.Student;
+import com.example.school.additional.EnglishLevel;
+import com.example.school.section.Dev;
+import com.example.school.section.PM;
+import com.example.school.section.QA;
+import com.example.school.section.UIUX;
+import com.example.school.section.course.AQA_Java;
+import com.example.school.section.course.AQA_JavaBuilder;
+
+public class Main {
     public static void main(String[] args) {
-        System.out.println();
-        System.out.println("D I S C O U N T   P R O G R A M :");
-        System.out.println("Students, who have been finished one of our courses before - get 10% discount!");
-        System.out.println();
+
 
         PM id1100_001 = new PM(1, "Anna", "+18007584412", "anna@example.com", true, 10, "" + EnglishLevel.B1_INTERMEDIATE, true);
         PM id1100_002 = new PM(2, "Brook", "+18008542502", "brook@sample.net", false, 0, "" + EnglishLevel.A1_BASIC, true);
@@ -14,11 +20,18 @@ public class Main { //implement class "Main"
         Dev id1200_227 = new Dev(227, "Charles", "+16801254679", "charles@mynet.com",false, 0, "" + EnglishLevel.B2_UPPER_INTERMEDIATE, true);
         UIUX id1300_338 = new UIUX(338, "Io", "+18003056478", "io@mynet.com", false, 0, "" + EnglishLevel.C1_ADVANCED, true);
         UIUX id1300_339 = new UIUX(339, "John", "+18205463321", "john@sample.net", false, 0, "" + EnglishLevel.B1_INTERMEDIATE, true);
-        QA id1400_511 = new QA(511, "Kennet", "+18604005067", "kennet@mynet.com", false, 0, "QA", "" + EnglishLevel.A2_PRE_INTERMEDIATE, true);
-        QA id1400_512 = new QA(512, "Lianne", "+16801203334", "lianne@example.com",false, 0, "QA", "" + EnglishLevel.B1_INTERMEDIATE, true);
-        AQA_Java id1400_571 = new AQA_JavaBuilder().setStudentId(571).setStudentName("Michael").setStudentPhone("+13800021549").setStudentMail("michael@wexample.com").setPreviouslyFinishedThisSchool(false).setDiscount(0).setFieldQA("QA").setEnglishLevel(""+EnglishLevel.C1_ADVANCED).setWeekendIsSuitable(true).setHasComExperienceInTheField(true).setYearsOfComExperience(2).createAQA_Java();
-        // The Line above ^ :: In the class "AQA_Java" - constructor "AQA_Java" has been replaced with builder "AQA_JavaBuilder"
+        QA id1400_511 = new QA(511, "Kennet", "+18604005067", "kennet@mynet.com", false, 0, "com.example.school.section.QA", "" + EnglishLevel.A2_PRE_INTERMEDIATE, true);
+        QA id1400_512 = new QA(512, "Lianne", "+16801203334", "lianne@example.com",false, 0, "com.example.school.section.QA", "" + EnglishLevel.B1_INTERMEDIATE, true);
+        AQA_Java id1400_571 = new AQA_JavaBuilder().setStudentId(571).setStudentName("Michael").setStudentPhone("+13800021549").setStudentMail("michael@wexample.com").setPreviouslyFinishedThisSchool(false).setDiscount(0).setFieldQA("com.example.school.section.QA").setEnglishLevel(""+EnglishLevel.C1_ADVANCED).setWeekendIsSuitable(true).setHasComExperienceInTheField(true).setYearsOfComExperience(2).createAQA_Java();
 
+
+        System.out.println();
+        System.out.println("************************************************************************************");
+        System.out.println("D I S C O U N T   P R O G R A M :");
+        System.out.println("Students, who have been finished one of our courses before - get 10% discount!");
+        System.out.println();
+
+        System.out.println("************************************************************************************");
         System.out.println();
         System.out.println("Student id1400_511 (" + id1400_511.getStudentName() + ") like to know which courses are available in their IT-Field?");
         id1400_511.message();
@@ -35,23 +48,23 @@ public class Main { //implement class "Main"
         System.out.println();
 
         System.out.println("INFO ABOUT PERSON id1400_512");
-        System.out.print("Is the person is Student? :: ");
+        System.out.print("Is the person is com.example.school.Student? :: ");
         System.out.println(id1400_512 instanceof Student);
-        System.out.print("Is the person in QA field? :: ");
+        System.out.print("Is the person in com.example.school.section.QA field? :: ");
         System.out.println(id1400_512 instanceof QA);
         System.out.println();
 
         System.out.println("INFO ABOUT PERSON id1400_571");
-        System.out.print("Is the person is Student? :: ");
+        System.out.print("Is the person is com.example.school.Student? :: ");
         System.out.println(id1400_571 instanceof Student);
-        System.out.print("Is the person in QA field? :: ");
+        System.out.print("Is the person in com.example.school.section.QA field? :: ");
         System.out.println(id1400_571 instanceof QA);
-        System.out.print("Is the person is studieng on AQA_Java course? :: ");
+        System.out.print("Is the person is studieng on com.example.school.section.course.AQA_Java course? :: ");
         System.out.println(id1400_571 instanceof AQA_Java);
         System.out.println();
 
-        // Use accessors which were absent and then add to the subclass "AQA_Java" acc. to the tutor remark //
-        System.out.println("****************************************************************");
+        // Use accessors which were absent and then add to the subclass "com.example.school.section.course.AQA_Java" acc. to the tutor remark //
+        System.out.println("************************************************************************************");
         System.out.println();
         System.out.println("What is name and previous experience of the Student id1400_571 ?");
         System.out.println("Student name is :: " + id1400_571.getStudentName());
@@ -59,37 +72,34 @@ public class Main { //implement class "Main"
         System.out.println("Relevant IT-Field :: " + id1400_571.getFieldQA());
         System.out.println();
 
-        // ********* LESSON-6 -> HOMEWORK-5 "Abstract classes and interfaces" ********* //
-        System.out.println("****************************************************************");
+        System.out.println("************************************************************************************");
         System.out.println();
         System.out.println();
 
-        // (FYI: PM-students and UI/UX-students been appointed to the Groups 1,2 and use same i/f)
-        // (FYI: Dev-students and QA-students been appointed to the Groups 3,4 and use same i/f)
+        // (FYI: PM-students and UI/UX-students been appointed to the Groups 1,2 and use the same interface)
+        // (FYI: Dev-students and QA-students been appointed to the Groups 3,4 and use the same iinterface)
 
-        // PM students //
         System.out.println(" --------------- PM field --------------- ");
         System.out.println();
 
         System.out.println("My student ID is id1100_002 - Which English Group has been appointed to me?");
-        id1100_002.saturdayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
+        id1100_002.saturdayEnglishGroup("");
         System.out.println();
 
         System.out.println("My student ID is id1100_003 - Which English Group has been appointed to me?");
-        id1100_003.sundayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
+        id1100_003.sundayEnglishGroup("");
         System.out.println();
         System.out.println();
 
-        // Dev students //
         System.out.println(" --------------- DEV field --------------- ");
         System.out.println();
 
         System.out.println("My student ID is id1200_226 - Which English Group has been appointed to me?");
-        id1200_226.saturdayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
+        id1200_226.saturdayEnglishGroup("");
         System.out.println();
 
         System.out.println("WMy student ID is id1200_227 - Which English Group has been appointed to me?");
-        id1200_227.sundayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
+        id1200_227.sundayEnglishGroup("");
         System.out.println();
         System.out.println();
 
@@ -98,29 +108,28 @@ public class Main { //implement class "Main"
         System.out.println();
 
         System.out.println("My student ID is id1300_338 - Which English Group has been appointed to me?");
-        id1300_338.saturdayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
+        id1300_338.saturdayEnglishGroup("");
         System.out.println();
 
         System.out.println("My student ID is id1300_339 - Which English Group has been appointed to me?");
-        id1300_339.sundayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
+        id1300_339.sundayEnglishGroup("");
         System.out.println();
         System.out.println();
 
-        // QA students //
+        // com.example.school.section.QA students //
         System.out.println(" --------------- QA field --------------- ");
         System.out.println();
 
         System.out.println("My student ID is id1400_511 - Which English Group has been appointed to me?");
-        id1400_511.saturdayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
+        id1400_511.saturdayEnglishGroup("");
         System.out.println();
 
         System.out.println("My student ID is id1400_512 - Which English Group has been appointed to me?");
-        id1400_512.sundayEnglishGroup(""); // !!! Confusion with blank quotation after Enum implementation and interface string-type methods
+        id1400_512.sundayEnglishGroup("");
         System.out.println();
         System.out.println();
 
-        // Add usage of 2 vars: "englishLevel" and "weekendIsSuitable" implemented in the interface
-        System.out.println("************** USE OF VARS FROM THE INTERFACE ***********************");
+        System.out.println("************************ USE OF VARS FROM THE INTERFACE ************************");
         System.out.println();
         System.out.println("What is the name of the Student id1100_001 ?");
         System.out.println("What is the english level of the Student id1100_001 ?");

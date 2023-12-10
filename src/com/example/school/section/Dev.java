@@ -1,4 +1,12 @@
-public class Dev extends Student implements EnglishCourse { // implements "EnglishCourse" interface
+package com.example.school.section;
+
+import com.example.school.Student;
+
+import com.example.school.additional.EnglishCourse;
+
+import com.example.school.additional.EnglishGroup;
+
+public class Dev extends Student implements EnglishCourse { // implements "com.example.school.additional.EnglishCourse" interface
     String fieldDev;
     String englishLevel;
     boolean weekendIsSuitable;
@@ -26,20 +34,20 @@ public class Dev extends Student implements EnglishCourse { // implements "Engli
     }
 
     @Override
-    void message(){
+    public void message(){
         System.out.println("There are available Courses: ");
         System.out.println("   1201.Software Developer (Java);");
         System.out.println("   1202.Software Developer (JavaScript);");
         System.out.println("   1203.Software Developer (Python);");
     }
 
-    @Override //add annotation for override "saturdayEnglishGroup()" method
+    @Override
     public void saturdayEnglishGroup(String satEnglishMessage) {
-        System.out.println("Welcome to " + EnglishGroup.Group_3 + "! Your lessons will be each Saturday 1:00-2:00 PM PST");
+        System.out.println("Welcome to " + EnglishGroup.Group_3 + "! Your lessons will be each Saturday 1:00-2:00 com.example.school.section.PM PST");
     }
 
-    @Override //add annotation for override "sundayEnglishGroup()" method
+    @Override
     public void sundayEnglishGroup(String sunEnglishMessage) {
-        System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
+        System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 com.example.school.section.PM PST");
     }
 }

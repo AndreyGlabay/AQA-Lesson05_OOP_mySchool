@@ -1,3 +1,5 @@
+package com.example.school.additional;
+
 public enum EnglishGroup {
     Group_1,
     Group_2,
