@@ -53,6 +53,9 @@ public class Main {
 
         System.out.println("************************************************************************************");
         System.out.println();
+        System.out.println("************************************************************************************");
+        System.out.println("C O U R S E S   A V A I L A B L E   I N   E A C H   I T   F I E L D");
+        System.out.println();
         System.out.println("Student id1400_511 (" + id1400_511.getStudentName() + ") like to know which courses are available in their IT-Field?");
         id1400_511.message();
         System.out.println();
@@ -64,9 +67,12 @@ public class Main {
         System.out.println();
         System.out.println("Student id1200_225 (" + id1200_225.getStudentName() + ") like to know which courses are available in their IT-Field?");
         id1200_225.message();
-        System.out.println();
+        System.out.println("************************************************************************************");
         System.out.println();
 
+        System.out.println("************************************************************************************");
+        System.out.println("M I S C   I N F O   A B O U T   S T U D E N T S  //CHECK PARENT-CHILD CLASS RELATIONS");
+        System.out.println();
         System.out.println("INFO ABOUT PERSON id1400_512");
         System.out.print("Is the person is Student of the mySchool? :: ");
         System.out.println(id1400_512 instanceof Student);
@@ -81,75 +87,73 @@ public class Main {
         System.out.println(id1400_571 instanceof QA);
         System.out.print("Is the person is studying on the AQA (Java) course? :: ");
         System.out.println(id1400_571 instanceof AQA_Java);
+        System.out.println("************************************************************************************");
         System.out.println();
 
-        // Use accessors which were absent and then add to the subclass "com.example.school.section.course.AQA_Java" acc. to the tutor remark //
+        // Use accessors, which were absent and then add to the subclass "com.example.school.section.course.AQA_Java" acc. to the tutor remark //
         System.out.println("************************************************************************************");
+        System.out.println("S T U D E N T   I N   A Q A   J A V A   C O U R S E //USING OF ACCESSORS FROM SUB-CLASS");
         System.out.println();
         System.out.println("What is name and previous experience of the Student id1400_571 ?");
         System.out.println("Student name is :: " + id1400_571.getStudentName());
         id1400_571.experience();
         System.out.println("Relevant IT-Field :: " + id1400_571.getFieldQA());
+        System.out.println("************************************************************************************");
         System.out.println();
 
         System.out.println("************************************************************************************");
+        System.out.println("E N G L I S H   G R O U P S   F O R   S T U D E N T S   //USING INTERFACES AND ENUMS");
         System.out.println();
+        System.out.println(" ---------------------------------- R U L E S : ---------------------------------- ");
+        System.out.println("PM-students and UI/UX-students been appointed to the Groups 1,2 and use the same interface");
+        System.out.println("Dev-students and QA-students been appointed to the Groups 3,4 and use the same interface");
+        System.out.println(" --------------------------------------------------------------------------------- ");
         System.out.println();
 
-        // (FYI: PM-students and UI/UX-students been appointed to the Groups 1,2 and use the same interface)
-        // (FYI: Dev-students and QA-students been appointed to the Groups 3,4 and use the same iinterface)
-
-        System.out.println(" --------------- PM field --------------- ");
-        System.out.println();
-
+        System.out.println(" ----------------------------------- PM field ----------------------------------- ");
         System.out.println("My student ID is id1100_002 - Which English Group has been appointed to me?");
         id1100_002.saturdayEnglishGroup("");
         System.out.println();
 
         System.out.println("My student ID is id1100_003 - Which English Group has been appointed to me?");
         id1100_003.sundayEnglishGroup("");
-        System.out.println();
-        System.out.println();
-
-        System.out.println(" --------------- DEV field --------------- ");
+        System.out.println(" --------------------------------------------------------------------------------- ");
         System.out.println();
 
+        System.out.println(" ----------------------------------- DEV field ----------------------------------- ");
         System.out.println("My student ID is id1200_226 - Which English Group has been appointed to me?");
         id1200_226.saturdayEnglishGroup("");
         System.out.println();
 
         System.out.println("WMy student ID is id1200_227 - Which English Group has been appointed to me?");
         id1200_227.sundayEnglishGroup("");
-        System.out.println();
-        System.out.println();
-
-        // UI/UX students //
-        System.out.println(" --------------- UX/UI field --------------- ");
+        System.out.println(" --------------------------------------------------------------------------------- ");
         System.out.println();
 
+        System.out.println(" ---------------------------------- UX/UI field ---------------------------------- ");
         System.out.println("My student ID is id1300_338 - Which English Group has been appointed to me?");
         id1300_338.saturdayEnglishGroup("");
         System.out.println();
 
         System.out.println("My student ID is id1300_339 - Which English Group has been appointed to me?");
         id1300_339.sundayEnglishGroup("");
-        System.out.println();
-        System.out.println();
-
-        // com.example.school.section.QA students //
-        System.out.println(" --------------- QA field --------------- ");
+        System.out.println(" --------------------------------------------------------------------------------- ");
         System.out.println();
 
+        System.out.println(" ----------------------------------- QA field ----------------------------------- ");
         System.out.println("My student ID is id1400_511 - Which English Group has been appointed to me?");
         id1400_511.saturdayEnglishGroup("");
         System.out.println();
 
         System.out.println("My student ID is id1400_512 - Which English Group has been appointed to me?");
         id1400_512.sundayEnglishGroup("");
+        System.out.println(" --------------------------------------------------------------------------------- ");
         System.out.println();
+        System.out.println("************************************************************************************");
         System.out.println();
 
-        System.out.println("************************ USE OF VARS FROM THE INTERFACE ************************");
+        System.out.println("************************************************************************************");
+        System.out.println("E N G L I S H   L E V E L   A N D   S C H E D U L E  //USING VARS FROM THE INTERFACE");
         System.out.println();
         System.out.println("What is the name of the Student id1100_001 ?");
         System.out.println("What is the english level of the Student id1100_001 ?");
@@ -158,6 +162,7 @@ public class Main {
         System.out.println("English level is :: " + id1100_001.englishLevel);
         System.out.println("Available at weekends :: " + id1100_001.weekendIsSuitable);
         System.out.println();
+
         System.out.println("What is the name of the Student id1100_004 ?");
         System.out.println("What is the english level of the Student id1100_004 ?");
         System.out.println("Is the student available at weekends for the English Courses?");
@@ -165,12 +170,7 @@ public class Main {
         System.out.println("English level is :: " + id1100_004.englishLevel);
         System.out.print("Available at weekends :: " + id1100_004.weekendIsSuitable + " -> ");
         id1100_004.eveningEnglishGroup();
-
-
-
+        System.out.println("************************************************************************************");
+        System.out.println();
     }
-
-
-
-
 }

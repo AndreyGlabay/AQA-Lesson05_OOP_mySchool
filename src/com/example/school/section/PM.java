@@ -48,6 +48,6 @@ public class PM extends Student implements EnglishCourse { // implements "com.ex
 
     @Override
     public void sundayEnglishGroup(String sunEnglishMessage) {
-        System.out.println("Welcome to " + EnglishGroup.Group_2 + "! Your lessons will be each Sunday 3:00-4:00 com.example.school.section.PM PST");
+        System.out.println("Welcome to " + EnglishGroup.Group_2 + "! Your lessons will be each Sunday 3:00-4:00 PM PST");
     }
 }

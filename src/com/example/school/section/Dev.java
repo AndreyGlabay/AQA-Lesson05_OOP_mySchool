@@ -43,11 +43,11 @@ public class Dev extends Student implements EnglishCourse { // implements "com.e
 
     @Override
     public void saturdayEnglishGroup(String satEnglishMessage) {
-        System.out.println("Welcome to " + EnglishGroup.Group_3 + "! Your lessons will be each Saturday 1:00-2:00 com.example.school.section.PM PST");
+        System.out.println("Welcome to " + EnglishGroup.Group_3 + "! Your lessons will be each Saturday 1:00-2:00 PM PST");
     }
 
     @Override
     public void sundayEnglishGroup(String sunEnglishMessage) {
-        System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 com.example.school.section.PM PST");
+        System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
     }
 }
