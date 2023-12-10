@@ -6,7 +6,7 @@ public abstract class Student {
     private final String studentName;
     private String studentPhone;
     private String studentMail;
-    private boolean previouslyFinishedThisSchool;
+    public boolean previouslyFinishedThisSchool;
     private int discount;
 
     public Student(
@@ -18,7 +18,8 @@ public abstract class Student {
             int discount) {
         this.studentId = studentId;
         this.studentName = studentName;
-
+        this.previouslyFinishedThisSchool = previouslyFinishedThisSchool;
+        this.discount = discount;
     }
 
     public int getStudentId() {return studentId;}
