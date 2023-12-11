@@ -77,17 +77,17 @@ public class AQA_JavaBuilder { //Replace constructor 'com.example.school.section
     @Override // Generates String.Builder using 1st variant "String Concat (+)"
     public String toString() {
         return "AQA_JavaBuilder{" +
-                "studentId=" + studentId +
-                ", studentName='" + studentName + '\'' +
-                ", studentPhone='" + studentPhone + '\'' +
-                ", studentMail='" + studentMail + '\'' +
-                ", previouslyFinishedThisSchool=" + previouslyFinishedThisSchool +
-                ", discount=" + discount +
-                ", fieldQA='" + fieldQA + '\'' +
-                ", englishLevel='" + englishLevel + '\'' +
-                ", weekendIsSuitable=" + weekendIsSuitable +
-                ", hasComExperienceInTheField=" + hasComExperienceInTheField +
-                ", yearsOfComExperience=" + yearsOfComExperience +
-                '}';
+                "\n\t studentId=" + studentId +
+                ", \n\t studentName='" + studentName + '\'' +
+                ", \n\t studentPhone='" + studentPhone + '\'' +
+                ", \n\t studentMail='" + studentMail + '\'' +
+                ", \n\t previouslyFinishedThisSchool=" + previouslyFinishedThisSchool +
+                ", \n\t discount=" + discount +
+                ", \n\t fieldQA='" + fieldQA + '\'' +
+                ", \n\t englishLevel='" + englishLevel + '\'' +
+                ", \n\t weekendIsSuitable=" + weekendIsSuitable +
+                ", \n\t hasComExperienceInTheField=" + hasComExperienceInTheField +
+                ", \n\t yearsOfComExperience=" + yearsOfComExperience +
+                "\n\t }";
     }
 }

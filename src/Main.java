@@ -174,7 +174,7 @@ public class Main {
         System.out.println("************************************************************************************");
         System.out.println();
         System.out.println("************************************************************************************");
-        System.out.println("S H O W   F I E L D S   F O R   D I F F   C O U R S E S // USING STRING BUILDER");
+        System.out.println("S H O W   P R O P E R T I E S   F O R    C O U R S E S // USING STRING BUILDER");
         System.out.println();
 
         System.out.println(" ------------------------ 1st variant \"String Concat (+)\" -------------------------- ");
@@ -186,8 +186,24 @@ public class Main {
 
         System.out.println(" ------------------------ 2nd variant \"__________________\" -------------------------- ");
 
+        System.out.println(" ----------------------------------------------------------------------------------- ");
+        System.out.println();
 
+        System.out.println(" ------------------------ 3rd variant \"__________________\" -------------------------- ");
 
+        System.out.println(" ----------------------------------------------------------------------------------- ");
+        System.out.println();
 
+        System.out.println(" ------------------------ 4th variant \"__________________\" -------------------------- ");
+
+        System.out.println(" ----------------------------------------------------------------------------------- ");
+        System.out.println();
+
+        System.out.println(" ------------------------ 5th variant \"__________________\" -------------------------- ");
+
+        System.out.println(" ----------------------------------------------------------------------------------- ");
+        System.out.println();
+        System.out.println("************************************************************************************");
+        System.out.println();
     }
 }
