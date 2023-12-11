@@ -149,7 +149,6 @@ public class Main {
         System.out.println("My student ID is id1400_512 - Which English Group has been appointed to me?");
         id1400_512.sundayEnglishGroup("");
         System.out.println(" --------------------------------------------------------------------------------- ");
-        System.out.println();
         System.out.println("************************************************************************************");
         System.out.println();
 
@@ -173,6 +172,7 @@ public class Main {
         id1100_004.eveningEnglishGroup();
         System.out.println("************************************************************************************");
         System.out.println();
+
         System.out.println("************************************************************************************");
         System.out.println("S H O W   P R O P E R T I E S   F O R    C O U R S E S // USING STRING BUILDER");
         System.out.println();
@@ -200,18 +200,20 @@ public class Main {
         System.out.println(" ----------------------------------------------------------------------------------- ");
         System.out.println();
 
-        System.out.println(" ------------ 4th variant \"StringBuilder (JDK 1.5)\" - class: \"UIUX\"------------- ");
+        System.out.println(" -------------- 4th variant \"StringBuilder (JDK 1.5)\" - class: \"UIUX\"--------------- ");
         // At Class "UIUX" Generates String.Builder using 4th variant "StringBuilder (JDK 1.5)"
-        // In the line below needs to fill in the  Dev() constructor with default "empty" values
+        // In the line below needs to fill in the UIUX() constructor with default "empty" values
         var uiuxToS = new UIUX(0, "", "", "", false, 0, "", false);
         System.out.println(uiuxToS);
         System.out.println(" ----------------------------------------------------------------------------------- ");
         System.out.println();
 
-        System.out.println(" -------- 5th variant \"_________________________\" - class: \"______\"--------- ");
-
+        System.out.println(" --------------- 5th variant \"StringJoiner (JDK 1.8)\" - class: \"PM\"----------------- ");
+        // At Class "PM" Generates String.Builder using 5th variant "StringJoiner (JDK 1.8)"
+        // In the line below needs to fill in the PM() constructor with default "empty" values
+        var pmToS = new PM(0, "", "", "", false, 0, "", false);
+        System.out.println(pmToS);
         System.out.println(" ----------------------------------------------------------------------------------- ");
-        System.out.println();
         System.out.println("************************************************************************************");
         System.out.println();
     }

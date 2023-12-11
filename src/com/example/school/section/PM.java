@@ -6,6 +6,7 @@ import com.example.school.additional.EnglishCourse;
 
 import com.example.school.additional.EnglishGroup;
 
+import java.util.StringJoiner;
 
 
 public class PM extends Student implements EnglishCourse { // implements "com.example.school.additional.EnglishCourse" interface
@@ -49,5 +50,14 @@ public class PM extends Student implements EnglishCourse { // implements "com.ex
     @Override
     public void sundayEnglishGroup(String sunEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_2 + "! Your lessons will be each Sunday 3:00-4:00 PM PST");
+    }
+
+    @Override // Generates String.Builder using 5th variant "StringJoiner (JDK 1.8)"
+    public String toString() {
+        return new StringJoiner(", ", PM.class.getSimpleName() + "[", "]")
+                .add("fieldPM='" + fieldPM + "'")
+                .add("englishLevel='" + englishLevel + "'")
+                .add("weekendIsSuitable=" + weekendIsSuitable)
+                .toString();
     }
 }
