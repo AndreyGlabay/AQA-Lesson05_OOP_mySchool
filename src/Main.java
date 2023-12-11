@@ -193,15 +193,18 @@ public class Main {
         System.out.println();
 
         System.out.println(" -------------------- 3rd variant \"StringBuffer\" - class: \"Dev\"--------------------- ");
-        // At Class "Dev" Generates String.Builder using 2nd variant "StringBuffer"
+        // At Class "Dev" Generates String.Builder using 3rd variant "StringBuffer"
         // In the line below needs to fill in the  Dev() constructor with default "empty" values
         var devToS = new Dev(0, "", "", "", false, 0, "", false);
         System.out.println(devToS);
         System.out.println(" ----------------------------------------------------------------------------------- ");
         System.out.println();
 
-        System.out.println(" -------- 4th variant \"_________________________\" - class: \"______\"--------- ");
-
+        System.out.println(" ------------ 4th variant \"StringBuilder (JDK 1.5)\" - class: \"UIUX\"------------- ");
+        // At Class "UIUX" Generates String.Builder using 4th variant "StringBuilder (JDK 1.5)"
+        // In the line below needs to fill in the  Dev() constructor with default "empty" values
+        var uiuxToS = new UIUX(0, "", "", "", false, 0, "", false);
+        System.out.println(uiuxToS);
         System.out.println(" ----------------------------------------------------------------------------------- ");
         System.out.println();
 
