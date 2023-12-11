@@ -50,4 +50,14 @@ public class Dev extends Student implements EnglishCourse { // implements "com.e
     public void sundayEnglishGroup(String sunEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
     }
+
+    @Override // Generates String.Builder using 3rd variant "StringBuffer"
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Dev{");
+        sb.append("fieldDev='").append(fieldDev).append('\'');
+        sb.append(", englishLevel='").append(englishLevel).append('\'');
+        sb.append(", weekendIsSuitable=").append(weekendIsSuitable);
+        sb.append('}');
+        return sb.toString();
+    }
 }

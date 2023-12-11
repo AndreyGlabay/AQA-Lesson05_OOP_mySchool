@@ -177,29 +177,35 @@ public class Main {
         System.out.println("S H O W   P R O P E R T I E S   F O R    C O U R S E S // USING STRING BUILDER");
         System.out.println();
 
-        System.out.println(" ------------------------ 1st variant \"String Concat (+)\" -------------------------- ");
-        // At Class "AQA_Java" Generates String.Builder using 1st variant "String Concat (+)"
+        System.out.println(" ----------- 1st variant \"String Concat (+)\" - class: \"AQA_JavaBuilder\"------------- ");
+        // At Class "AQA_JavaBuilder" Generates String.Builder using 1st variant "String Concat (+)"
         var aqaJavaToS = new AQA_JavaBuilder(); // declaration of var "aqaJavaToS" and initialization it = StringBuilder "AQA_JavaBuilder"
         System.out.println(aqaJavaToS); // printout StringBuilder "AQA_JavaBuilder" via var "aqaJavaToS"
         System.out.println(" ----------------------------------------------------------------------------------- ");
         System.out.println();
 
-        System.out.println(" ------------------------ 2nd variant \"__________________\" -------------------------- ");
+        System.out.println(" -------- 2nd variant \"String Concat (+) and super.toString()\" - class: \"QA\"-------- ");
+        // At Class "QA" Generates String.Builder using 2nd variant "String Concat (+) and super.toString()"
+        // In the line below needs to fill in the  QA() constructor with default "empty" values
+        QA qaToS = new QA(0, "", "", "", false, 0, "", "", false);
+        System.out.println(qaToS);
+        System.out.println(" ----------------------------------------------------------------------------------- ");
+        System.out.println();
+
+        System.out.println(" -------------------- 3rd variant \"StringBuffer\" - class: \"Dev\"--------------------- ");
+        // At Class "Dev" Generates String.Builder using 2nd variant "StringBuffer"
+        // In the line below needs to fill in the  Dev() constructor with default "empty" values
+        var devToS = new Dev(0, "", "", "", false, 0, "", false);
+        System.out.println(devToS);
+        System.out.println(" ----------------------------------------------------------------------------------- ");
+        System.out.println();
+
+        System.out.println(" -------- 4th variant \"_________________________\" - class: \"______\"--------- ");
 
         System.out.println(" ----------------------------------------------------------------------------------- ");
         System.out.println();
 
-        System.out.println(" ------------------------ 3rd variant \"__________________\" -------------------------- ");
-
-        System.out.println(" ----------------------------------------------------------------------------------- ");
-        System.out.println();
-
-        System.out.println(" ------------------------ 4th variant \"__________________\" -------------------------- ");
-
-        System.out.println(" ----------------------------------------------------------------------------------- ");
-        System.out.println();
-
-        System.out.println(" ------------------------ 5th variant \"__________________\" -------------------------- ");
+        System.out.println(" -------- 5th variant \"_________________________\" - class: \"______\"--------- ");
 
         System.out.println(" ----------------------------------------------------------------------------------- ");
         System.out.println();

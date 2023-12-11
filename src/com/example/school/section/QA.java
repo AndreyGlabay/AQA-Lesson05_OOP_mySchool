@@ -25,6 +25,8 @@ public class QA extends Student implements EnglishCourse {
         this.fieldQA = fieldQA;
     }
 
+
+
     public String getFieldQA() {
         return fieldQA;
     }
@@ -51,5 +53,14 @@ public class QA extends Student implements EnglishCourse {
     @Override //add annotation for override "sundayEnglishGroup()" method
     public void sundayEnglishGroup(String sunEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
+    }
+
+    @Override // Generates String.Builder using 2nd variant "String Concat (+) and super.toString()"
+    public String toString() {
+        return "QA{" +
+                "\n\t fieldQA='" + fieldQA + '\'' +
+                ",\n\t englishLevel='" + englishLevel + '\'' +
+                ",\n\t weekendIsSuitable=" + weekendIsSuitable +
+                "\n\t} " + "\n\t" + super.toString();
     }
 }
