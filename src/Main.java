@@ -29,7 +29,8 @@ public class Main {
         System.out.println("Students, who have been finished one of our courses before - get 10% discount!");
         System.out.println();
 
-        Student[] allStudents = { //implement an Array of students;
+        //implement an Array of students;
+        Student[] allStudents = {
                 id1100_001,
                 id1100_002,
                 id1100_003,
@@ -172,5 +173,21 @@ public class Main {
         id1100_004.eveningEnglishGroup();
         System.out.println("************************************************************************************");
         System.out.println();
+        System.out.println("************************************************************************************");
+        System.out.println("S H O W   F I E L D S   F O R   D I F F   C O U R S E S // USING STRING BUILDER");
+        System.out.println();
+
+        System.out.println(" ------------------------ 1st variant \"String Concat (+)\" -------------------------- ");
+        // At Class "AQA_Java" Generates String.Builder using 1st variant "String Concat (+)"
+        var aqaJavaToS = new AQA_JavaBuilder(); // declaration of var "aqaJavaToS" and initialization it = StringBuilder "AQA_JavaBuilder"
+        System.out.println(aqaJavaToS); // printout StringBuilder "AQA_JavaBuilder" via var "aqaJavaToS"
+        System.out.println(" ----------------------------------------------------------------------------------- ");
+        System.out.println();
+
+        System.out.println(" ------------------------ 2nd variant \"__________________\" -------------------------- ");
+
+
+
+
     }
 }

@@ -73,4 +73,21 @@ public class AQA_JavaBuilder { //Replace constructor 'com.example.school.section
     public AQA_Java createAQA_Java() {
         return new AQA_Java(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount, fieldQA, englishLevel, weekendIsSuitable, hasComExperienceInTheField, yearsOfComExperience);
     }
+
+    @Override // Generates String.Builder using 1st variant "String Concat (+)"
+    public String toString() {
+        return "AQA_JavaBuilder{" +
+                "studentId=" + studentId +
+                ", studentName='" + studentName + '\'' +
+                ", studentPhone='" + studentPhone + '\'' +
+                ", studentMail='" + studentMail + '\'' +
+                ", previouslyFinishedThisSchool=" + previouslyFinishedThisSchool +
+                ", discount=" + discount +
+                ", fieldQA='" + fieldQA + '\'' +
+                ", englishLevel='" + englishLevel + '\'' +
+                ", weekendIsSuitable=" + weekendIsSuitable +
+                ", hasComExperienceInTheField=" + hasComExperienceInTheField +
+                ", yearsOfComExperience=" + yearsOfComExperience +
+                '}';
+    }
 }
