@@ -1,6 +1,6 @@
 package com.example.school.section.course;
 
-public class AQA_JavaBuilder { //Replace constructor 'com.example.school.section.course.AQA_Java' with builder 'com.example.school.section.course.AQA_JavaBuilder'"
+public class AQA_JavaBuilder {
     private int studentId;
     private String studentName;
     private String studentPhone;

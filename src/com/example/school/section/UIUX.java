@@ -6,7 +6,7 @@ import com.example.school.additional.EnglishCourse;
 
 import com.example.school.additional.EnglishGroup;
 
-public class UIUX extends Student implements EnglishCourse { // implements "com.example.school.additional.EnglishCourse" interface
+public class UIUX extends Student implements EnglishCourse {
     String fieldUIUX;
     String englishLevel;
     boolean weekendIsSuitable;
@@ -42,7 +42,7 @@ public class UIUX extends Student implements EnglishCourse { // implements "com.
         System.out.println("Welcome to " + EnglishGroup.Group_1 + "! Your lessons will be each Saturday 11:00-12:00 AM PST");
     }
 
-    @Override //add annotation for override "sundayEnglishGroup()" method
+    @Override
     public void sundayEnglishGroup(String sunEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_2 + "! Your lessons will be each Sunday 3:00-4:00 PM PST");
     }

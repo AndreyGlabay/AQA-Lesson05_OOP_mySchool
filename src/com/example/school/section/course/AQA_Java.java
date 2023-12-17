@@ -6,7 +6,6 @@ public class AQA_Java extends QA {
 
     boolean hasComExperienceInTheField;
     int yearsOfComExperience;
-    // add new variables especially for this class
 
     public AQA_Java( // Replace constructor "com.example.school.section.course.AQA_Java" with builder "com.example.school.section.course.AQA_JavaBuilder"
             int studentId,

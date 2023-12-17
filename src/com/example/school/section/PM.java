@@ -9,7 +9,7 @@ import com.example.school.additional.EnglishGroup;
 import java.util.StringJoiner;
 
 
-public class PM extends Student implements EnglishCourse { // implements "com.example.school.additional.EnglishCourse" interface
+public class PM extends Student implements EnglishCourse {
     String fieldPM;
     public String englishLevel;
     public boolean weekendIsSuitable;

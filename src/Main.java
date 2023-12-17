@@ -29,7 +29,6 @@ public class Main {
         System.out.println("Students, who have been finished one of our courses before - get 10% discount!");
         System.out.println();
 
-        //implement an Array of students;
         Student[] allStudents = {
                 id1100_001,
                 id1100_002,
@@ -45,7 +44,6 @@ public class Main {
                 id1400_571
         };
 
-        // Implement the loop, for check and printout those students, who previously finished this IT school;
         for (Student student : allStudents) {
             if (student.previouslyFinishedThisSchool) {
                 System.out.println("Student ID " + student.getStudentId() + " (" + student.getStudentName() + ") has a Discount: " + student.getDiscount() + "%");
@@ -91,7 +89,6 @@ public class Main {
         System.out.println("************************************************************************************");
         System.out.println();
 
-        // Use accessors, which were absent and then add to the subclass "com.example.school.section.course.AQA_Java" acc. to the tutor remark //
         System.out.println("************************************************************************************");
         System.out.println("S T U D E N T   I N   A Q A   J A V A   C O U R S E //USING OF ACCESSORS FROM SUB-CLASS");
         System.out.println();
@@ -178,39 +175,30 @@ public class Main {
         System.out.println();
 
         System.out.println(" ----------- 1st variant \"String Concat (+)\" - class: \"AQA_JavaBuilder\"------------- ");
-        // At Class "AQA_JavaBuilder" Generates String.Builder using 1st variant "String Concat (+)"
-        var aqaJavaToS = new AQA_JavaBuilder(); // declaration of var "aqaJavaToS" and initialization it = StringBuilder "AQA_JavaBuilder"
-        System.out.println(aqaJavaToS); // printout StringBuilder "AQA_JavaBuilder" via var "aqaJavaToS"
+        var aqaJavaToS = new AQA_JavaBuilder();
+        System.out.println(aqaJavaToS);
         System.out.println(" ----------------------------------------------------------------------------------- ");
         System.out.println();
 
         System.out.println(" -------- 2nd variant \"String Concat (+) and super.toString()\" - class: \"QA\"-------- ");
-        // At Class "QA" Generates String.Builder using 2nd variant "String Concat (+) and super.toString()"
-        // In the line below needs to fill in the  QA() constructor with default "empty" values
         QA qaToS = new QA(0, "", "", "", false, 0, "", "", false);
         System.out.println(qaToS);
         System.out.println(" ----------------------------------------------------------------------------------- ");
         System.out.println();
 
         System.out.println(" -------------------- 3rd variant \"StringBuffer\" - class: \"Dev\"--------------------- ");
-        // At Class "Dev" Generates String.Builder using 3rd variant "StringBuffer"
-        // In the line below needs to fill in the  Dev() constructor with default "empty" values
         var devToS = new Dev(0, "", "", "", false, 0, "", false);
         System.out.println(devToS);
         System.out.println(" ----------------------------------------------------------------------------------- ");
         System.out.println();
 
         System.out.println(" -------------- 4th variant \"StringBuilder (JDK 1.5)\" - class: \"UIUX\"--------------- ");
-        // At Class "UIUX" Generates String.Builder using 4th variant "StringBuilder (JDK 1.5)"
-        // In the line below needs to fill in the UIUX() constructor with default "empty" values
         var uiuxToS = new UIUX(0, "", "", "", false, 0, "", false);
         System.out.println(uiuxToS);
         System.out.println(" ----------------------------------------------------------------------------------- ");
         System.out.println();
 
         System.out.println(" --------------- 5th variant \"StringJoiner (JDK 1.8)\" - class: \"PM\"----------------- ");
-        // At Class "PM" Generates String.Builder using 5th variant "StringJoiner (JDK 1.8)"
-        // In the line below needs to fill in the PM() constructor with default "empty" values
         var pmToS = new PM(0, "", "", "", false, 0, "", false);
         System.out.println(pmToS);
         System.out.println(" ----------------------------------------------------------------------------------- ");

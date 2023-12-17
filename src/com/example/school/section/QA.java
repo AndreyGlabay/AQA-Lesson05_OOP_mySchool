@@ -50,7 +50,7 @@ public class QA extends Student implements EnglishCourse {
         System.out.println("Welcome to " + EnglishGroup.Group_3 + "! Your lessons will be each Saturday 1:00-2:00 PM PST");
     }
 
-    @Override //add annotation for override "sundayEnglishGroup()" method
+    @Override
     public void sundayEnglishGroup(String sunEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
     }

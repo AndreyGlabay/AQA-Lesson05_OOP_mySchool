@@ -6,7 +6,7 @@ import com.example.school.additional.EnglishCourse;
 
 import com.example.school.additional.EnglishGroup;
 
-public class Dev extends Student implements EnglishCourse { // implements "com.example.school.additional.EnglishCourse" interface
+public class Dev extends Student implements EnglishCourse {
     String fieldDev;
     String englishLevel;
     boolean weekendIsSuitable;
