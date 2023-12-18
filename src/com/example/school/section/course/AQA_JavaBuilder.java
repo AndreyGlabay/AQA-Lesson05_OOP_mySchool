@@ -1,3 +1,4 @@
+// ******* TURNED OFF FOR THE TASK - READ CSV-FILE WITH SCANNER ******* //
 //package com.example.school.section.course;
 //
 //public class AQA_JavaBuilder {
