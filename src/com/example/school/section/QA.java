@@ -63,4 +63,13 @@ public class QA extends Student implements EnglishCourse {
 //    }
 
 
+    @Override
+    public String toString() {
+        return "QA{" +
+                "fieldQA='" + fieldQA + '\'' +
+                ", englishLevel='" + englishLevel + '\'' +
+                ", weekendIsSuitable=" + weekendIsSuitable +
+                ", previouslyFinishedThisSchool=" + previouslyFinishedThisSchool +
+                "} " + super.toString();
+    }
 }

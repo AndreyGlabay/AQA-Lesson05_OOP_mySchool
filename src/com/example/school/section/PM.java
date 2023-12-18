@@ -57,5 +57,13 @@ public class PM extends Student implements EnglishCourse {
 //                .toString();
 //    }
 
-
+    @Override
+    public String toString() {
+        return "PM{" +
+                "fieldPM='" + fieldPM + '\'' +
+                ", englishLevel='" + englishLevel + '\'' +
+                ", weekendIsSuitable=" + weekendIsSuitable +
+                ", previouslyFinishedThisSchool=" + previouslyFinishedThisSchool +
+                "} " + super.toString();
+    }
 }
