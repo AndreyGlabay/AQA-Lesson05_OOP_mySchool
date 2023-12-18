@@ -48,7 +48,7 @@ public class Main {
 
         for (int i = 1; i < data.length; i++) { // implements the "for" loop for array's line by line traverse;
             var pieces = data[i].split(";"); // split the array to the lines: if there is no regex ";" - method return the line -> then put the function into var "pieces";
-
+            Student student = null; // implements the Object "student"
         }
 
 
