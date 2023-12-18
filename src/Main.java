@@ -15,13 +15,19 @@ public class Main {
 
     private static final String FILE_NAME = "resources/students.csv"; // add the constant FILE_NAME which has property of file, that should be read
 
-    static String[] readFileUsingScanner(String fileName){  // add static method, which read a file using scanner return String Array
-        var file = new File(fileName);                      // create an object with type "file"
-        try {                                               // surround the function with TRY/CATCH
-            var scanner = new Scanner(file);                // input file to the Scanner
+    static String[] readFileUsingScanner(String fileName){  // add static method, which read a file using scanner return String Array;
+        var file = new File(fileName);                      // create an object with type "file";
+        Scanner scanner = null;                             // take "Scanner" out of TRY/CATCH;
+        try {                                               // surround the function with TRY/CATCH;
+            scanner = new Scanner(file);                    // input file to the Scanner;
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+
+        boolean finished = false;                           // implement boolean var "finished", which has property "false" so far as there is smth to read
+        scanner.nextLine();                                 // implement scanner method "nextLine()", which return next string line;
+
+        scanner.close();                                    // close the "Scanner";
         return null;
     };
 
