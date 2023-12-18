@@ -1,0 +1,12 @@
+studentId;studentName;studentPhone;studentMail;previouslyFinishedThisSchool;discount
+11;Aya;+17505151011;aya@probe.com;true;10
+12;Bala;+17505151012;bala@probe.com;false;0
+13;Cor;+17505151013;cor@probe.com;true;10
+14;Dexter;+17505151014;dexter@probe.com;false;0
+250;Jannet;+17505151250;jannet@probe.com;false;0
+251;Kirk;+17505151251;kirk@probe.com;true;10
+252;Lilly;+17505151252;lilly@probe.com;false;0
+348;Peter;+17505151348;peter@probe.com;false;0
+349;Quark;+17505151349;quark@probe.com;true;10
+571;Ultima;+17505151571;ultima@probe.com;true;10
+572;Vivek;+17505151572;vivek@probe.com;false;0
