@@ -1,13 +1,8 @@
 package com.example.school.section;
-
 import com.example.school.Student;
-
 import com.example.school.additional.EnglishCourse;
-
 import com.example.school.additional.EnglishGroup;
-
 import java.util.StringJoiner;
-
 
 public class PM extends Student implements EnglishCourse {
     String fieldPM;

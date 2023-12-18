@@ -1,5 +1,4 @@
 package com.example.school.section.course;
-
 import com.example.school.section.QA;
 
 public class AQA_Java extends QA {
