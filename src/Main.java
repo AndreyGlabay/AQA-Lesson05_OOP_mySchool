@@ -9,6 +9,7 @@ import com.example.school.section.course.AQA_JavaBuilder;
 
 import java.io.File; // auto import, when input to the Scanner object with type "file"
 import java.io.FileNotFoundException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Main {
@@ -25,7 +26,16 @@ public class Main {
         }
 
         boolean finished = false;                           // implement boolean var "finished", which has property "false" so far as there is smth to read
-        scanner.nextLine();                                 // implement scanner method "nextLine()", which return next string line;
+        do {                                                // implement DO-WHILE loop, and put to it scanner's method nextLine();
+            try {                                           // surround the nextLine() method with TRY/CATCH
+                var nextLine = scanner.nextLine();          // implement var "nextLine" = scanner method "nextLine()", which return next string line;
+            } catch (NoSuchElementException e) {            // exception for case if no more lines in the nextLine();
+                finished = true;                            // when the exception been caught - change "finished" property to the "true"
+            }
+
+
+        } while (!finished);
+
 
         scanner.close();                                    // close the "Scanner";
         return null;
