@@ -30,7 +30,7 @@ public class Main {
         boolean finished = false;                           // implement boolean var "finished", which has property "false" so far as there is smth to read
         do {                                                // implement DO-WHILE loop, and put to it scanner's method nextLine();
             try {                                           // surround the nextLine() method with TRY/CATCH
-                var nextLine = scanner.nextLine();          // implement var "nextLine" = scanner method "nextLine()", which return next string line;
+                data.add(scanner.nextLine());               // implement var "nextLine" = scanner method "nextLine()", which return next string line; -> then change var to the ArrayList "add" method;
             } catch (NoSuchElementException e) {            // exception for case if no more lines in the nextLine();
                 finished = true;                            // when the exception been caught - change "finished" property to the "true"
             }
