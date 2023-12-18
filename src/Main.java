@@ -63,6 +63,7 @@ public class Main {
                     student = new QA(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3], Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7], Boolean.parseBoolean(pieces[8]));
                     break;
             }
+            System.out.println(student); // printout String from file "students.csv"
         }
 
 
