@@ -38,11 +38,15 @@ public class Main {
         } while (!finished);
 
         scanner.close();                                                    // close the "Scanner";
-        return Arrays.copyOf(data.toArray(), data.size(), String[].class);  // return array from string from ArrayList
+        return Arrays.copyOf(data.toArray(), data.size(), String[].class);  // return array from string from ArrayList;
     };
 
     public static void main(String[] args) {
+        // With the help of all above implementation - we will have inside "data" all the data needed;
         String[] data = readFileUsingScanner(FILE_NAME); // inside main() array's data is data from file FILE_NAME
+        System.out.println(data); // output data -> but only Object's name and address;
+
+
 
 
         // ******************************* HIDES PREVIOUS LESSONS' TASKS TO THE COMMENTS *******************************
