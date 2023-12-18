@@ -10,6 +10,7 @@ import com.example.school.section.course.AQA_JavaBuilder;
 import java.io.File; // auto import, when input to the Scanner object with type "file"
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -34,13 +35,10 @@ public class Main {
             } catch (NoSuchElementException e) {            // exception for case if no more lines in the nextLine();
                 finished = true;                            // when the exception been caught - change "finished" property to the "true"
             }
-
-
         } while (!finished);
 
-
-        scanner.close();                                    // close the "Scanner";
-        return null;
+        scanner.close();                                                    // close the "Scanner";
+        return Arrays.copyOf(data.toArray(), data.size(), String[].class);  // return array from string from ArrayList
     };
 
     public static void main(String[] args) {
