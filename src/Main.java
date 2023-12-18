@@ -43,12 +43,17 @@ public class Main {
 
     public static void main(String[] args) {
         // With the help of all above implementation - we will have inside "data" all the data needed;
-        String[] data = readFileUsingScanner(FILE_NAME); // inside main() array's data is data from file FILE_NAME
-        System.out.println(data); // output data -> but only Object's name and address;
+        String[] data = readFileUsingScanner(FILE_NAME);    // inside main() array's data is data from file FILE_NAME
+        System.out.println(data);                           // output data -> but only Object's name and address;
 
-        for (int i = 1; i < data.length; i++) { // implements the "for" loop for array's line by line traverse;
-            var pieces = data[i].split(";"); // split the array to the lines: if there is no regex ";" - method return the line -> then put the function into var "pieces";
-            Student student = null; // implements the Object "student"
+        for (int i = 1; i < data.length; i++) {             // implements the "for" loop for array's line by line traverse;
+            var pieces = data[i].split(";");          // split the array to the lines: if there is no regex ";" - method return the line -> then put the function into var "pieces";
+            Student student = null;                         // implements the Object "student"
+            switch (pieces[6].toLowerCase()) {              // implements SWITCH statement, which get element with index = 6 (englishLevel) + transform data to the lower case;
+                case "pm":                                  // implements case for students in PM field
+                    student = new PM(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3], Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7], Boolean.parseBoolean(pieces[8]));
+                    break;
+            }
         }
 
 
