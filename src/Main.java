@@ -170,39 +170,43 @@ public class Main {
         System.out.println("************************************************************************************");
         System.out.println();
 
-        System.out.println("************************************************************************************");
-        System.out.println("S H O W   P R O P E R T I E S   F O R    C O U R S E S // USING STRING BUILDER");
-        System.out.println();
+//        System.out.println("************************************************************************************");
+//        System.out.println("S H O W   P R O P E R T I E S   F O R    C O U R S E S // USING STRING BUILDER");
+//        System.out.println();
+//
+//        System.out.println(" ----------- 1st variant \"String Concat (+)\" - class: \"AQA_JavaBuilder\"------------- ");
+//        var aqaJavaToS = new AQA_JavaBuilder();
+//        System.out.println(aqaJavaToS);
+//        System.out.println(" ----------------------------------------------------------------------------------- ");
+//        System.out.println();
+//
+//        System.out.println(" -------- 2nd variant \"String Concat (+) and super.toString()\" - class: \"QA\"-------- ");
+//        QA qaToS = new QA(0, "", "", "", false, 0, "", "", false);
+//        System.out.println(qaToS);
+//        System.out.println(" ----------------------------------------------------------------------------------- ");
+//        System.out.println();
+//
+//        System.out.println(" -------------------- 3rd variant \"StringBuffer\" - class: \"Dev\"--------------------- ");
+//        var devToS = new Dev(0, "", "", "", false, 0, "", false);
+//        System.out.println(devToS);
+//        System.out.println(" ----------------------------------------------------------------------------------- ");
+//        System.out.println();
+//
+//        System.out.println(" -------------- 4th variant \"StringBuilder (JDK 1.5)\" - class: \"UIUX\"--------------- ");
+//        var uiuxToS = new UIUX(0, "", "", "", false, 0, "", false);
+//        System.out.println(uiuxToS);
+//        System.out.println(" ----------------------------------------------------------------------------------- ");
+//        System.out.println();
+//
+//        System.out.println(" --------------- 5th variant \"StringJoiner (JDK 1.8)\" - class: \"PM\"----------------- ");
+//        var pmToS = new PM(0, "", "", "", false, 0, "", false);
+//        System.out.println(pmToS);
+//        System.out.println(" ----------------------------------------------------------------------------------- ");
+//        System.out.println("************************************************************************************");
+//        System.out.println();
 
-        System.out.println(" ----------- 1st variant \"String Concat (+)\" - class: \"AQA_JavaBuilder\"------------- ");
-        var aqaJavaToS = new AQA_JavaBuilder();
-        System.out.println(aqaJavaToS);
-        System.out.println(" ----------------------------------------------------------------------------------- ");
-        System.out.println();
 
-        System.out.println(" -------- 2nd variant \"String Concat (+) and super.toString()\" - class: \"QA\"-------- ");
-        QA qaToS = new QA(0, "", "", "", false, 0, "", "", false);
-        System.out.println(qaToS);
-        System.out.println(" ----------------------------------------------------------------------------------- ");
-        System.out.println();
 
-        System.out.println(" -------------------- 3rd variant \"StringBuffer\" - class: \"Dev\"--------------------- ");
-        var devToS = new Dev(0, "", "", "", false, 0, "", false);
-        System.out.println(devToS);
-        System.out.println(" ----------------------------------------------------------------------------------- ");
-        System.out.println();
 
-        System.out.println(" -------------- 4th variant \"StringBuilder (JDK 1.5)\" - class: \"UIUX\"--------------- ");
-        var uiuxToS = new UIUX(0, "", "", "", false, 0, "", false);
-        System.out.println(uiuxToS);
-        System.out.println(" ----------------------------------------------------------------------------------- ");
-        System.out.println();
-
-        System.out.println(" --------------- 5th variant \"StringJoiner (JDK 1.8)\" - class: \"PM\"----------------- ");
-        var pmToS = new PM(0, "", "", "", false, 0, "", false);
-        System.out.println(pmToS);
-        System.out.println(" ----------------------------------------------------------------------------------- ");
-        System.out.println("************************************************************************************");
-        System.out.println();
     }
 }

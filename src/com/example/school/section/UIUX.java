@@ -44,13 +44,15 @@ public class UIUX extends Student implements EnglishCourse {
         System.out.println("Welcome to " + EnglishGroup.Group_2 + "! Your lessons will be each Sunday 3:00-4:00 PM PST");
     }
 
-    @Override // Generates String.Builder using 4th variant "StringBuilder (JDK 1.5)"
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("UIUX{");
-        sb.append("fieldUIUX='").append(fieldUIUX).append('\'');
-        sb.append(", englishLevel='").append(englishLevel).append('\'');
-        sb.append(", weekendIsSuitable=").append(weekendIsSuitable);
-        sb.append('}');
-        return sb.toString();
-    }
+    // HIDE TO COMMENTS FOR SEPARATE TASK TO USE DIFF STRING BUILDERS
+//    @Override // Generates String.Builder using 4th variant "StringBuilder (JDK 1.5)"
+//    public String toString() {
+//        final StringBuilder sb = new StringBuilder("UIUX{");
+//        sb.append("fieldUIUX='").append(fieldUIUX).append('\'');
+//        sb.append(", englishLevel='").append(englishLevel).append('\'');
+//        sb.append(", weekendIsSuitable=").append(weekendIsSuitable);
+//        sb.append('}');
+//        return sb.toString();
+//    }
+
 }

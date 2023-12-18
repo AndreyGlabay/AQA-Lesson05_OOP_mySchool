@@ -74,20 +74,23 @@ public class AQA_JavaBuilder {
         return new AQA_Java(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount, fieldQA, englishLevel, weekendIsSuitable, hasComExperienceInTheField, yearsOfComExperience);
     }
 
-    @Override // Generates String.Builder using 1st variant "String Concat (+)"
-    public String toString() {
-        return "AQA_JavaBuilder{" +
-                "\n\t studentId=" + studentId +
-                ", \n\t studentName='" + studentName + '\'' +
-                ", \n\t studentPhone='" + studentPhone + '\'' +
-                ", \n\t studentMail='" + studentMail + '\'' +
-                ", \n\t previouslyFinishedThisSchool=" + previouslyFinishedThisSchool +
-                ", \n\t discount=" + discount +
-                ", \n\t fieldQA='" + fieldQA + '\'' +
-                ", \n\t englishLevel='" + englishLevel + '\'' +
-                ", \n\t weekendIsSuitable=" + weekendIsSuitable +
-                ", \n\t hasComExperienceInTheField=" + hasComExperienceInTheField +
-                ", \n\t yearsOfComExperience=" + yearsOfComExperience +
-                "\n\t }";
-    }
+    // HIDE TO COMMENTS FOR SEPARATE TASK TO USE DIFF STRING BUILDERS
+//    @Override // Generates String.Builder using 1st variant "String Concat (+)"
+//    public String toString() {
+//        return "AQA_JavaBuilder{" +
+//                "\n\t studentId=" + studentId +
+//                ", \n\t studentName='" + studentName + '\'' +
+//                ", \n\t studentPhone='" + studentPhone + '\'' +
+//                ", \n\t studentMail='" + studentMail + '\'' +
+//                ", \n\t previouslyFinishedThisSchool=" + previouslyFinishedThisSchool +
+//                ", \n\t discount=" + discount +
+//                ", \n\t fieldQA='" + fieldQA + '\'' +
+//                ", \n\t englishLevel='" + englishLevel + '\'' +
+//                ", \n\t weekendIsSuitable=" + weekendIsSuitable +
+//                ", \n\t hasComExperienceInTheField=" + hasComExperienceInTheField +
+//                ", \n\t yearsOfComExperience=" + yearsOfComExperience +
+//                "\n\t }";
+//    }
+
+
 }

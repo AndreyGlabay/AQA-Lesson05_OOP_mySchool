@@ -47,12 +47,15 @@ public class PM extends Student implements EnglishCourse {
         System.out.println("Welcome to " + EnglishGroup.Group_2 + "! Your lessons will be each Sunday 3:00-4:00 PM PST");
     }
 
-    @Override // Generates String.Builder using 5th variant "StringJoiner (JDK 1.8)"
-    public String toString() {
-        return new StringJoiner(", ", PM.class.getSimpleName() + "[", "]")
-                .add("fieldPM='" + fieldPM + "'")
-                .add("englishLevel='" + englishLevel + "'")
-                .add("weekendIsSuitable=" + weekendIsSuitable)
-                .toString();
-    }
+    // HIDE TO COMMENTS FOR SEPARATE TASK TO USE DIFF STRING BUILDERS
+//    @Override // Generates String.Builder using 5th variant "StringJoiner (JDK 1.8)"
+//    public String toString() {
+//        return new StringJoiner(", ", PM.class.getSimpleName() + "[", "]")
+//                .add("fieldPM='" + fieldPM + "'")
+//                .add("englishLevel='" + englishLevel + "'")
+//                .add("weekendIsSuitable=" + weekendIsSuitable)
+//                .toString();
+//    }
+
+
 }
