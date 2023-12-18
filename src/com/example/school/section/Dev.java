@@ -62,17 +62,15 @@ public class Dev extends Student implements EnglishCourse {
 
     @Override
     public String toString() {
-        return "Dev{" +
+        return "Dev {" +
                 "id='" + getStudentId() + '\'' +
-                ", Name='" + getStudentName() + '\'' +
-                ", Phone='" + getStudentPhone() + '\'' +
-                ", Email='" + getStudentMail() + '\'' +
-                ", previouslyFinishedThisSchool=" + previouslyFinishedThisSchool +
-                ", discount=" + previouslyFinishedThisSchool + '%' +
-                ", fieldDev='" + fieldDev + '\'' +
-                ", englishLevel='" + englishLevel + '\'' +
-                ", weekendIsSuitable=" + weekendIsSuitable +
-
-                "} " + super.toString();
+                ",  Name='" + getStudentName() + '\'' +
+                ",  Phone='" + getStudentPhone() + '\'' +
+                ",  Email='" + getStudentMail() + '\'' +
+                ",  previouslyFinishedThisSchool = " + previouslyFinishedThisSchool +
+                " -> discount = " + getDiscount() + '%' +
+                ",  englishLevel='" + englishLevel + '\'' +
+                ",  weekendIsSuitable=" + weekendIsSuitable +
+                "}   " + super.toString();
     }
 }

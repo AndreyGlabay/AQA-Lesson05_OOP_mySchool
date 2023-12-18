@@ -19,20 +19,19 @@ public class QA extends Student implements EnglishCourse {
             String englishLevel,
             boolean weekendIsSuitable) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
-        this.fieldQA = fieldQA;
         this.englishLevel = englishLevel;
         this.weekendIsSuitable = weekendIsSuitable;
     }
 
 
 
-    public String getFieldQA() {
-        return fieldQA;
-    }
-
-    public void setFieldQA(String fieldQA) {
-        this.fieldQA = fieldQA;
-    }
+//    public String getFieldQA() {
+//        return fieldQA;
+//    }
+//
+//    public void setFieldQA(String fieldQA) {
+//        this.fieldQA = fieldQA;
+//    }
 
     @Override
     public void message(){
@@ -41,7 +40,6 @@ public class QA extends Student implements EnglishCourse {
         System.out.println("   1401.AQA Engineer (Java);");
         System.out.println("   1402.AQA Engineer (JavaScript);");
         System.out.println("   1403.AQA Engineer (Python);");
-
     }
 
     @Override
@@ -67,17 +65,15 @@ public class QA extends Student implements EnglishCourse {
 
     @Override
     public String toString() {
-        return "QA{" +
+        return "QA {" +
                 "id='" + getStudentId() + '\'' +
-                ", Name='" + getStudentName() + '\'' +
-                ", Phone='" + getStudentPhone() + '\'' +
-                ", Email='" + getStudentMail() + '\'' +
-                ", previouslyFinishedThisSchool=" + previouslyFinishedThisSchool +
-                ", discount=" + previouslyFinishedThisSchool + '%' +
-                ", fieldQA='" + fieldQA + '\'' +
-                ", englishLevel='" + englishLevel + '\'' +
-                ", weekendIsSuitable=" + weekendIsSuitable +
-
-                "} " + super.toString();
+                ",  Name='" + getStudentName() + '\'' +
+                ",  Phone='" + getStudentPhone() + '\'' +
+                ",  Email='" + getStudentMail() + '\'' +
+                ",  previouslyFinishedThisSchool = " + previouslyFinishedThisSchool +
+                " -> discount = " + getDiscount() + '%' +
+                ",  englishLevel='" + englishLevel + '\'' +
+                ",  weekendIsSuitable=" + weekendIsSuitable +
+                "}   " + super.toString();
     }
 }

@@ -17,6 +17,8 @@ public abstract class Student {
             int discount) {
         this.studentId = studentId;
         this.studentName = studentName;
+        this.studentPhone = studentPhone;
+        this.studentMail = studentMail;
         this.previouslyFinishedThisSchool = previouslyFinishedThisSchool;
         this.discount = discount;
     }
@@ -43,6 +45,14 @@ public void setPreviouslyFinishedThisSchool(boolean previouslyFinishedThisSchool
            setDiscount(0);
         }
 }
+
+    public void setStudentPhone(String studentPhone) {
+        this.studentPhone = studentPhone;
+    }
+
+    public void setStudentMail(String studentMail) {
+        this.studentMail = studentMail;
+    }
 
     public void setDiscount(int discount) {
         this.discount = discount;

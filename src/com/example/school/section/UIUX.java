@@ -18,6 +18,8 @@ public class UIUX extends Student implements EnglishCourse {
             String englishLevel,
             boolean weekendIsSuitable) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
+        this.englishLevel = englishLevel;
+        this.weekendIsSuitable = weekendIsSuitable;
     }
 
     public String getFieldUIUX() {
@@ -58,17 +60,15 @@ public class UIUX extends Student implements EnglishCourse {
 
     @Override
     public String toString() {
-        return "UIUX{" +
+        return "UIUX {" +
                 "id='" + getStudentId() + '\'' +
-                ", Name='" + getStudentName() + '\'' +
-                ", Phone='" + getStudentPhone() + '\'' +
-                ", Email='" + getStudentMail() + '\'' +
-                ", previouslyFinishedThisSchool=" + previouslyFinishedThisSchool +
-                ", discount=" + previouslyFinishedThisSchool + '%' +
-                ", fieldUIUX='" + fieldUIUX + '\'' +
-                ", englishLevel='" + englishLevel + '\'' +
-                ", weekendIsSuitable=" + weekendIsSuitable +
-
-                "} " + super.toString();
+                ",  Name='" + getStudentName() + '\'' +
+                ",  Phone='" + getStudentPhone() + '\'' +
+                ",  Email='" + getStudentMail() + '\'' +
+                ",  previouslyFinishedThisSchool = " + previouslyFinishedThisSchool +
+                " -> discount = " + getDiscount() + '%' +
+                ",  englishLevel='" + englishLevel + '\'' +
+                ",  weekendIsSuitable=" + weekendIsSuitable +
+                "}   " + super.toString();
     }
 }
