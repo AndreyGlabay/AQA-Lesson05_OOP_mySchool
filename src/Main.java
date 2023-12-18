@@ -8,15 +8,20 @@ import com.example.school.section.course.AQA_Java;
 import com.example.school.section.course.AQA_JavaBuilder;
 
 import java.io.File; // auto import, when input to the Scanner object with type "file"
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
 
     private static final String FILE_NAME = "resources/students.csv"; // add the constant FILE_NAME which has property of file, that should be read
 
-    static String[] readFileUsingScanner(String fileName){ // add static method, which read a file using scanner return String Array
-        var file = new File(fileName); // create an object with type "file"
-        var scanner = new Scanner(file); // input file to the Scanner
+    static String[] readFileUsingScanner(String fileName){  // add static method, which read a file using scanner return String Array
+        var file = new File(fileName);                      // create an object with type "file"
+        try {                                               // surround the function with TRY/CATCH
+            var scanner = new Scanner(file);                // input file to the Scanner
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         return null;
     };
 
