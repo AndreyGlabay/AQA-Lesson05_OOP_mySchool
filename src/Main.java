@@ -46,6 +46,11 @@ public class Main {
         String[] data = readFileUsingScanner(FILE_NAME); // inside main() array's data is data from file FILE_NAME
         System.out.println(data); // output data -> but only Object's name and address;
 
+        for (int i = 1; i < data.length; i++) { // implements the "for" loop for array's line by line traverse;
+            var pieces = data[i].split(";"); // split the array to the lines: if there is no regex ";" - method return the line -> then put the function into var "pieces";
+
+        }
+
 
 
 
