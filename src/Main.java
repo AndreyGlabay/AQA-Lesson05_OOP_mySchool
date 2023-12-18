@@ -9,6 +9,7 @@ import com.example.school.section.course.AQA_JavaBuilder;
 
 import java.io.File; // auto import, when input to the Scanner object with type "file"
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -17,6 +18,7 @@ public class Main {
     private static final String FILE_NAME = "resources/students.csv"; // add the constant FILE_NAME which has property of file, that should be read
 
     static String[] readFileUsingScanner(String fileName){  // add static method, which read a file using scanner return String Array;
+        ArrayList<String> data = new ArrayList<>();         // implement ArrayList for realize the possibility to add new line to the "empty" Array;
         var file = new File(fileName);                      // create an object with type "file";
         Scanner scanner = null;                             // take "Scanner" out of TRY/CATCH;
         try {                                               // surround the function with TRY/CATCH;
