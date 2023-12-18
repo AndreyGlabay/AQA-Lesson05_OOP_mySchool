@@ -50,8 +50,17 @@ public class Main {
             var pieces = data[i].split(";");          // split the array to the lines: if there is no regex ";" - method return the line -> then put the function into var "pieces";
             Student student = null;                         // implements the Object "student"
             switch (pieces[6].toLowerCase()) {              // implements SWITCH statement, which get element with index = 6 (englishLevel) + transform data to the lower case;
-                case "pm":                                  // implements case for students in PM field
+                case "pm":                                  // implements case for students studying PM field
                     student = new PM(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3], Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7], Boolean.parseBoolean(pieces[8]));
+                    break;
+                case "dev":                                  // implements case for students studying Dev field
+                    student = new Dev(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3], Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7], Boolean.parseBoolean(pieces[8]));
+                    break;
+                case "uiux":                                  // implements case for students studying UI/UX field
+                    student = new UIUX(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3], Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7], Boolean.parseBoolean(pieces[8]));
+                    break;
+                case "qa":                                  // implements case for students studying QA field
+                    student = new QA(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3], Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7], Boolean.parseBoolean(pieces[8]));
                     break;
             }
         }
