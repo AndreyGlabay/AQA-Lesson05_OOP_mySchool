@@ -23,8 +23,6 @@ public class QA extends Student implements EnglishCourse {
         this.weekendIsSuitable = weekendIsSuitable;
     }
 
-
-
     public String getFieldQA() {
         return fieldQA;
     }
@@ -65,7 +63,7 @@ public class QA extends Student implements EnglishCourse {
 
     @Override
     public String toString() {
-        return "QA {" +
+        return "QA { " +
                 "id='" + getStudentId() + '\'' +
                 ",  Name='" + getStudentName() + '\'' +
                 ",  Phone='" + getStudentPhone() + '\'' +
@@ -74,6 +72,6 @@ public class QA extends Student implements EnglishCourse {
                 " -> discount = " + getDiscount() + '%' +
                 ",  englishLevel='" + englishLevel + '\'' +
                 ",  weekendIsSuitable=" + weekendIsSuitable +
-                "}   " + super.toString();
+                " }   " + super.toString();
     }
 }

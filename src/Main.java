@@ -7,12 +7,12 @@ import com.example.school.section.UIUX;
 //import com.example.school.section.course.AQA_Java;        // ******* TURNED OFF FOR THE TASK - READ CSV-FILE WITH SCANNER ******* //
 //import com.example.school.section.course.AQA_JavaBuilder; // ******* TURNED OFF FOR THE TASK - READ CSV-FILE WITH SCANNER ******* //
 
-import java.io.File; // auto import, when input to the Scanner object with type "file"
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import java.io.File;                        // auto import, when input to the Scanner object with type "file"
+import java.io.FileNotFoundException;       // auto import
+import java.util.ArrayList;                 // auto import
+import java.util.Arrays;                    // auto import
+import java.util.NoSuchElementException;    // auto import
+import java.util.Scanner;                   // auto import
 
 public class Main {
 
@@ -24,8 +24,8 @@ public class Main {
         Scanner scanner = null;                             // take "Scanner" out of TRY/CATCH;
         try {                                               // surround the function with TRY/CATCH;
             scanner = new Scanner(file);                    // input file to the Scanner;
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+        } catch (FileNotFoundException e) {                 // if catch the exemption ->
+            throw new RuntimeException(e);                  // -> run RuntimeException(e);
         }
 
         boolean finished = false;                           // implement boolean var "finished", which has property "false" so far as there is smth to read
@@ -41,9 +41,9 @@ public class Main {
         return Arrays.copyOf(data.toArray(), data.size(), String[].class);  // return array from string from ArrayList;
     };
 
+    // all implementations made above allows to have inside "data" - all the data needed;
     public static void main(String[] args) {
-        // With the help of all above implementation - we will have inside "data" all the data needed;
-        String[] data = readFileUsingScanner(FILE_NAME);    // inside main() array's data is data from file FILE_NAME
+        String[] data = readFileUsingScanner(FILE_NAME);    // array's data is data from file FILE_NAME
         System.out.println(data);                           // output data -> but only Object's name and address;
 
         for (int i = 1; i < data.length; i++) {             // implements the "for" loop for array's line by line traverse;
@@ -51,26 +51,31 @@ public class Main {
             Student student = null;                         // implements the Object "student"
             switch (pieces[6].toLowerCase()) {              // implements SWITCH statement, which get element with index = 6 (englishLevel) + transform data to the lower case;
                 case "pm":                                  // implements case for students studying PM field
-                    student = new PM(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3], Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7], Boolean.parseBoolean(pieces[8]));
+                    student = new PM(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
+                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
+                            Boolean.parseBoolean(pieces[8]));
                     break;
                 case "dev":                                  // implements case for students studying Dev field
-                    student = new Dev(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3], Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7], Boolean.parseBoolean(pieces[8]));
+                    student = new Dev(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
+                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
+                            Boolean.parseBoolean(pieces[8]));
                     break;
                 case "uiux":                                  // implements case for students studying UI/UX field
-                    student = new UIUX(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3], Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7], Boolean.parseBoolean(pieces[8]));
+                    student = new UIUX(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
+                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
+                            Boolean.parseBoolean(pieces[8]));
                     break;
-                case "qa":                                  // implements case for students studying QA field
-                    student = new QA(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3], Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7], Boolean.parseBoolean(pieces[8]));
+                case "qa":                                    // implements case for students studying QA field
+                    student = new QA(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
+                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
+                            Boolean.parseBoolean(pieces[8]));
                     break;
             }
-            System.out.println(student); // printout String from file "students.csv"
+            System.out.println(student);                      // printout String from file "students.csv"
         }
 
-
-
-
-        // ******************************* HIDES PREVIOUS LESSONS' TASKS TO THE COMMENTS *******************************
-
+// ******************************* TURNED OFF FOR THE TASK - READ CSV-FILE WITH SCANNER ******************************* //
+// ******************************************************************************************************************** //
 //        PM id1100_001 = new PM(1, "Anna", "+18007584412", "anna@example.com", true, 10, "" + EnglishLevel.B1_INTERMEDIATE, true);
 //        PM id1100_002 = new PM(2, "Brook", "+18008542502", "brook@sample.net", false, 0, "" + EnglishLevel.A1_BASIC, true);
 //        PM id1100_003 = new PM(3, "Claus", "+18602584697", "claus@example.com", false, 0, "" + EnglishLevel.A2_PRE_INTERMEDIATE, true);
@@ -265,6 +270,6 @@ public class Main {
 //        System.out.println(" ----------------------------------------------------------------------------------- ");
 //        System.out.println("************************************************************************************");
 //        System.out.println();
-
+// ******************************************************************************************************************** //
     }
 }

@@ -59,7 +59,7 @@ public class PM extends Student implements EnglishCourse {
 
     @Override
     public String toString() {
-        return "PM {" +
+        return "PM { " +
                 "id='" + getStudentId() + '\'' +
                 ",  Name='" + getStudentName() + '\'' +
                 ",  Phone='" + getStudentPhone() + '\'' +
@@ -68,6 +68,6 @@ public class PM extends Student implements EnglishCourse {
                 " -> discount = " + getDiscount() + '%' +
                 ",  englishLevel='" + englishLevel + '\'' +
                 ",  weekendIsSuitable=" + weekendIsSuitable +
-                "}   " + super.toString();
+                " }   " + super.toString();
     }
 }

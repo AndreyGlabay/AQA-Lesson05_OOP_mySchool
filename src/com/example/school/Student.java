@@ -23,17 +23,29 @@ public abstract class Student {
         this.discount = discount;
     }
 
-    public int getStudentId() {return studentId;}
+    public int getStudentId() {
+        return studentId;
+    }
 
-    public String getStudentName() {return studentName;}
+    public String getStudentName() {
+        return studentName;
+    }
 
-    public String getStudentPhone() {return studentPhone;}
+    public String getStudentPhone() {
+        return studentPhone;
+    }
 
-    public String getStudentMail() {return studentMail;}
+    public String getStudentMail() {
+        return studentMail;
+    }
 
-    public boolean isPreviouslyFinishedThisSchool() {return previouslyFinishedThisSchool;}
+    public boolean isPreviouslyFinishedThisSchool() {
+        return previouslyFinishedThisSchool;
+    }
 
-    public int getDiscount() {return discount;}
+    public int getDiscount() {
+        return discount;
+    }
 
 public void setPreviouslyFinishedThisSchool(boolean previouslyFinishedThisSchool) {
         this.previouslyFinishedThisSchool = previouslyFinishedThisSchool;

@@ -59,10 +59,9 @@ public class Dev extends Student implements EnglishCourse {
 //        return sb.toString();
 //    }
 
-
     @Override
     public String toString() {
-        return "Dev {" +
+        return "Dev { " +
                 "id='" + getStudentId() + '\'' +
                 ",  Name='" + getStudentName() + '\'' +
                 ",  Phone='" + getStudentPhone() + '\'' +
@@ -71,6 +70,6 @@ public class Dev extends Student implements EnglishCourse {
                 " -> discount = " + getDiscount() + '%' +
                 ",  englishLevel='" + englishLevel + '\'' +
                 ",  weekendIsSuitable=" + weekendIsSuitable +
-                "}   " + super.toString();
+                " }   " + super.toString();
     }
 }
