@@ -25,13 +25,13 @@ public class QA extends Student implements EnglishCourse {
 
 
 
-//    public String getFieldQA() {
-//        return fieldQA;
-//    }
-//
-//    public void setFieldQA(String fieldQA) {
-//        this.fieldQA = fieldQA;
-//    }
+    public String getFieldQA() {
+        return fieldQA;
+    }
+
+    public void setFieldQA(String fieldQA) {
+        this.fieldQA = fieldQA;
+    }
 
     @Override
     public void message(){
