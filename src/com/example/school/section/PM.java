@@ -47,7 +47,7 @@ public class PM extends Student implements EnglishCourse {
         System.out.println("Welcome to " + EnglishGroup.Group_2 + "! Your lessons will be each Sunday 3:00-4:00 PM PST");
     }
 
-    // HIDE TO COMMENTS FOR SEPARATE TASK TO USE DIFF STRING BUILDERS
+//     ************ HIDE THIS PART TO COMMENTS - TASK ABOUT DIFF STRING BUILDERS USAGE ************
 //    @Override // Generates String.Builder using 5th variant "StringJoiner (JDK 1.8)"
 //    public String toString() {
 //        return new StringJoiner(", ", PM.class.getSimpleName() + "[", "]")

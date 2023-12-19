@@ -1,11 +1,11 @@
 import com.example.school.Student;
-import com.example.school.additional.EnglishLevel;
+//import com.example.school.additional.EnglishLevel;        // *** TURNED OFF FOR THE TASK "READ CSV-FILE WITH SCANNER" ***
 import com.example.school.section.Dev;
 import com.example.school.section.PM;
 import com.example.school.section.QA;
 import com.example.school.section.UIUX;
-//import com.example.school.section.course.AQA_Java;        // ******* TURNED OFF FOR THE TASK - READ CSV-FILE WITH SCANNER ******* //
-//import com.example.school.section.course.AQA_JavaBuilder; // ******* TURNED OFF FOR THE TASK - READ CSV-FILE WITH SCANNER ******* //
+//import com.example.school.section.course.AQA_Java;        // *** TURNED OFF FOR THE TASK "READ CSV-FILE WITH SCANNER" ***
+//import com.example.school.section.course.AQA_JavaBuilder; // *** TURNED OFF FOR THE TASK "READ CSV-FILE WITH SCANNER" ***
 
 import java.io.File;                        // auto import, when input to the Scanner object with type "file"
 import java.io.FileNotFoundException;       // auto import
@@ -55,26 +55,26 @@ public class Main {
                             Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
                             Boolean.parseBoolean(pieces[8]));
                     break;
-                case "dev":                                  // implements case for students studying Dev field
+                case "dev": // implements case for students studying Dev field
                     student = new Dev(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
                             Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
                             Boolean.parseBoolean(pieces[8]));
                     break;
-                case "uiux":                                  // implements case for students studying UI/UX field
+                case "uiux":  // implements case for students studying UI/UX field
                     student = new UIUX(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
                             Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
                             Boolean.parseBoolean(pieces[8]));
                     break;
-                case "qa":                                    // implements case for students studying QA field
+                case "qa":  // implements case for students studying QA field
                     student = new QA(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
                             Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
                             Boolean.parseBoolean(pieces[8]));
                     break;
             }
-            System.out.println("\"My School\" student in their IT-field: " + student);                      // printout String from file "students.csv"
+            System.out.println("\"My School\" student in their IT-field: " + student);  // printout String from file "students.csv"
         }
 
-// ******************************* TURNED OFF FOR THE TASK - READ CSV-FILE WITH SCANNER ******************************* //
+// ******************************* TURNED OFF FOR THE TASK "READ CSV-FILE WITH SCANNER" ******************************* //
 // ******************************************************************************************************************** //
 //        PM id1100_001 = new PM(1, "Anna", "+18007584412", "anna@example.com", true, 10, "" + EnglishLevel.B1_INTERMEDIATE, true);
 //        PM id1100_002 = new PM(2, "Brook", "+18008542502", "brook@sample.net", false, 0, "" + EnglishLevel.A1_BASIC, true);

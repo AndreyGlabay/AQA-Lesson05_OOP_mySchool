@@ -48,7 +48,7 @@ public class Dev extends Student implements EnglishCourse {
         System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
     }
 
-    // HIDE TO COMMENTS FOR SEPARATE TASK TO USE DIFF STRING BUILDERS
+//     ************ HIDE THIS PART TO COMMENTS - TASK ABOUT DIFF STRING BUILDERS USAGE ************
 //    @Override // Generates String.Builder using 3rd variant "StringBuffer"
 //    public String toString() {
 //        final StringBuffer sb = new StringBuffer("Dev{");
