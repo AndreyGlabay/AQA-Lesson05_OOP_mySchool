@@ -71,7 +71,7 @@ public class Main {
                             Boolean.parseBoolean(pieces[8]));
                     break;
             }
-            System.out.println(student);                      // printout String from file "students.csv"
+            System.out.println("\"My School\" student in their IT-field: " + student);                      // printout String from file "students.csv"
         }
 
 // ******************************* TURNED OFF FOR THE TASK - READ CSV-FILE WITH SCANNER ******************************* //

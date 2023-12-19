@@ -71,4 +71,16 @@ public void setPreviouslyFinishedThisSchool(boolean previouslyFinishedThisSchool
     }
 
     public abstract void message();
+
+    @Override
+    public String toString() {
+        return "Student { " +
+                "id= " + getStudentId() +
+                ",  Name= " + getStudentName() +
+                ",  Phone= " + getStudentPhone() +
+                ",  Email= " + getStudentMail() +
+                ",  Previously Finished This School? = " + previouslyFinishedThisSchool +
+                " -> discount = " + getDiscount() + '%' +
+                " };   ";
+    }
 }

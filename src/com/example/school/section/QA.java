@@ -63,15 +63,9 @@ public class QA extends Student implements EnglishCourse {
 
     @Override
     public String toString() {
-        return "QA   { " +
-                "id=" + getStudentId() +
-                ",  Name='" + getStudentName() + '\'' +
-                ",  Phone='" + getStudentPhone() + '\'' +
-                ",  Email='" + getStudentMail() + '\'' +
-                ",  Previously Finished This School? = " + previouslyFinishedThisSchool +
-                " -> discount = " + getDiscount() + '%' +
-                ",  English Level= '" + englishLevel + '\'' +
-                ",  Weekends Suitable? =" + weekendIsSuitable +
-                " }   " + super.toString();
+        return "QA-" + super.toString() + "Info for English classes: { " +
+                "English Level= '" + englishLevel + '\'' +
+                ",  Weekends Suitable? = " + weekendIsSuitable +
+                " };";
     }
 }
