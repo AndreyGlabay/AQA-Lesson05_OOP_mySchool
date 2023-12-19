@@ -60,14 +60,14 @@ public class UIUX extends Student implements EnglishCourse {
     @Override
     public String toString() {
         return "UIUX { " +
-                "id='" + getStudentId() + '\'' +
+                "id=" + getStudentId() +
                 ",  Name='" + getStudentName() + '\'' +
                 ",  Phone='" + getStudentPhone() + '\'' +
                 ",  Email='" + getStudentMail() + '\'' +
-                ",  previouslyFinishedThisSchool = " + previouslyFinishedThisSchool +
+                ",  Previously Finished This School? = " + previouslyFinishedThisSchool +
                 " -> discount = " + getDiscount() + '%' +
-                ",  englishLevel='" + englishLevel + '\'' +
-                ",  weekendIsSuitable=" + weekendIsSuitable +
+                ",  English Level= '" + englishLevel + '\'' +
+                ",  Weekends Suitable? =" + weekendIsSuitable +
                 " }   " + super.toString();
     }
 }
