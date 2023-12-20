@@ -2,7 +2,7 @@
 // New "scanner" branch test
 // New "scanner" branch test
 import com.example.school.Student;
-//import com.example.school.additional.EnglishLevel;        // *** TURNED OFF FOR THE TASK "READ CSV-FILE WITH SCANNER" ***
+import com.example.school.additional.EnglishLevel;
 import com.example.school.section.Dev;
 import com.example.school.section.PM;
 import com.example.school.section.QA;
@@ -74,6 +74,12 @@ public class Main {
                     break;
             }
             System.out.println("\"My School\" student in their IT-field: " + student);  // printout String from file "students.csv"
+        }
+        System.out.println();
+
+        System.out.println("FYI: the List of pre-defined English levels:");
+        for (com.example.school.additional.EnglishLevel level : EnglishLevel.values()) {
+            System.out.println("* " + level);
         }
     }
 }
