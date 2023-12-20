@@ -15,7 +15,7 @@ public class QA extends Student implements EnglishCourse {
             String studentMail,
             boolean previouslyFinishedThisSchool,
             int discount,
-            //String fieldQA,
+            String fieldQA,
             String englishLevel,
             boolean weekendIsSuitable) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
@@ -50,21 +50,12 @@ public class QA extends Student implements EnglishCourse {
         System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
     }
 
-//     ************ HIDE THIS PART TO COMMENTS - TASK ABOUT DIFF STRING BUILDERS USAGE ************
-//    @Override // Generates String.Builder using 2nd variant "String Concat (+) and super.toString()"
-//    public String toString() {
-//        return "QA{" +
-//                "\n\t fieldQA='" + fieldQA + '\'' +
-//                ",\n\t englishLevel='" + englishLevel + '\'' +
-//                ",\n\t weekendIsSuitable=" + weekendIsSuitable +
-//                "\n\t} " + "\n\t" + super.toString();
-//    }
-
-    @Override
+    @Override // Generates String.Builder using 2nd variant "String Concat (+) and super.toString()"
     public String toString() {
-        return "QA-" + super.toString() + "Info for English classes: { " +
-                "English Level= '" + englishLevel + '\'' +
-                ",  Weekends Suitable? = " + weekendIsSuitable +
-                " };";
+        return "QA{" +
+                "\n\t fieldQA='" + fieldQA + '\'' +
+                ",\n\t englishLevel='" + englishLevel + '\'' +
+                ",\n\t weekendIsSuitable=" + weekendIsSuitable +
+                "\n\t} " + "\n\t" + super.toString();
     }
 }
