@@ -4,7 +4,6 @@ import com.example.school.additional.EnglishCourse;
 import com.example.school.additional.EnglishGroup;
 
 public class QA extends Student implements EnglishCourse {
-    String fieldQA;
     String englishLevel;
     boolean weekendIsSuitable;
 
@@ -21,14 +20,6 @@ public class QA extends Student implements EnglishCourse {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
         this.englishLevel = englishLevel;
         this.weekendIsSuitable = weekendIsSuitable;
-    }
-
-    public String getFieldQA() {
-        return fieldQA;
-    }
-
-    public void setFieldQA(String fieldQA) {
-        this.fieldQA = fieldQA;
     }
 
     @Override
@@ -49,16 +40,6 @@ public class QA extends Student implements EnglishCourse {
     public void sundayEnglishGroup(String sunEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
     }
-
-//     ************ HIDE THIS PART TO COMMENTS - TASK ABOUT DIFF STRING BUILDERS USAGE ************
-//    @Override // Generates String.Builder using 2nd variant "String Concat (+) and super.toString()"
-//    public String toString() {
-//        return "QA{" +
-//                "\n\t fieldQA='" + fieldQA + '\'' +
-//                ",\n\t englishLevel='" + englishLevel + '\'' +
-//                ",\n\t weekendIsSuitable=" + weekendIsSuitable +
-//                "\n\t} " + "\n\t" + super.toString();
-//    }
 
     @Override
     public String toString() {

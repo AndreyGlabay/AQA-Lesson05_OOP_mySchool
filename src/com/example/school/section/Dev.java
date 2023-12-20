@@ -4,7 +4,6 @@ import com.example.school.additional.EnglishCourse;
 import com.example.school.additional.EnglishGroup;
 
 public class Dev extends Student implements EnglishCourse {
-    String fieldDev;
     String englishLevel;
     boolean weekendIsSuitable;
 
@@ -20,14 +19,6 @@ public class Dev extends Student implements EnglishCourse {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
         this.englishLevel = englishLevel;
         this.weekendIsSuitable = weekendIsSuitable;
-    }
-
-    public String getFieldDev() {
-        return fieldDev;
-    }
-
-    public void setFieldDev(String fieldDev) {
-        this.fieldDev = fieldDev;
     }
 
     @Override
@@ -47,17 +38,6 @@ public class Dev extends Student implements EnglishCourse {
     public void sundayEnglishGroup(String sunEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
     }
-
-//     ************ HIDE THIS PART TO COMMENTS - TASK ABOUT DIFF STRING BUILDERS USAGE ************
-//    @Override // Generates String.Builder using 3rd variant "StringBuffer"
-//    public String toString() {
-//        final StringBuffer sb = new StringBuffer("Dev{");
-//        sb.append("fieldDev='").append(fieldDev).append('\'');
-//        sb.append(", englishLevel='").append(englishLevel).append('\'');
-//        sb.append(", weekendIsSuitable=").append(weekendIsSuitable);
-//        sb.append('}');
-//        return sb.toString();
-//    }
 
     @Override
     public String toString() {

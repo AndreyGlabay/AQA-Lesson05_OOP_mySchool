@@ -4,7 +4,6 @@ import com.example.school.additional.EnglishCourse;
 import com.example.school.additional.EnglishGroup;
 
 public class UIUX extends Student implements EnglishCourse {
-    String fieldUIUX;
     String englishLevel;
     boolean weekendIsSuitable;
 
@@ -22,14 +21,6 @@ public class UIUX extends Student implements EnglishCourse {
         this.weekendIsSuitable = weekendIsSuitable;
     }
 
-    public String getFieldUIUX() {
-        return fieldUIUX;
-    }
-
-    public void setFieldUIUX(String fieldUIUX) {
-        this.fieldUIUX = fieldUIUX;
-    }
-
     @Override
     public void message(){
         System.out.println("There are available Courses: ");
@@ -45,17 +36,6 @@ public class UIUX extends Student implements EnglishCourse {
     public void sundayEnglishGroup(String sunEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_2 + "! Your lessons will be each Sunday 3:00-4:00 PM PST");
     }
-
-//         ************ HIDE THIS PART TO COMMENTS - TASK ABOUT DIFF STRING BUILDERS USAGE ************
-//    @Override // Generates String.Builder using 4th variant "StringBuilder (JDK 1.5)"
-//    public String toString() {
-//        final StringBuilder sb = new StringBuilder("UIUX{");
-//        sb.append("fieldUIUX='").append(fieldUIUX).append('\'');
-//        sb.append(", englishLevel='").append(englishLevel).append('\'');
-//        sb.append(", weekendIsSuitable=").append(weekendIsSuitable);
-//        sb.append('}');
-//        return sb.toString();
-//    }
 
     @Override
     public String toString() {

@@ -2,10 +2,8 @@ package com.example.school.section;
 import com.example.school.Student;
 import com.example.school.additional.EnglishCourse;
 import com.example.school.additional.EnglishGroup;
-import java.util.StringJoiner;
 
 public class PM extends Student implements EnglishCourse {
-    String fieldPM;
     public String englishLevel;
     public boolean weekendIsSuitable;
 
@@ -23,14 +21,6 @@ public class PM extends Student implements EnglishCourse {
         this.weekendIsSuitable = weekendIsSuitable;
     }
 
-    public String getFieldPM() {
-        return fieldPM;
-    }
-
-    public void setFieldPM(String fieldPM) {
-        this.fieldPM = fieldPM;
-    }
-
     @Override
     public void message(){
         System.out.println("There are available Courses: ");
@@ -46,16 +36,6 @@ public class PM extends Student implements EnglishCourse {
     public void sundayEnglishGroup(String sunEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_2 + "! Your lessons will be each Sunday 3:00-4:00 PM PST");
     }
-
-//     ************ HIDE THIS PART TO COMMENTS - TASK ABOUT DIFF STRING BUILDERS USAGE ************
-//    @Override // Generates String.Builder using 5th variant "StringJoiner (JDK 1.8)"
-//    public String toString() {
-//        return new StringJoiner(", ", PM.class.getSimpleName() + "[", "]")
-//                .add("fieldPM='" + fieldPM + "'")
-//                .add("englishLevel='" + englishLevel + "'")
-//                .add("weekendIsSuitable=" + weekendIsSuitable)
-//                .toString();
-//    }
 
     @Override
     public String toString() {
