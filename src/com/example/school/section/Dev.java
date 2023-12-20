@@ -22,14 +22,6 @@ public class Dev extends Student implements EnglishCourse {
     }
 
     @Override
-    public void message(){
-        System.out.println("There are available Courses: ");
-        System.out.println("   1201.Software Developer (Java);");
-        System.out.println("   1202.Software Developer (JavaScript);");
-        System.out.println("   1203.Software Developer (Python);");
-    }
-
-    @Override
     public void saturdayEnglishGroup(String satEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_3 + "! Your lessons will be each Saturday 1:00-2:00 PM PST");
     }

@@ -22,12 +22,6 @@ public class UIUX extends Student implements EnglishCourse {
     }
 
     @Override
-    public void message(){
-        System.out.println("There are available Courses: ");
-        System.out.println("   1300.UI/UX designer");
-    }
-
-    @Override
     public void saturdayEnglishGroup(String satEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_1 + "! Your lessons will be each Saturday 11:00-12:00 AM PST");
     }

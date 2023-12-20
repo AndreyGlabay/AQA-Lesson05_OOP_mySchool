@@ -23,15 +23,6 @@ public class QA extends Student implements EnglishCourse {
     }
 
     @Override
-    public void message(){
-        System.out.println("There are available Courses: ");
-        System.out.println("   1400.com.example.school.section.QA Engineer Manual;");
-        System.out.println("   1401.AQA Engineer (Java);");
-        System.out.println("   1402.AQA Engineer (JavaScript);");
-        System.out.println("   1403.AQA Engineer (Python);");
-    }
-
-    @Override
     public void saturdayEnglishGroup(String satEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_3 + "! Your lessons will be each Saturday 1:00-2:00 PM PST");
     }

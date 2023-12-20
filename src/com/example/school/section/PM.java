@@ -22,12 +22,6 @@ public class PM extends Student implements EnglishCourse {
     }
 
     @Override
-    public void message(){
-        System.out.println("There are available Courses: ");
-        System.out.println("   1100.Project Management");
-    }
-
-    @Override
     public void saturdayEnglishGroup(String satEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_1 + "! Your lessons will be each Saturday 11:00-12:00 AM PST");
     }
