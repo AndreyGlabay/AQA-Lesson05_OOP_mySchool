@@ -1,6 +1,3 @@
-// New "scanner" branch test
-// New "scanner" branch test
-// New "scanner" branch test
 import com.example.school.Student;
 import com.example.school.additional.EnglishLevel;
 import com.example.school.section.Dev;
