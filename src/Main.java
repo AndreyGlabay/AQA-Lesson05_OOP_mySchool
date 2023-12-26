@@ -52,8 +52,6 @@ public class Main {
 
         Stream<String> lines = Files.lines(Paths.get(FILE_NAME));
         lines.forEach(System.out::println);
-
-
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
@@ -85,14 +83,12 @@ public class Main {
                     break;
             }
 
-
             students.add(student); // implement method "add()", which add data for Linked List
 
-//            System.out.println("\"My School\" student in their IT-field: " + student); // hide to comments
         }
 
-        System.out.println("STUDENTS: " + students);
-        System.out.println("Number of students: " + students.size());
+        System.out.println("STUDENTS: " + students); // printout students' objects
+        System.out.println("Number of students: " + students.size()); // printout students' qty
 
 //        System.out.println("**************************************************************************");
 //        System.out.println("FYI: the List of pre-defined English levels:");
@@ -100,7 +96,5 @@ public class Main {
 //            System.out.println("* " + level);
 //        }
 
-
     }
-
 }
