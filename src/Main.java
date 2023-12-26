@@ -4,19 +4,24 @@ import com.example.school.section.Dev;
 import com.example.school.section.PM;
 import com.example.school.section.QA;
 import com.example.school.section.UIUX;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class Main {
 
     private static final String FILE_NAME = "resources/students.csv";
 
     static String[] readFileUsingScanner(String fileName){
-        ArrayList<String> data = new ArrayList<>();
+        LinkedList<String> data = new LinkedList<>(); // change ArrayList to the LinkedList;
         var file = new File(fileName);
         Scanner scanner = null;
         try {
@@ -35,12 +40,24 @@ public class Main {
         } while (!finished);
 
         scanner.close();
-        return Arrays.copyOf(data.toArray(), data.size(), String[].class);
+        return data.toArray(new String[0]);
     };
 
-    public static void main(String[] args) {
-        String[] data = readFileUsingScanner(FILE_NAME);
-        System.out.println(data);
+    public static void main(String[] args) throws IOException {
+        // implements "List" interface (which is subclass for Collections) for students' set, with the empty list of the students
+        List<Student> students = new LinkedList<>();
+        String[] data = readFileUsingScanner(FILE_NAME); // read lines from the file
+        createStudentObjects(data, students); // read objects from the lines
+        Stream<Student> stream = students.stream(); // create stream from the objects
+
+        Stream<String> lines = Files.lines(Paths.get(FILE_NAME));
+        lines.forEach(System.out::println);
+
+
+    }
+
+    private  static void createStudentObjects(String[] data, List<Student> students) {
+
 
         for (int i = 1; i < data.length; i++) {
             var pieces = data[i].split(";");
@@ -67,13 +84,23 @@ public class Main {
                             Boolean.parseBoolean(pieces[8]));
                     break;
             }
-            System.out.println("\"My School\" student in their IT-field: " + student);
-        }
-        System.out.println();
 
-        System.out.println("FYI: the List of pre-defined English levels:");
-        for (com.example.school.additional.EnglishLevel level : EnglishLevel.values()) {
-            System.out.println("* " + level);
+
+            students.add(student); // implement method "add()", which add data for Linked List
+
+//            System.out.println("\"My School\" student in their IT-field: " + student); // hide to comments
         }
+
+        System.out.println("STUDENTS: " + students);
+        System.out.println("Number of students: " + students.size());
+
+//        System.out.println("**************************************************************************");
+//        System.out.println("FYI: the List of pre-defined English levels:");
+//        for (com.example.school.additional.EnglishLevel level : EnglishLevel.values()) {
+//            System.out.println("* " + level);
+//        }
+
+
     }
+
 }
