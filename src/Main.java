@@ -12,16 +12,17 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.NoSuchElementException; // (step 2.2) import manually, when modify ArrayList to the LinkedList
 import java.util.Scanner;
 import java.util.stream.Stream;
+import java.util.Stack; // (step 2.3) import manually for put all objects to the Stack
 
 public class Main {
 
     private static final String FILE_NAME = "resources/students.csv";
 
     static String[] readFileUsingScanner(String fileName){
-        LinkedList<String> data = new LinkedList<>(); // change ArrayList to the LinkedList;
+        LinkedList<String> data = new LinkedList<>(); // (step 2.2) change ArrayList to the LinkedList;
         var file = new File(fileName);
         Scanner scanner = null;
         try {
@@ -44,14 +45,23 @@ public class Main {
     };
 
     public static void main(String[] args) throws IOException {
-        // implements "List" interface (which is subclass for Collections) for students' set, with the empty list of the students
+        // (step 2.1) implements "List" interface (which is subclass for Collections) for ->
+        //            -> students' set, with the empty list of the students
         List<Student> students = new LinkedList<>();
-        String[] data = readFileUsingScanner(FILE_NAME); // read lines from the file
-        createStudentObjects(data, students); // read objects from the lines
-        Stream<Student> stream = students.stream(); // create stream from the objects
+        String[] data = readFileUsingScanner(FILE_NAME);    // (step 2.1) read lines from the file
+        createStudentObjects(data, students);               // (step 2.1) read objects from the lines
+        Stream<Student> stream = students.stream();         // (step 2.1) create Stream from the objects
 
-        Stream<String> lines = Files.lines(Paths.get(FILE_NAME));
-        lines.forEach(System.out::println);
+        Stack<Student> studentStack = new Stack<>();        // (step 2.3) modify List to the Stack;
+        studentStack.addAll(students);                      // (step 2.3) add all elements from the List to the Stack;
+
+        System.out.println("Elements in the Stack :");      // (step 2.3) check Stack functionality:
+        while (!studentStack.isEmpty()) {                   // (step 2.3) until Stack is not empty ->
+            System.out.println(studentStack.pop());         // (step 2.3) -> take of an element from the Stack and return it;
+        }
+
+        Stream<String> lines = Files.lines(Paths.get(FILE_NAME)); // (step 2.2) get string lines from the file
+        lines.forEach(System.out::println);                       // (step 2.2) printout each line
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
@@ -83,12 +93,20 @@ public class Main {
                     break;
             }
 
-            students.add(student); // implement method "add()", which add data for Linked List
+            students.add(student); // (step 2.1) implement method "add()", which add data for Linked List
 
         }
 
-        System.out.println("STUDENTS: " + students); // printout students' objects
-        System.out.println("Number of students: " + students.size()); // printout students' qty
+        System.out.println("STUDENTS: " + students); // (step 2.1) Check LinkedList: printout students' objects
+        System.out.println("Number of students: " + students.size()); // (step 2.1) Check LinkedList: printout students' qty
+
+
+
+
+
+
+
+
 
 //        System.out.println("**************************************************************************");
 //        System.out.println("FYI: the List of pre-defined English levels:");
