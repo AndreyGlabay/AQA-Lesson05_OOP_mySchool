@@ -52,14 +52,37 @@ public class Main {
         createStudentObjects(data, students);               // (step 2.1) read objects from the lines
         Stream<Student> stream = students.stream();         // (step 2.1) create Stream from the objects
 
-        Stack<Student> studentStack = new Stack<>();        // (step 2.3) modify List to the Stack of all students;
 
+
+        System.out.println();
+        System.out.println("****************************************************************************************");
+        System.out.println();
+
+        System.out.println("Elements in the Stream :");             // (step 2.2) check Stream functionality:
+        Stream<String> lines = Files.lines(Paths.get(FILE_NAME));   // (step 2.2) get string lines from the file
+        lines.forEach(System.out::println);                         // (step 2.2) printout each line
+
+
+
+
+        System.out.println();
+        System.out.println("****************************************************************************************");
+        System.out.println();
+
+
+
+        Stack<Student> studentStack = new Stack<>();        // (step 2.3) modify List to the Stack of all students
         studentStack.addAll(students);                      // (step 2.3) add all elements from the List to the Stack;
-
         System.out.println("All elements in the 1 Stack :");// (step 2.3) check Stack functionality:
         while (!studentStack.isEmpty()) {                   // (step 2.3) until Stack is not empty ->
             System.out.println(studentStack.pop());         // (step 2.3) -> take of an element from the Stack and return it;
         }
+
+
+
+
+
+
 
         System.out.println();
         System.out.println("****************************************************************************************");
@@ -82,18 +105,14 @@ public class Main {
             }
         }
 
+        System.out.println("Elements divided to the 4 Stacks:");
+        System.out.println();
         System.out.println("PM Stack: " + pmStack);         // (step 2.4) checkout pmStack;
         System.out.println("Dev Stack: " + devStack);       // (step 2.4) checkout devStack;
         System.out.println("UIUX Stack: " + uiuxStack);     // (step 2.4) checkout uiuxStack;
         System.out.println("QA Stack: " + qaStack);         // (step 2.4) checkout qaStack;
 
-        System.out.println();
-        System.out.println("****************************************************************************************");
-        System.out.println();
 
-        System.out.println("Elements in the Stream :");             // (step 2.2) check Stream functionality:
-        Stream<String> lines = Files.lines(Paths.get(FILE_NAME));   // (step 2.2) get string lines from the file
-        lines.forEach(System.out::println);                         // (step 2.2) printout each line
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
@@ -129,7 +148,7 @@ public class Main {
         }
 
         System.out.println("STUDENTS: " + students); // (step 2.1) Check LinkedList: printout students' objects
-        System.out.println("Number of students: " + students.size()); // (step 2.1) Check LinkedList: printout students' qty
+        System.out.println("TOTAL: " + students.size()); // (step 2.1) Check LinkedList: printout students' qty
 
 
 
