@@ -52,13 +52,21 @@ public class Main {
         createStudentObjects(data, students);               // (step 2.1) read objects from the lines
         Stream<Student> stream = students.stream();         // (step 2.1) create Stream from the objects
 
-        Stack<Student> studentStack = new Stack<>();        // (step 2.3) modify List to the Stack;
-        studentStack.addAll(students);                      // (step 2.3) add all elements from the List to the Stack;
-
-        System.out.println("Elements in the Stack :");      // (step 2.3) check Stack functionality:
-        while (!studentStack.isEmpty()) {                   // (step 2.3) until Stack is not empty ->
-            System.out.println(studentStack.pop());         // (step 2.3) -> take of an element from the Stack and return it;
-        }
+//        Stack<Student> pmStack = new Stack<>();             // (step 2.3) modify List to the Stack of PM-students;
+//        Stack<Student> devStack = new Stack<>();            // (step 2.3) modify List to the Stack of Dev-students;
+//        Stack<Student> uiuxStack = new Stack<>();           // (step 2.3) modify List to the Stack of UI/UX-students;
+//        Stack<Student> qaStack = new Stack<>();             // (step 2.3) modify List to the Stack of QA-students;
+//
+//        for (Student student : students) {
+//            switch (student.getIT)
+//        }
+//
+//        studentStack.addAll(students);                      // (step 2.3) add all elements from the List to the Stack;
+//
+//        System.out.println("Elements in the Stack :");      // (step 2.3) check Stack functionality:
+//        while (!studentStack.isEmpty()) {                   // (step 2.3) until Stack is not empty ->
+//            System.out.println(studentStack.pop());         // (step 2.3) -> take of an element from the Stack and return it;
+//        }
 
         System.out.println();
         System.out.println("****************************************************************************************");
@@ -78,22 +86,22 @@ public class Main {
             switch (pieces[6].toLowerCase()) {
                 case "pm":
                     student = new PM(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
-                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
+                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[6], pieces[7],
                             Boolean.parseBoolean(pieces[8]));
                     break;
                 case "dev":
                     student = new Dev(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
-                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
+                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[6], pieces[7],
                             Boolean.parseBoolean(pieces[8]));
                     break;
                 case "uiux":
                     student = new UIUX(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
-                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
+                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[6], pieces[7],
                             Boolean.parseBoolean(pieces[8]));
                     break;
                 case "qa":
                     student = new QA(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
-                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[7],
+                            Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[6], pieces[7],
                             Boolean.parseBoolean(pieces[8]));
                     break;
             }

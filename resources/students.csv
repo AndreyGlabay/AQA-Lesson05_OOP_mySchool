@@ -1,4 +1,4 @@
-studentId;studentName;studentPhone;studentMail;previouslyFinishedThisSchool;discount;IT-field;englishLevel;weekendIsSuitable
+studentId;studentName;studentPhone;studentMail;previouslyFinishedThisSchool;discount;ITField;englishLevel;weekendIsSuitable
 11;Aya;+17505151011;aya@probe.com;true;10;PM;A1_BASIC;true
 12;Bala;+17505151012;bala@probe.com;false;0;PM;B1_INTERMEDIATE;true
 13;Cor;+17505151013;cor@probe.com;true;10;PM;C1_ADVANCED;true
