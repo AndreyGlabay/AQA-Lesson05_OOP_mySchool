@@ -24,14 +24,6 @@ public class PM extends Student implements EnglishCourse {
         this.weekendIsSuitable = weekendIsSuitable;
     }
 
-    public String getITField() {
-        return ITField;
-    }
-
-    public void setITField(String ITField) {
-        this.ITField = "PM";
-    }
-
     @Override
     public void saturdayEnglishGroup(String satEnglishMessage) {
         System.out.println("Welcome to " + EnglishGroup.Group_1 + "! Your lessons will be each Saturday 11:00-12:00 AM PST");

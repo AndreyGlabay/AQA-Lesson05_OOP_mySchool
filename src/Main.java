@@ -52,21 +52,40 @@ public class Main {
         createStudentObjects(data, students);               // (step 2.1) read objects from the lines
         Stream<Student> stream = students.stream();         // (step 2.1) create Stream from the objects
 
-//        Stack<Student> pmStack = new Stack<>();             // (step 2.3) modify List to the Stack of PM-students;
-//        Stack<Student> devStack = new Stack<>();            // (step 2.3) modify List to the Stack of Dev-students;
-//        Stack<Student> uiuxStack = new Stack<>();           // (step 2.3) modify List to the Stack of UI/UX-students;
-//        Stack<Student> qaStack = new Stack<>();             // (step 2.3) modify List to the Stack of QA-students;
-//
-//        for (Student student : students) {
-//            switch (student.getIT)
-//        }
-//
-//        studentStack.addAll(students);                      // (step 2.3) add all elements from the List to the Stack;
-//
-//        System.out.println("Elements in the Stack :");      // (step 2.3) check Stack functionality:
-//        while (!studentStack.isEmpty()) {                   // (step 2.3) until Stack is not empty ->
-//            System.out.println(studentStack.pop());         // (step 2.3) -> take of an element from the Stack and return it;
-//        }
+        Stack<Student> studentStack = new Stack<>();        // (step 2.3) modify List to the Stack of all students;
+
+        studentStack.addAll(students);                      // (step 2.3) add all elements from the List to the Stack;
+
+        System.out.println("All elements in the 1 Stack :");// (step 2.3) check Stack functionality:
+        while (!studentStack.isEmpty()) {                   // (step 2.3) until Stack is not empty ->
+            System.out.println(studentStack.pop());         // (step 2.3) -> take of an element from the Stack and return it;
+        }
+
+        System.out.println();
+        System.out.println("****************************************************************************************");
+        System.out.println();
+
+        Stack<Student> pmStack = new Stack<>();             // (step 2.4) implement the Stack of PM-students;
+        Stack<Student> devStack = new Stack<>();            // (step 2.4) implement the Stack of Dev-students;
+        Stack<Student> uiuxStack = new Stack<>();           // (step 2.4) implement the Stack of UIUX-students;
+        Stack<Student> qaStack = new Stack<>();             // (step 2.4) implement the Stack of QA-students;
+
+        for (Student student : students) {                  // (step 2.4) take all elements and ->
+            if (student instanceof PM) {                    // (step 2.4) -> if an element is instance of PM class ->
+                pmStack.push(student);                      // (step 2.4) -> -> add the element to pmStack;
+            } else if (student instanceof Dev) {            // (step 2.4) -> if an element is instance of Dev class ->
+                devStack.push(student);                     // (step 2.4) -> -> add the element to devStack;
+            } else if (student instanceof UIUX) {           // (step 2.4) -> if an element is instance of UIUX class ->
+                uiuxStack.push(student);                    // (step 2.4) -> -> add the element to uiuxStack;
+            } else if (student instanceof QA) {             // (step 2.4) -> if an element is instance of QA class ->
+                qaStack.push(student);                      // (step 2.4) -> -> add the element to qaStack;
+            }
+        }
+
+        System.out.println("PM Stack: " + pmStack);         // (step 2.4) checkout pmStack;
+        System.out.println("Dev Stack: " + devStack);       // (step 2.4) checkout devStack;
+        System.out.println("UIUX Stack: " + uiuxStack);     // (step 2.4) checkout uiuxStack;
+        System.out.println("QA Stack: " + qaStack);         // (step 2.4) checkout qaStack;
 
         System.out.println();
         System.out.println("****************************************************************************************");
@@ -78,7 +97,6 @@ public class Main {
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
-
 
         for (int i = 1; i < data.length; i++) {
             var pieces = data[i].split(";");
