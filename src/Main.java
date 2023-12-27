@@ -60,8 +60,13 @@ public class Main {
             System.out.println(studentStack.pop());         // (step 2.3) -> take of an element from the Stack and return it;
         }
 
-        Stream<String> lines = Files.lines(Paths.get(FILE_NAME)); // (step 2.2) get string lines from the file
-        lines.forEach(System.out::println);                       // (step 2.2) printout each line
+        System.out.println();
+        System.out.println("****************************************************************************************");
+        System.out.println();
+
+        System.out.println("Elements in the Stream :");             // (step 2.2) check Stream functionality:
+        Stream<String> lines = Files.lines(Paths.get(FILE_NAME));   // (step 2.2) get string lines from the file
+        lines.forEach(System.out::println);                         // (step 2.2) printout each line
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
