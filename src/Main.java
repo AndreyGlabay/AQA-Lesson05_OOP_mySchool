@@ -113,6 +113,42 @@ public class Main {
         System.out.println("QA Stack: " + qaStack);         // (step 2.4) checkout qaStack;
 
 
+
+        System.out.println();
+        System.out.println("****************************************************************************************");
+        System.out.println();
+        System.out.println("Transform Stack Collections to the Streams: ");
+        System.out.println();
+
+        Stream<Student> pmStream = pmStack.stream();        // (step 3) implement Stream for PM Stack
+        Stream<Student> devStream = devStack.stream();      // (step 3) implement Stream for Dev Stack
+        Stream<Student> uiuxStream = uiuxStack.stream();    // (step 3) implement Stream for UIUX Stack
+        Stream<Student> qaStream = qaStack.stream();        // (step 3) implement Stream for QA Stack
+
+        System.out.println("PM Stream: ");
+        pmStream.forEach(System.out::println);              // (step 3) printout PM Stream
+        System.out.println();
+        System.out.println("Dev Stream: ");
+        devStream.forEach(System.out::println);             // (step 3) printout Dev Stream
+        System.out.println();
+        System.out.println("UIUX Stream: ");
+        uiuxStream.forEach(System.out::println);            // (step 3) printout UIUX Stream
+        System.out.println();
+        System.out.println("QA Stream: ");
+        qaStream.forEach(System.out::println);              // (step 3) printout QA Stream
+
+
+        System.out.println();
+        System.out.println("****************************************************************************************");
+        System.out.println();
+
+
+
+
+
+
+
+
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
