@@ -54,6 +54,9 @@ Andriy Glabay:
  * за допомогою методу "skip" було пропущено перщі 20 значень id = "будь-яка крапка відлику" ;
  * за допомогою методу "limit" було виведено наступні 24 значення id  (FilterOut = 24);
 
-
+(3.3) Для завдання по маппінгу було зроблено 3 мапи "Map<Integer, String>" типу:
+* для студентів-розробників devMap, де KEY = studentId, а VALUE = studentName (забезпеченне використання devStream);
+* для студентів-дизайненрів uiuxMap, де KEY = studentId, а VALUE = (studentName + studentPhone) (забезпеченне використання uiuxStream);
+* для студентів-тестувальніків qaMap, де KEY = studentId, а VALUE = (studentName + studentMail) (забезпеченне використання qaStream);
 
 

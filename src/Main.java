@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
@@ -166,9 +167,39 @@ public class Main {
         System.out.println();
         System.out.println("****************************************************************************************");
         System.out.println();
+        System.out.println("Map for Dev Students: ");
+        System.out.println();
+
+        // (step 3.3) implement mapping for Dev Students, where the key is "studentId" and the value is "studentName";
+        Map<Integer, String> devMap = devStream.collect(Collectors.toMap(
+                Student::getStudentId,
+                Student::getStudentName
+        ));
+        devMap.forEach((key, value) -> System.out.println("ID = " + key + " -> Name = " + value));
 
 
+        System.out.println();
+        System.out.println("Map for UI/UX Students: ");
+        System.out.println();
 
+        // (step 3.3) implement mapping for UIUX Students, where the key is "studentId" and the value is "studentPhone";
+        Map<Integer, String> uiuxMap = uiuxStream.collect(Collectors.toMap(
+                Student::getStudentId,
+                student -> student.getStudentName() + " by phone: " + student.getStudentPhone()
+        ));
+        uiuxMap.forEach((key, value) -> System.out.println("ID = " + key + " -> Call: " + value));
+
+
+        System.out.println();
+        System.out.println("Map for QA Students: ");
+        System.out.println();
+
+        // (step 3.3) implement mapping for QA Students, where the key is "studentId" and the value is "studentMail";
+        Map<Integer, String> qaMap = qaStream.collect(Collectors.toMap(
+                Student::getStudentId,
+                student -> student.getStudentName() + " on address: " + student.getStudentMail()
+        ));
+        qaMap.forEach((key, value) -> System.out.println("ID = " + key + " -> Mail to: " + value));
 
 
 
