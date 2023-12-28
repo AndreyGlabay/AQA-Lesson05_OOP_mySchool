@@ -125,22 +125,43 @@ public class Main {
         Stream<Student> uiuxStream = uiuxStack.stream();    // (step 3) implement Stream for UIUX Stack
         Stream<Student> qaStream = qaStack.stream();        // (step 3) implement Stream for QA Stack
 
-        System.out.println("PM Stream: ");
-        pmStream.forEach(System.out::println);              // (step 3) printout PM Stream
-        System.out.println();
-        System.out.println("Dev Stream: ");
-        devStream.forEach(System.out::println);             // (step 3) printout Dev Stream
-        System.out.println();
-        System.out.println("UIUX Stream: ");
-        uiuxStream.forEach(System.out::println);            // (step 3) printout UIUX Stream
-        System.out.println();
-        System.out.println("QA Stream: ");
-        qaStream.forEach(System.out::println);              // (step 3) printout QA Stream
+//        System.out.println("PM Stream: ");
+//        pmStream.forEach(System.out::println);              // (step 3) printout PM Stream
+//        System.out.println();
+//        System.out.println("Dev Stream: ");
+//        devStream.forEach(System.out::println);             // (step 3) printout Dev Stream
+//        System.out.println();
+//        System.out.println("UIUX Stream: ");
+//        uiuxStream.forEach(System.out::println);            // (step 3) printout UIUX Stream
+//        System.out.println();
+//        System.out.println("QA Stream: ");
+//        qaStream.forEach(System.out::println);              // (step 3) printout QA Stream
 
 
         System.out.println();
         System.out.println("****************************************************************************************");
         System.out.println();
+        System.out.println("Stream Sorting: ");
+        System.out.println();
+
+
+
+        pmStream        // (step 3.1) for PM Stream for "studentId" field implement:
+                .sorted((s1, s2) -> (int) (s1.getStudentId() - s2.getStudentId()))      // sorting with SortOrder = ASC,
+                .skip(7)                                                             // SortSkip = 7 -> skip id [11;17],
+                .limit(13)                                                      // SortOut = 13 -> show id [18;30],
+                .forEach(System.out::println);                                          // printout the Stream;
+
+
+
+        System.out.println();
+        System.out.println("****************************************************************************************");
+        System.out.println();
+        System.out.println("Stream Filtering: ");
+        System.out.println();
+
+
+
 
 
 
@@ -185,6 +206,10 @@ public class Main {
 
         System.out.println("STUDENTS: " + students); // (step 2.1) Check LinkedList: printout students' objects
         System.out.println("TOTAL: " + students.size()); // (step 2.1) Check LinkedList: printout students' qty
+
+
+
+
 
 
 
