@@ -1,5 +1,4 @@
 import com.example.school.Student;
-import com.example.school.additional.EnglishLevel;
 import com.example.school.section.Dev;
 import com.example.school.section.PM;
 import com.example.school.section.QA;
@@ -49,14 +48,21 @@ public class Main {
         createStudentObjects(data, students);               // (step 2.1) read objects from the lines
         Stream<Student> studentStream = students.stream();         // (step 2.1) create Stream from the objects
 
+        System.out.println();
+        System.out.println("****************************************************************************************");
+        System.out.println("TASK 2.1 - LinkedList implementation");
+        System.out.println();
 
+        System.out.println("STUDENTS: " + students); // (step 2.1) Check LinkedList: printout students' objects
+        System.out.println("TOTAL: " + students.size()); // (step 2.1) Check LinkedList: printout students' qty
 
         System.out.println();
         System.out.println("****************************************************************************************");
+        System.out.println("TASK 2.2 - Stream for all elements implementation");
         System.out.println();
 
         System.out.println("Elements in the Stream :");             // (step 2.2) check Stream functionality:
-        Stream<String> lines = Files.lines(Paths.get(FILE_NAME));   // (step 2.2) get string lines from the file
+        Stream<String> lines = Files.lines(Paths.get(FILE_NAME));   // (step 2.2) get string lines from the file,
         lines.forEach(System.out::println);                         // (step 2.2) printout each line
 
 
@@ -64,6 +70,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
+        System.out.println("TASK 2.3 - One general Stack implementation");
         System.out.println();
 
 
@@ -83,6 +90,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
+        System.out.println("TASK 2.4 - Multiple-Stacks implementation");
         System.out.println();
 
         Stack<Student> pmStack = new Stack<>();             // (step 2.4) implement the Stack of PM-students;
@@ -113,8 +121,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println();
-        System.out.println("Transform Stack Collections to the Streams: ");
+        System.out.println("TASK 3 - Transform Stack Collections to the Streams for resolve TASK 3.1, 3.2, 3.3");
         System.out.println();
 
         Stream<Student> pmStream = pmStack.stream();        // (step 3) implement Stream for PM Stack
@@ -122,23 +129,11 @@ public class Main {
         Stream<Student> uiuxStream = uiuxStack.stream();    // (step 3) implement Stream for UIUX Stack
         Stream<Student> qaStream = qaStack.stream();        // (step 3) implement Stream for QA Stack
 
-//        System.out.println("PM Stream: ");
-//        pmStream.forEach(System.out::println);              // (step 3) printout PM Stream
-//        System.out.println();
-//        System.out.println("Dev Stream: ");
-//        devStream.forEach(System.out::println);             // (step 3) printout Dev Stream
-//        System.out.println();
-//        System.out.println("UIUX Stream: ");
-//        uiuxStream.forEach(System.out::println);            // (step 3) printout UIUX Stream
-//        System.out.println();
-//        System.out.println("QA Stream: ");
-//        qaStream.forEach(System.out::println);              // (step 3) printout QA Stream
 
 
+        System.out.println("TASK 3.1 - Streams' Sorting");
         System.out.println();
-        System.out.println("****************************************************************************************");
-        System.out.println();
-        System.out.println("Stream Sorting: ");
+        System.out.println("PM Students Stream Sorting: ");
         System.out.println();
 
 
@@ -153,8 +148,9 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
+        System.out.println("TASK 3.2 - Streams' Filtering");
         System.out.println();
-        System.out.println("Stream Filtering: ");
+        System.out.println("All Students Stream Filtering: ");
         System.out.println();
 
         studentStream   // (step 3.2) for All Students Stream for "studentId" field implement:
@@ -166,6 +162,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
+        System.out.println("TASK 3.3 - Streams' Mapping");
         System.out.println();
         System.out.println("Map for Dev Students: ");
         System.out.println();
@@ -239,8 +236,6 @@ public class Main {
 
         }
 
-        System.out.println("STUDENTS: " + students); // (step 2.1) Check LinkedList: printout students' objects
-        System.out.println("TOTAL: " + students.size()); // (step 2.1) Check LinkedList: printout students' qty
 
 
 
@@ -254,11 +249,8 @@ public class Main {
 
 
 
-//        System.out.println("**************************************************************************");
-//        System.out.println("FYI: the List of pre-defined English levels:");
-//        for (com.example.school.additional.EnglishLevel level : EnglishLevel.values()) {
-//            System.out.println("* " + level);
-//        }
+
+
 
     }
 }
