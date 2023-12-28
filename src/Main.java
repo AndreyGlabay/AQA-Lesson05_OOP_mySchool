@@ -10,12 +10,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.NoSuchElementException; // (step 2.2) import manually, when modify ArrayList to the LinkedList
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Stream;
-import java.util.Stack; // (step 2.3) import manually for put all objects to the Stack
 
 public class Main {
 
@@ -50,7 +46,7 @@ public class Main {
         List<Student> students = new LinkedList<>();
         String[] data = readFileUsingScanner(FILE_NAME);    // (step 2.1) read lines from the file
         createStudentObjects(data, students);               // (step 2.1) read objects from the lines
-        Stream<Student> stream = students.stream();         // (step 2.1) create Stream from the objects
+        Stream<Student> studentStream = students.stream();         // (step 2.1) create Stream from the objects
 
 
 
@@ -160,8 +156,16 @@ public class Main {
         System.out.println("Stream Filtering: ");
         System.out.println();
 
+        studentStream   // (step 3.2) for All Students Stream for "studentId" field implement:
+                .filter(student -> student.getStudentId() % 2 != 0)    // filtering aprox a half (odd id only)
+                .skip(20)                                           // choose any "start point" (skip first 20 id)
+                .limit(24)                                     // FilterOut = 24 -> show 24 id
+                .forEach(System.out::println);                         // printout the Stream;
 
 
+        System.out.println();
+        System.out.println("****************************************************************************************");
+        System.out.println();
 
 
 
