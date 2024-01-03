@@ -41,7 +41,14 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         List<Student> students = new LinkedList<>();
-        String[] data = readFileUsingScanner(FILE_NAME);
+
+        var startImport = System.currentTimeMillis();       // (step 1.a) implement var for start import from CSV-file;
+        String[] data = readFileUsingScanner(FILE_NAME);    // THE MOMENT OF DATA IMPORT
+        var finishImport = System.currentTimeMillis();      // (step 1.a) implement var for start import from CSV-file;
+        var durationImport = finishImport - startImport;    // (step 1.a) implement var for shows diff. between 2 moments;
+        System.out.println();
+        System.out.println("Duration of data import from CSV-file = " + durationImport + "ms;"); // (1.a) printout the diff;
+
         createStudentObjects(data, students);
         Stream<Student> studentStream = students.stream();
 
@@ -200,7 +207,6 @@ public class Main {
                             Boolean.parseBoolean(pieces[8]));
                     break;
             }
-
             students.add(student);
         }
     }
