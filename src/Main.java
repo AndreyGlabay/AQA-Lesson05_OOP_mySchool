@@ -45,20 +45,22 @@ public class Main {
         var startImport = System.currentTimeMillis();       // (step 1.a) implement var for start data import from CSV-file;
         String[] data = readFileUsingScanner(FILE_NAME);    // THE MOMENT OF DATA IMPORT
         var finishImport = System.currentTimeMillis();      // (step 1.a) implement var for start data import from CSV-file;
-        var durationImport = finishImport - startImport;    // (step 1.a) implement var for shows diff. between 2 moments;
+        var durationImport = finishImport - startImport;    // (step 1.a) calculate diff. between 2 moments;
 
-        var startProcessing = System.currentTimeMillis();   // (step 1.b) implement var for start data processing;
+        var startCreation = System.currentTimeMillis();     // (step 1.b.1) implement var for start object creation;
         createStudentObjects(data, students);               // THE MOMENT OF OBJECTS CREATION
         Stream<Student> studentStream = students.stream();
-        var durationProcessing = System.currentTimeMillis() - startProcessing; // (step 1.b) implement var for shows diff. between 2 moments;
+        var durationCreating = System.currentTimeMillis() - startCreation; // (step 1.b.1) calculate diff. between 2 moments;
 
         System.out.println();
         System.out.println("****************************************************************************************");
         System.out.println("LinkedList implementation");
         System.out.println();
 
-        System.out.println("STUDENTS: " + students);
-        System.out.println("TOTAL: " + students.size());
+        var startProcessing = System.currentTimeMillis();   // (step 1.b.2) implement var for start data processing;
+        System.out.println("STUDENTS: " + students);        // THE MOMENT OF DATA PROCESSING;
+        System.out.println("TOTAL: " + students.size());    // ANOTHER MOMENT OF DATA PROCESSING;
+        var durationProcessing = System.currentTimeMillis() - startProcessing; // (step 1.b.2) calculate diff. between 2 moments;
 
         System.out.println();
         System.out.println("****************************************************************************************");
@@ -189,13 +191,16 @@ public class Main {
         System.out.println("TASK 1 - OPERATIONS' DURATIONS");
         System.out.println();
         // (step 1.d) printout execution speed of import data from csv-file:
-        System.out.println("Duration of data import from CSV-file = " + durationImport + " ms;");
+        System.out.println("TASK 1.a - Duration of data import from CSV-file = " + durationImport + " ms;");
 
         // (step 1.d) printout execution speed of objects' creations:
-        System.out.println("Duration of new objects' creations = " + durationProcessing + " ms;");
+        System.out.println("TASK 1.b - Duration of new objects' creations = " + durationCreating + " ms;");
+
+        // (step 1.d) printout execution speed of data processing:
+        System.out.println("TASK 1.b - Duration of data processing = " + durationProcessing + " ms;");
 
         // (step 1.d) printout execution speed of 3 operations with the streams:
-        System.out.println("Streams 3 operations' total duration = " + durationStreams + " ms;");
+        System.out.println("TASK 1.c - Streams 3 operations' total duration = " + durationStreams + " ms;");
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
