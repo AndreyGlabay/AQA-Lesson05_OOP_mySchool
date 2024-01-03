@@ -216,13 +216,37 @@ public class Main {
 
         System.out.println("1st Date: " + date1);      // (step 2.1) printout 1st date;
         System.out.println("2nd Date: " + date2);      // (step 2.1) printout 2nd date;
+
         System.out.println();
+        System.out.println("TASK 2.a - DATES COMPARISON");
 
         // (step 2.a) confirm that 1st Date is before 1-Dec-2023 (before 123-11-1):
-        System.out.println("Is the 1st Date before 1-Dec-2023 ? :: " + date1.before(new Date(123, 11, 1)));
+        System.out.println("- Is the 1st Date before 1-Dec-2023 ? :: " + date1.before(new Date(123, 11, 1)));
 
         // (step 2.a) confirm that 2nd Date is after 1-Feb-2024 (after 124-1-1):
-        System.out.println("Is the 2nd Date after 1-Feb-2024 ? :: " + date2.after(new Date(124, 1, 1)));
+        System.out.println("- Is the 2nd Date after 1-Feb-2024 ? :: " + date2.after(new Date(124, 1, 1)));
+
+        System.out.println();
+        System.out.println("TASK 2.a - DIFFERENCE BETWEEN DATES");
+
+        // (step 2.b) compare 1st and 2nd Dates - which date is greater (do this for the next operation).
+        var compareDates = date2.compareTo(date1);
+        System.out.println("Lets compare two dates first: " +
+                "\n - if gets 0 -> date2 equals date1; " +
+                "\n - if gets -1 -> date2 before date1; " +
+                "\n - if gats 1 -> date2 after date1. ");
+        System.out.println("Result of comparation: " + compareDates);
+        System.out.println();
+
+        // (step 2.b) calculate difference between two dates in milliseconds.
+        float differenceMillis = date2.getTime() - date1.getTime();
+
+        // (step 2.b) printout difference with converting milliseconds to days.
+        System.out.println("Difference between 30-Nov-2023 13:12:11 and 2-Feb-2024 12:24:55 = " +
+                (differenceMillis) / (24*60*60*1000) + " days");
+
+
+
 
 
 
