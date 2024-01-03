@@ -46,18 +46,15 @@ public class Main {
         String[] data = readFileUsingScanner(FILE_NAME);    // THE MOMENT OF DATA IMPORT
         var finishImport = System.currentTimeMillis();      // (step 1.a) implement var for start data import from CSV-file;
         var durationImport = finishImport - startImport;    // (step 1.a) implement var for shows diff. between 2 moments;
-        System.out.println();
-        System.out.println("Duration of data import from CSV-file = " + durationImport + " ms;"); // (1.a) printout the diff;
 
         var startProcessing = System.currentTimeMillis();   // (step 1.b) implement var for start data processing;
         createStudentObjects(data, students);               // THE MOMENT OF OBJECTS CREATION
         Stream<Student> studentStream = students.stream();
         var durationProcessing = System.currentTimeMillis() - startProcessing; // (step 1.b) implement var for shows diff. between 2 moments;
-        System.out.println("Duration of data processing = " + durationProcessing + " ms;"); // (1.b) printout the diff;
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 2.1 - LinkedList implementation");
+        System.out.println("LinkedList implementation");
         System.out.println();
 
         System.out.println("STUDENTS: " + students);
@@ -65,7 +62,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 2.2 - Stream for all elements implementation");
+        System.out.println("Stream for all elements implementation");
         System.out.println();
 
         System.out.println("Elements in the Stream :");
@@ -75,7 +72,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 2.3 - One general Stack implementation");
+        System.out.println("One general Stack implementation");
         System.out.println();
 
         Stack<Student> studentStack = new Stack<>();
@@ -88,7 +85,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 2.4 - Multiple-Stacks implementation");
+        System.out.println("Multiple-Stacks implementation");
         System.out.println();
 
         Stack<Student> pmStack = new Stack<>();
@@ -118,7 +115,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 3 - Transform Stack Collections to the Streams for resolve TASK 3.1, 3.2, 3.3");
+        System.out.println("Transform Stack Collections to the Streams");
         System.out.println();
 
         var startStreams = System.currentTimeMillis(); // (step 1.c) implement start time for streams processing;
@@ -128,7 +125,7 @@ public class Main {
         Stream<Student> uiuxStream = uiuxStack.stream();
         Stream<Student> qaStream = qaStack.stream();
 
-        System.out.println("TASK 3.1 - Streams' Sorting");
+        System.out.println("Streams' Sorting");
         System.out.println();
         System.out.println("PM Students Stream Sorting: ");
         System.out.println();
@@ -141,7 +138,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 3.2 - Streams' Filtering");
+        System.out.println("Streams' Filtering");
         System.out.println();
         System.out.println("All Students Stream Filtering: ");
         System.out.println();
@@ -154,7 +151,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 3.3 - Streams' Mapping");
+        System.out.println("Streams' Mapping");
         System.out.println();
         System.out.println("Map for Dev Students: ");
         System.out.println();
@@ -186,7 +183,19 @@ public class Main {
         qaMap.forEach((key, value) -> System.out.println("ID = " + key + " -> Mail to: " + value));
 
         var durationStreams = System.currentTimeMillis() - startStreams; // (step 1.c) implement duration of streams processing;
-        System.out.println("Streams duration = " + durationStreams + " ms;"); // (step 1.c) printout streams duration;
+
+        System.out.println();
+        System.out.println("****************************************************************************************");
+        System.out.println("TASK 1 - OPERATIONS' DURATIONS");
+        System.out.println();
+        // (step 1.d) printout execution speed of import data from csv-file:
+        System.out.println("Duration of data import from CSV-file = " + durationImport + " ms;");
+
+        // (step 1.d) printout execution speed of objects' creations:
+        System.out.println("Duration of new objects' creations = " + durationProcessing + " ms;");
+
+        // (step 1.d) printout execution speed of 3 operations with the streams:
+        System.out.println("Streams 3 operations' total duration = " + durationStreams + " ms;");
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
