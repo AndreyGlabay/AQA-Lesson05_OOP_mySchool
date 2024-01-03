@@ -12,6 +12,7 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.Date; // (step 1) import "LocalDateTime" package for ops with dates;
 
 public class Main {
     private static final String FILE_NAME = "resources/students.csv";
@@ -201,6 +202,27 @@ public class Main {
 
         // (step 1.d) printout execution speed of 3 operations with the streams:
         System.out.println("TASK 1.c - Streams 3 operations' total duration = " + durationStreams + " ms;");
+
+        System.out.println();
+        System.out.println("****************************************************************************************");
+        System.out.println("TASK 2 - OPERATIONS WITH DATES");
+        System.out.println();
+
+        // (step 2.1) implement Date class object = before 1-Dec-2023 = before 123-11-1 = 123-10-30 (30-Nov-2023, 13:12:11):
+        var date1 = new Date(123, 10, 30, 13, 12, 11);
+
+        // (step 2.1) implement Date class object = after 1-Feb-2024 = after 124-1-1 = 123-1-2 (2-Feb-2024, 12:24:55):
+        var date2 = new Date(124, 1, 2, 12, 24, 55);
+
+        System.out.println("Date1: " + date1);      // (step 2.1) printout 1st date;
+        System.out.println("Date2: " + date2);      // (step 2.1) printout 2nd date;
+
+
+
+
+
+
+
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
