@@ -121,6 +121,8 @@ public class Main {
         System.out.println("TASK 3 - Transform Stack Collections to the Streams for resolve TASK 3.1, 3.2, 3.3");
         System.out.println();
 
+        var startStreams = System.currentTimeMillis(); // (step 1.c) implement start time for streams processing;
+
         Stream<Student> pmStream = pmStack.stream();
         Stream<Student> devStream = devStack.stream();
         Stream<Student> uiuxStream = uiuxStack.stream();
@@ -182,6 +184,9 @@ public class Main {
                 student -> student.getStudentName() + " on address: " + student.getStudentMail()
         ));
         qaMap.forEach((key, value) -> System.out.println("ID = " + key + " -> Mail to: " + value));
+
+        var durationStreams = System.currentTimeMillis() - startStreams; // (step 1.c) implement duration of streams processing;
+        System.out.println("Streams duration = " + durationStreams + " ms;"); // (step 1.c) printout streams duration;
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
