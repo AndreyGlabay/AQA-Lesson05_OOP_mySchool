@@ -208,14 +208,21 @@ public class Main {
         System.out.println("TASK 2 - OPERATIONS WITH DATES");
         System.out.println();
 
-        // (step 2.1) implement Date class object = before 1-Dec-2023 = before 123-11-1 = 123-10-30 (30-Nov-2023, 13:12:11):
+        // (step 2) implement Date class object = before 1-Dec-2023 = before 123-11-1 = 123-10-30 (30-Nov-2023, 13:12:11):
         var date1 = new Date(123, 10, 30, 13, 12, 11);
 
-        // (step 2.1) implement Date class object = after 1-Feb-2024 = after 124-1-1 = 123-1-2 (2-Feb-2024, 12:24:55):
+        // (step 2) implement Date class object = after 1-Feb-2024 = after 124-1-1 = 123-1-2 (2-Feb-2024, 12:24:55):
         var date2 = new Date(124, 1, 2, 12, 24, 55);
 
-        System.out.println("Date1: " + date1);      // (step 2.1) printout 1st date;
-        System.out.println("Date2: " + date2);      // (step 2.1) printout 2nd date;
+        System.out.println("1st Date: " + date1);      // (step 2.1) printout 1st date;
+        System.out.println("2nd Date: " + date2);      // (step 2.1) printout 2nd date;
+        System.out.println();
+
+        // (step 2.a) confirm that 1st Date is before 1-Dec-2023 (before 123-11-1):
+        System.out.println("Is the 1st Date before 1-Dec-2023 ? :: " + date1.before(new Date(123, 11, 1)));
+
+        // (step 2.a) confirm that 2nd Date is after 1-Feb-2024 (after 124-1-1):
+        System.out.println("Is the 2nd Date after 1-Feb-2024 ? :: " + date2.after(new Date(124, 1, 1)));
 
 
 
