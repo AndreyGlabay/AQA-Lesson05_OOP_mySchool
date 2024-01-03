@@ -42,15 +42,18 @@ public class Main {
     public static void main(String[] args) throws IOException {
         List<Student> students = new LinkedList<>();
 
-        var startImport = System.currentTimeMillis();       // (step 1.a) implement var for start import from CSV-file;
+        var startImport = System.currentTimeMillis();       // (step 1.a) implement var for start data import from CSV-file;
         String[] data = readFileUsingScanner(FILE_NAME);    // THE MOMENT OF DATA IMPORT
-        var finishImport = System.currentTimeMillis();      // (step 1.a) implement var for start import from CSV-file;
+        var finishImport = System.currentTimeMillis();      // (step 1.a) implement var for start data import from CSV-file;
         var durationImport = finishImport - startImport;    // (step 1.a) implement var for shows diff. between 2 moments;
         System.out.println();
-        System.out.println("Duration of data import from CSV-file = " + durationImport + "ms;"); // (1.a) printout the diff;
+        System.out.println("Duration of data import from CSV-file = " + durationImport + " ms;"); // (1.a) printout the diff;
 
-        createStudentObjects(data, students);
+        var startProcessing = System.currentTimeMillis();   // (step 1.b) implement var for start data processing;
+        createStudentObjects(data, students);               // THE MOMENT OF OBJECTS CREATION
         Stream<Student> studentStream = students.stream();
+        var durationProcessing = System.currentTimeMillis() - startProcessing; // (step 1.b) implement var for shows diff. between 2 moments;
+        System.out.println("Duration of data processing = " + durationProcessing + " ms;"); // (1.b) printout the diff;
 
         System.out.println();
         System.out.println("****************************************************************************************");
