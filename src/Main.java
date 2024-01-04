@@ -7,12 +7,18 @@ import com.example.school.section.UIUX;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.NoSuchElementException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Stack;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.Date; // (step 1) import "LocalDateTime" package for ops with dates;
+import java.util.TreeMap; // (step 1.e) import "TreeMap" package for sorting duration in asc-order;
 
 public class Main {
     private static final String FILE_NAME = "resources/students.csv";
@@ -187,10 +193,21 @@ public class Main {
 
         var durationStreams = System.currentTimeMillis() - startStreams; // (step 1.c) implement duration of streams processing;
 
+        // (step 1.e) create TreeMap for sort time duration in ASC-order:
+        //              "Long" -> for time duration = key,
+        //              "String" -> for msg = value;
+        TreeMap<Long, String> durationMap = new TreeMap<>();
+        durationMap.put(durationImport, "TASK 1.a - Duration of data import from CSV-file"); // key=duration; value=message;
+        durationMap.put(durationCreating, "TASK 1.b - Duration of new objects' creations");  // key=duration; value=message;
+        durationMap.put(durationProcessing, "TASK 1.b - Duration of data processing");       // key=duration; value=message;
+        durationMap.put(durationStreams, "TASK 1.c - Streams 3 operations' total duration"); // key=duration; value=message;
+
         System.out.println();
         System.out.println("****************************************************************************************");
         System.out.println("TASK 1 - OPERATIONS' DURATIONS");
         System.out.println();
+        System.out.println("************* WITHOUT SORTING ************* ");
+
         // (step 1.d) printout execution speed of import data from csv-file:
         System.out.println("TASK 1.a - Duration of data import from CSV-file = " + durationImport + " ms;");
 
@@ -202,6 +219,13 @@ public class Main {
 
         // (step 1.d) printout execution speed of 3 operations with the streams:
         System.out.println("TASK 1.c - Streams 3 operations' total duration = " + durationStreams + " ms;");
+
+        System.out.println("************* WITH ASC-SORTING ************* ");
+        // (step 1.e) implement the loop for "durationMap" entries, which pass all pairs key-value;
+        for (Map.Entry<Long, String> entry : durationMap.entrySet()) {
+            // for this loop printout to the console according to the pattern: Message + '=' sign + duration + "ms"
+            System.out.println(entry.getValue() + " = " + entry.getKey() + " ms;");
+        }
 
         System.out.println();
         System.out.println("****************************************************************************************");
@@ -244,16 +268,6 @@ public class Main {
         // (step 2.b) printout difference with converting milliseconds to days.
         System.out.println("Difference between 30-Nov-2023 13:12:11 and 2-Feb-2024 12:24:55 = " +
                 (differenceMillis) / (24*60*60*1000) + " days");
-
-
-
-
-
-
-
-
-
-
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
