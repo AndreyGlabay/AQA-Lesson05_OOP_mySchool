@@ -7,6 +7,10 @@
     <groupId>com.example.school</groupId>
     <artifactId>mySchool</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>                                     <!-- (Step 0.c) Add manually  tag <build> for Maven can find source -->
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+    </build>
     <dependencies>                              <!-- (Step 0.b) Add manually  tag <dependencies> -->
         <dependency>                            <!-- (Step 0.b) Add dependency from Maven repository -->
             <groupId>org.testng</groupId>
