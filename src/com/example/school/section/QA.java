@@ -4,7 +4,7 @@ import com.example.school.additional.EnglishCourse;
 import com.example.school.additional.EnglishGroup;
 
 public class QA extends Student implements EnglishCourse {
-    public String ITField; // add the var
+    public String ITField;
     String englishLevel;
     boolean weekendIsSuitable;
 
@@ -15,12 +15,12 @@ public class QA extends Student implements EnglishCourse {
             String studentMail,
             boolean previouslyFinishedThisSchool,
             int discount,
-            String ITField, //add IT-Field
+            String ITField,
             //String fieldQA,
             String englishLevel,
             boolean weekendIsSuitable) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
-        this.ITField = ITField; //add IT-Field for this class
+        this.ITField = ITField;
         this.englishLevel = englishLevel;
         this.weekendIsSuitable = weekendIsSuitable;
     }
