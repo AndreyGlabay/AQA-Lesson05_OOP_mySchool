@@ -1,3 +1,5 @@
+package com.example.school;
+
 import com.example.school.Student;
 import com.example.school.section.Dev;
 import com.example.school.section.PM;
