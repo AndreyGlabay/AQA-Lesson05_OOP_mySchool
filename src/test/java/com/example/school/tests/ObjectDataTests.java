@@ -1,5 +1,7 @@
 package com.example.school.tests; // (step 1) Auto-created, when implemented ObjectDataTests java-class;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -61,5 +63,15 @@ public class ObjectDataTests {
     public void testStudentPhoneNotNull(int studentId, String studentName, String studentPhone, String studentMail) {
         var softAssert = new SoftAssert();
         softAssert.assertNotNull(studentPhone);
+    }
+
+    @BeforeTest
+    public void beforeTestMethod() {
+        System.out.println("ObjectDataTests::this is BeforeTest method");
+    }
+
+    @AfterTest
+    public void afterTestMethod() {
+        System.out.println("ObjectDataTests::this is AfterTest method");
     }
 }
