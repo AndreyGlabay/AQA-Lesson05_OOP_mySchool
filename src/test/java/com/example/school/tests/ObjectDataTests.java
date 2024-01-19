@@ -9,7 +9,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class ObjectDataTests {
-    @DataProvider
+    @DataProvider // (step 1.b) Implement data provider, for using tests from it;
     public Object[][] data() {
         return new Object[][] {
                 {41, "Alson", "+17505151041", "alson@probe.com"},
@@ -19,8 +19,7 @@ public class ObjectDataTests {
         };
     }
 
-    // (step 1) Implement 5 test methods with use data from the data provider;
-    @Test(dataProvider = "data")
+    @Test(dataProvider = "data") // (step 1.b) Implement test method with use of data from the data provider;
     public void testStudentId(int studentId, String studentName, String studentPhone, String studentMail) {
         int expectedStudentId41 = 41;
         var softAssert = new SoftAssert();
@@ -28,7 +27,7 @@ public class ObjectDataTests {
         System.out.println("ObjectDataTests::Check that ID = 41 is present in the provided data (4 Objects in Array)");
     }
 
-    @Test(dataProvider = "data")
+    @Test(dataProvider = "data") // (step 1.b) Implement test method with use of data from the data provider;
     public void testStudentName(int studentId, String studentName, String studentPhone, String studentMail) {
         String expectedStudentNameAlson = "Alson";
         String expectedStudentNameBert = "Bert"; // Negative: Such Name is not provided;
@@ -45,7 +44,7 @@ public class ObjectDataTests {
         System.out.println("ObjectDataTests::Check that expected Names, listed in this test, provided OR not");
     }
 
-    @Test(dataProvider = "data")
+    @Test(dataProvider = "data") // (step 1.b) Implement test method with use of data from the data provider;
     public void testStudentPhone(int studentId, String studentName, String studentPhone, String studentMail) {
         String expectedStudentPhone276 = "+17505151276";
         var softAssert = new SoftAssert();
@@ -53,7 +52,7 @@ public class ObjectDataTests {
         System.out.println("ObjectDataTests::Check that expected Phone number is in provided data");
     }
 
-    @Test(dataProvider = "data")
+    @Test(dataProvider = "data") // (step 1.b) Implement test method with use of data from the data provider;
     public void testStudentMail(int studentId, String studentName, String studentPhone, String studentMail) {
         String expectedStudentMail376 = "prince@probe.com";
         var softAssert = new SoftAssert();
@@ -61,29 +60,29 @@ public class ObjectDataTests {
         System.out.println("ObjectDataTests::Check that expected Email address is in provided data");
     }
 
-    @Test(dataProvider = "data")
+    @Test(dataProvider = "data") // (step 1.b) Implement test method with use of data from the data provider;
     public void testStudentPhoneNotNull(int studentId, String studentName, String studentPhone, String studentMail) {
         var softAssert = new SoftAssert();
         softAssert.assertNotNull(studentPhone);
         System.out.println("ObjectDataTests::Check that Phone field is provided");
     }
 
-    @BeforeClass
+    @BeforeClass // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
     public void beforeClass() {
         System.out.println("ObjectDataTests::this is BeforeClass annotation");
     }
 
-    @AfterClass
+    @AfterClass // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
     public void afterClass() {
         System.out.println("ObjectDataTests::this is AfterClass annotation");
     }
 
-    @BeforeSuite
+    @BeforeSuite // (step 1.f) Implements the Before/After Suite annotation.
     public void beforeSuite() {
         System.out.println("ObjectDataTests::this is BeforeSuite annotation");
     }
 
-    @AfterSuite
+    @AfterSuite // (step 1.f) Implements the Before/After Suite annotation.
     public void afterSuite() {
         System.out.println("ObjectDataTests::this is AfterSuite annotation");
     }
