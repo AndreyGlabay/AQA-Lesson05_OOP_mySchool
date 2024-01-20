@@ -29,10 +29,10 @@ public class ObjectDataTests {
         int expectedStudentId41 = 41;
         var softAssert = new SoftAssert();
         softAssert.assertEquals(studentId, expectedStudentId41);
-        System.out.println("ObjectDataTests::\t Name: testStudentId" + // (step 1.1.a) Get test method's Name from description;
-                        "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
-                        "; \t Thread: " + Thread.currentThread().getName() + // (step 1.1.b)  Get test method's Thread;
-                "; \t Summary: Check that ID is present in the provided data (4 Objects in Array)"
+        System.out.println("ObjectDataTests:: Name: testStudentId" + // (step 1.1.a) Get test method's Name from description;
+                        ";  Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
+                        ";  Thread: " + Thread.currentThread().getName() + // (step 1.1.b)  Get test method's Thread;
+                "; *** Summary: Check that ID is present in the provided data (4 Objects in Array)"
         );
     }
 
@@ -51,10 +51,10 @@ public class ObjectDataTests {
                         Objects.equals(studentName, expectedStudentNameZara),
                 "*** Negative test *** Check that expected Names, listed in this test, are NOT in provided data");
 
-        System.out.println("ObjectDataTests::\t Name: testStudentName" + // (step 1.1.a) Get test method's Name from description;
-                "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
-                "; \t Thread: " + Thread.currentThread().getName() + // (step 1.1.b)  Get test method's Thread;
-                "; \t Summary: Check that expected Names, listed in this test, are in provided data"
+        System.out.println("ObjectDataTests:: Name: testStudentName" + // (step 1.1.a) Get test method's Name from description;
+                ";  Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
+                ";  Thread: " + Thread.currentThread().getName() + // (step 1.1.b)  Get test method's Thread;
+                ";  Summary: Check that expected Names, listed in this test, are in provided data"
         );
     }
 
@@ -64,10 +64,10 @@ public class ObjectDataTests {
         String expectedStudentPhone276 = "+17505151276";
         var softAssert = new SoftAssert();
         softAssert.assertEquals(studentPhone, expectedStudentPhone276);
-        System.out.println("ObjectDataTests::\t Name: testStudentPhone"  + // (step 1.1.a) Get test method's Name from description;
-                "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
-                "; \t Thread: " + Thread.currentThread().getName() + // (step 1.1.b)  Get test method's Thread;
-                "; \t Summary: Check that expected Phone number is in provided data"
+        System.out.println("ObjectDataTests:: Name: testStudentPhone"  + // (step 1.1.a) Get test method's Name from description;
+                ";  Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
+                ";  Thread: " + Thread.currentThread().getName() + // (step 1.1.b)  Get test method's Thread;
+                ";  Summary: Check that expected Phone number is in provided data"
         );
     }
 
@@ -77,10 +77,10 @@ public class ObjectDataTests {
         String expectedStudentMail376 = "prince@probe.com";
         var softAssert = new SoftAssert();
         softAssert.assertEquals(studentMail, expectedStudentMail376);
-        System.out.println("ObjectDataTests::\t Name: testStudentMail"  + // (step 1.1.a) Get test method's Name from description;
-                "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
-                "; \t Thread: " + Thread.currentThread().getName() + // (step 1.1.b)  Get test method's Thread;
-                "; \t Summary: Check that expected Email address is in provided data"
+        System.out.println("ObjectDataTests:: Name: testStudentMail"  + // (step 1.1.a) Get test method's Name from description;
+                ";  Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
+                ";  Thread: " + Thread.currentThread().getName() + // (step 1.1.b)  Get test method's Thread;
+                ";  Summary: Check that expected Email address is in provided data"
         );
     }
 
@@ -89,50 +89,50 @@ public class ObjectDataTests {
     public void testStudentPhoneNotNull(int studentId, String studentName, String studentPhone, String studentMail) {
         var softAssert = new SoftAssert();
         softAssert.assertNotNull(studentPhone);
-        System.out.println("ObjectDataTests::\t Name: testStudentPhoneNotNull"  + // (step 1.1.a) Get test method's Name from description;
-                "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
-                "; \t Thread: " + Thread.currentThread().getName() + // (step 1.1.b)  Get test method's Thread;
-                "; \t Summary: Check that Phone field is provided"
+        System.out.println("ObjectDataTests:: Name: testStudentPhoneNotNull"  + // (step 1.1.a) Get test method's Name from description;
+                ";  Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
+                ";  Thread: " + Thread.currentThread().getName() + // (step 1.1.b)  Get test method's Thread;
+                ";  Summary: Check that Phone field is provided"
         );
     }
 
     // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
     @BeforeClass
     public void preConditions() {
-        System.out.println("ObjectDataTests:: BEFORE CLASS\t Name: " +
+        System.out.println("ObjectDataTests:: BEFORE CLASS;  Name: " +
                 "preConditions" + // (step 1.1.a) Get test method's Name from description;
-                "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
-                "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
+                ";  Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
+                ";  Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
         );
     }
 
     // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
     @AfterClass
     public void postConditions() {
-        System.out.println("ObjectDataTests:: AFTER CLASS\t Name: " +
+        System.out.println("ObjectDataTests:: AFTER CLASS;  Name: " +
                 "postConditions" + // (step 1.1.a) Get test method's Name from description;
-                "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
-                "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
+                ";  Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
+                ";  Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
         );
     }
 
     // (step 1.f) Implements the Before/After Suite annotation.
     @BeforeSuite
     public void openPage() {
-        System.out.println("ObjectDataTests:: BEFORE SUITE\t Name: " +
+        System.out.println("ObjectDataTests:: BEFORE SUITE;  Name: " +
                 "openPage" + // (step 1.1.a) Get test method's Name from description;
-                "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
-                "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
+                ";  Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
+                ";  Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
         );
     }
 
     // (step 1.f) Implements the Before/After Suite annotation.
     @AfterSuite
     public void closePage() {
-        System.out.println("ObjectDataTests:: AFTER SUITE\t Name: " +
+        System.out.println("ObjectDataTests:: AFTER SUITE;  Name: " +
                 "closePage" + // (step 1.1.a) Get test method's Name from description;
-                "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
-                "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
+                ";  Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
+                ";  Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
         );
     }
 }
