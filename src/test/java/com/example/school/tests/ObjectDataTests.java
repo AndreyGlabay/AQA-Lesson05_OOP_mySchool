@@ -99,7 +99,7 @@ public class ObjectDataTests {
     // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
     @BeforeClass
     public void preConditions() {
-        System.out.println("ObjectDataTests::BeforeClass annotation PRE-CONDS\t Name: " +
+        System.out.println("ObjectDataTests:: BEFORE CLASS\t Name: " +
                 "preConditions" + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
@@ -109,7 +109,7 @@ public class ObjectDataTests {
     // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
     @AfterClass
     public void postConditions() {
-        System.out.println("ObjectDataTests::AfterClass annotation POST-CONDS\t Name: " +
+        System.out.println("ObjectDataTests:: AFTER CLASS\t Name: " +
                 "postConditions" + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
@@ -119,7 +119,7 @@ public class ObjectDataTests {
     // (step 1.f) Implements the Before/After Suite annotation.
     @BeforeSuite
     public void openPage() {
-        System.out.println("ObjectDataTests::BeforeSuite annotation OPEN PAGE\t Name: " +
+        System.out.println("ObjectDataTests:: BEFORE SUITE\t Name: " +
                 "openPage" + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
@@ -129,7 +129,7 @@ public class ObjectDataTests {
     // (step 1.f) Implements the Before/After Suite annotation.
     @AfterSuite
     public void closePage() {
-        System.out.println("ObjectDataTests::AfterSuite annotation CLOSE PAGE\t Name: " +
+        System.out.println("ObjectDataTests:: AFTER SUITE\t Name: " +
                 "closePage" + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;

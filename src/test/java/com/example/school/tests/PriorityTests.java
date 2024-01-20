@@ -55,7 +55,7 @@ public class PriorityTests {
 
     @BeforeClass // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
     public void pre_Test() {
-        System.out.println("PriorityTests::BeforeClass annotation PRE-TEST\t Name: " +
+        System.out.println("PriorityTests:: BEFORE CLASS \t Name: " +
                 "pre_Test" + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
@@ -64,7 +64,7 @@ public class PriorityTests {
 
     @AfterClass // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
     public void post_Test() {
-        System.out.println("PriorityTests::AfterClass annotation POST-TEST\t Name: " +
+        System.out.println("PriorityTests:: AFTER CLASS\t Name: " +
                 "post_Test" + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
@@ -73,7 +73,7 @@ public class PriorityTests {
 
     @BeforeSuite // (step 1.f) Implements the Before/After Suite annotation.
     public void start_Test() {
-        System.out.println("PriorityTests::AfterSuite annotation START-TESTING\t Name: " +
+        System.out.println("PriorityTests:: BEFORE SUITE\t Name: " +
                 "start_Test" + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
@@ -82,7 +82,7 @@ public class PriorityTests {
 
     @AfterSuite // (step 1.f) Implements the Before/After Suite annotation.
     public void stop_Test() {
-        System.out.println("PriorityTests::AfterSuite annotation STOP-TESTING\t Name: " +
+        System.out.println("PriorityTests:: AFTER SUITE \t Name: " +
                 "stop_Test" + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;

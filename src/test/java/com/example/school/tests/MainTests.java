@@ -58,7 +58,7 @@ public class MainTests {    // (step 0.c) This line auto-created, when implement
     // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
     @BeforeClass
     public void login() {
-        System.out.println("MainTests::\t Name: " +
+        System.out.println("MainTests:: BEFORE SUITE\t Name: " +
                 "BeforeClass annotation LOGIN" + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
@@ -68,7 +68,7 @@ public class MainTests {    // (step 0.c) This line auto-created, when implement
     // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
     @AfterClass
     public void logout() {
-        System.out.println("MainTests::\t Name: " +
+        System.out.println("MainTests:: AFTER CLASS\t Name: " +
                 "AfterClass annotation LOGOUT"  + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
@@ -78,7 +78,7 @@ public class MainTests {    // (step 0.c) This line auto-created, when implement
     // (step 1.f) Implements the Before/After Suite annotation.
     @BeforeSuite
     public void openApp()  {
-        System.out.println("MainTests::\t Name: " +
+        System.out.println("MainTests:: BEFORE SUITE\t Name: " +
                 "BeforeSuite annotation OPEN APP"  + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
@@ -88,7 +88,7 @@ public class MainTests {    // (step 0.c) This line auto-created, when implement
     // (step 1.f) Implements the Before/After Suite annotation.
     @AfterSuite
     public void closeApp() {
-        System.out.println("MainTests::\t Name: " +
+        System.out.println("MainTests:: AFTER SUITE\t Name: " +
                 "AfterSuite annotation CLOSE APP"  + // (step 1.1.a) Get test method's Name from description;
                 "; \t Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 "; \t Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
