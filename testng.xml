@@ -7,15 +7,29 @@
 <!-- suite name="mySchoolSuite" thread-count="4" parallel="true" -->         <!-- (2.3) Discover parallel = "true" -->
 
     <test name="TestCase1::mySchoolFunctionalTests"> <!-- (step 2) Create TestCase1 -->
+        <groups>
+            <run>
+                <include name="group0"/> <!-- (step 4.a) Execution of test methods, included in the "group0" -->
+                <include name="group1"/> <!-- (step 4.a) Execution of test methods, included in the "group1" -->
+            </run>
+        </groups>
         <classes>
             <class name="com.example.school.tests.MainTests"/>  <!-- (2.1) This Test Class distributes to TestCase1 -->
             <class name="com.example.school.tests.ObjectDataTests"/> <!-- (2.1) This Test Class distributes to TestCase1 -->
         </classes>
     </test>
     <test name="TestCase2::mySchoolPriorityTests"> <!-- (step 2) Create TestCase2 -->
+        <groups>
+            <run>
+                <include name="group0"/> <!-- (step 4.a) Execution of test methods, included in the "group0" -->
+                <include name="groupA"/> <!-- (step 4.a) Execution of test methods, included in the "groupA" -->
+                <include name="groupB"/> <!-- (step 4.a) Execution of test methods, included in the "groupB" -->
+            </run>
+        </groups>
         <classes>
             <class name="com.example.school.tests.PriorityTests"/> <!-- (2.1) This Test Class distributes to TestCase2 -->
         </classes>
+
     </test>
 </suite>
 
