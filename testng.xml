@@ -10,8 +10,8 @@
         <groups>
             <run>
                 <include name="group0"/> <!-- (step 4.a) Run test methods, included in the "group0" -->
-                <!-- include name="group1"/ --> <!-- (step 4.a) Run test methods, included in the "group1" -->
-                <exclude name="group1"/> <!-- (step 4.b) Skip test methods, included in the "group1" -->
+                <include name="group1"/> <!-- (step 4.a) Run test methods, included in the "group1" -->
+                <!-- exclude name="group1"/ --> <!-- (step 4.b) Skip test methods, included in the "group1" -->
             </run>
         </groups>
         <classes>
@@ -24,14 +24,25 @@
             <run>
                 <include name="group0"/> <!-- (step 4.a) Run test methods, included in the "group0" -->
                 <include name="groupA"/> <!-- (step 4.a) Run test methods, included in the "groupA" -->
-                <!-- include name="groupB"/ --> <!-- (step 4.a) Run test methods, included in the "groupB" -->
-                <exclude name="groupB"/> <!-- (step 4.b) Skip test methods, included in the "groupB" -->
+                <include name="groupB"/> <!-- (step 4.a) Run test methods, included in the "groupB" -->
+                <!-- exclude name="groupB"/ --> <!-- (step 4.b) Skip test methods, included in the "groupB" -->
             </run>
+            <dependencies>
+                <!--(step 4.c) Run tests in groupA only after success run groupB tests:
+                               "PriorityTests:: Name:test_B3/2/1"  will be run first, and only after it tets
+                               "PriorityTests::Name:test_A2/1" will be executed -->
+                <group name="groupA" depends-on="groupB"/>
+
+                <!--(step 4.d) Run tests in groupC only after success run of group1 tests:
+                                group1 has 2 negative tests, which will be fail,
+                                so groupC (which consist of 4 test methods) will not be executed
+                                - there is total tests run: 30 instead of 34-->
+                <group name="groupC" depends-on="group1"/>
+            </dependencies>
         </groups>
         <classes>
             <class name="com.example.school.tests.PriorityTests"/> <!-- (2.1) This Test Class distributes to TestCase2 -->
         </classes>
-
     </test>
 </suite>
 

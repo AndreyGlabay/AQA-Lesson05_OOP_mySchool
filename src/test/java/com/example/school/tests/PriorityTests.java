@@ -58,6 +58,61 @@ import org.testng.annotations.AfterClass;
         );
     }
 
+
+
+
+
+
+
+
+
+
+     // (step 4.c) Implement test method for increase groups qty.
+     @Test(description = "test_C1", priority = 1, groups = {"groupC"}) // (step 4.c) Set parameter "groupC";
+     public void test_C1() throws NoSuchMethodException {
+         System.out.println("PriorityTests:: Name: test_C1" + // (step 4.c) Change test method's Name to "test_C1";
+                 ";  Class: " + getClass().getSimpleName() + // (step 4.c) Remain w/o changes;
+                 ";  Thread: " + Thread.currentThread().getName() + // (step 4.c) Remain w/o changes;
+                 ";  FYI: Priority=" + getClass().getDeclaredMethod("test_C1").getAnnotation(Test.class).priority()
+         );
+     }
+
+     // (step 4.c) Implement test method for increase groups qty.
+     @Test(description = "test_C2", priority = 2, groups = {"groupC"}) // (step 4.c) Set parameter "groupC";
+     public void test_C2() throws NoSuchMethodException {
+         System.out.println("PriorityTests:: Name: test_C2" + // (step 4.c) Change test method's Name to "test_C1";
+                 ";  Class: " + getClass().getSimpleName() + // (step 4.c) Remain w/o changes;
+                 ";  Thread: " + Thread.currentThread().getName() + // (step 4.c) Remain w/o changes;
+                 ";  FYI: Priority=" + getClass().getDeclaredMethod("test_C2").getAnnotation(Test.class).priority()
+         );
+     }
+
+     // (step 4.c) Implement test method for increase groups qty.
+     @Test(description = "test_C3", priority = 3, groups = {"groupC"}) // (step 4.c) Set parameter "groupC";
+     public void test_C3() throws NoSuchMethodException {
+         System.out.println("PriorityTests:: Name: test_C3" + // (step 4.c) Change test method's Name to "test_C1";
+                 ";  Class: " + getClass().getSimpleName() + // (step 4.c) Remain w/o changes;
+                 ";  Thread: " + Thread.currentThread().getName() + // (step 4.c) Remain w/o changes;
+                 ";  FYI: Priority=" + getClass().getDeclaredMethod("test_C3").getAnnotation(Test.class).priority()
+         );
+     }
+
+     // (step 4.c) Implement test method for increase groups qty.
+     @Test(description = "test_C4", priority = 4, groups = {"groupC"}) // (step 4.c) Set parameter "groupC";
+     public void test_C4() throws NoSuchMethodException {
+         System.out.println("PriorityTests:: Name: test_C4" + // (step 4.c) Change test method's Name to "test_C1";
+                 ";  Class: " + getClass().getSimpleName() + // (step 4.c) Remain w/o changes;
+                 ";  Thread: " + Thread.currentThread().getName() + // (step 4.c) Remain w/o changes;
+                 ";  FYI: Priority=" + getClass().getDeclaredMethod("test_C4").getAnnotation(Test.class).priority()
+         );
+     }
+
+
+
+
+
+
+
     // (1.e) Add Before/After Test annotation -> (1.f) Modify it to the Before/After Class <- (3) Done in (1.e) & (1.f);
     @BeforeClass(groups = {"group0"}) // (step 4) Implement parameter "groups";
     public void pre_Test() {
