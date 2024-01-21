@@ -2,10 +2,8 @@ package com.example.school.tests; // (step 1) Auto-created, when implemented Obj
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import org.testng.asserts.SoftAssert;
 import static org.testng.Assert.assertTrue;
-
 import java.util.Objects;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
