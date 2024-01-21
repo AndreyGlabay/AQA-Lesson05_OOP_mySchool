@@ -9,8 +9,9 @@
     <test name="TestCase1::mySchoolFunctionalTests"> <!-- (step 2) Create TestCase1 -->
         <groups>
             <run>
-                <include name="group0"/> <!-- (step 4.a) Execution of test methods, included in the "group0" -->
-                <include name="group1"/> <!-- (step 4.a) Execution of test methods, included in the "group1" -->
+                <include name="group0"/> <!-- (step 4.a) Run test methods, included in the "group0" -->
+                <!-- include name="group1"/ --> <!-- (step 4.a) Run test methods, included in the "group1" -->
+                <exclude name="group1"/> <!-- (step 4.b) Skip test methods, included in the "group1" -->
             </run>
         </groups>
         <classes>
@@ -21,9 +22,10 @@
     <test name="TestCase2::mySchoolPriorityTests"> <!-- (step 2) Create TestCase2 -->
         <groups>
             <run>
-                <include name="group0"/> <!-- (step 4.a) Execution of test methods, included in the "group0" -->
-                <include name="groupA"/> <!-- (step 4.a) Execution of test methods, included in the "groupA" -->
-                <include name="groupB"/> <!-- (step 4.a) Execution of test methods, included in the "groupB" -->
+                <include name="group0"/> <!-- (step 4.a) Run test methods, included in the "group0" -->
+                <include name="groupA"/> <!-- (step 4.a) Run test methods, included in the "groupA" -->
+                <!-- include name="groupB"/ --> <!-- (step 4.a) Run test methods, included in the "groupB" -->
+                <exclude name="groupB"/> <!-- (step 4.b) Skip test methods, included in the "groupB" -->
             </run>
         </groups>
         <classes>
