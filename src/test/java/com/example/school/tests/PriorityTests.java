@@ -6,7 +6,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
-public class PriorityTests {
+ public class PriorityTests {
     // (step 1) Implement 5 test methods with different priorities;
     @Test(description = "test_A1", priority = 2) // (step 1.c) Implement test method with priority parameter;
     public void test_A1() throws NoSuchMethodException {
@@ -53,7 +53,8 @@ public class PriorityTests {
         );
     }
 
-    @BeforeClass // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
+    // (1.e) Add Before/After Test annotation -> (1.f) Modify it to the Before/After Class <- (3) Done in (1.e) & (1.f);
+    @BeforeClass
     public void pre_Test() {
         System.out.println("PriorityTests:: BEFORE CLASS;  Name: " +
                 "pre_Test" + // (step 1.1.a) Get test method's Name from description;
@@ -62,7 +63,8 @@ public class PriorityTests {
         );
     }
 
-    @AfterClass // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
+    // (1.e) Add Before/After Test annotation -> (1.f) Modify it to the Before/After Class <- (3) Done in (1.e) & (1.f);
+    @AfterClass
     public void post_Test() {
         System.out.println("PriorityTests:: AFTER CLASS;  Name: " +
                 "post_Test" + // (step 1.1.a) Get test method's Name from description;
@@ -71,7 +73,8 @@ public class PriorityTests {
         );
     }
 
-    @BeforeSuite // (step 1.f) Implements the Before/After Suite annotation.
+    // (step 1.f) Implements the Before/After Suite annotation <- (step 3) Has been done in (step 1.f);
+    @BeforeSuite
     public void start_Test() {
         System.out.println("PriorityTests:: BEFORE SUITE;  Name: " +
                 "start_Test" + // (step 1.1.a) Get test method's Name from description;
@@ -80,7 +83,8 @@ public class PriorityTests {
         );
     }
 
-    @AfterSuite // (step 1.f) Implements the Before/After Suite annotation.
+    // (step 1.f) Implements the Before/After Suite annotation <- (step 3) Has been done in (step 1.f);
+    @AfterSuite
     public void stop_Test() {
         System.out.println("PriorityTests:: AFTER SUITE;  Name: " +
                 "stop_Test" + // (step 1.1.a) Get test method's Name from description;

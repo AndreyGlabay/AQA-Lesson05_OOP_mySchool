@@ -6,7 +6,9 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
-public class MainTests {    // (step 0.c) This line auto-created, when implemented MainTests java-class;
+// (step 0.c) This line auto-created, when implemented MainTests java-class;
+// (step 3) extends this class by MainTestsSuper, and move Before/After annotations there
+public class MainTests {
     @Test(description = "functionality_ABS55") // (step 1.a) Implement test method;
     public void functionality_ABS55() throws NoSuchMethodException { // (step 1.1.a) Exemption for get description property;
         System.out.println(
@@ -55,17 +57,17 @@ public class MainTests {    // (step 0.c) This line auto-created, when implement
         );
     }
 
-    // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
+    // (1.e) Add Before/After Test annotation -> (1.f) Modify it to the Before/After Class <- (3) Done in (1.e) & (1.f);
     @BeforeClass
     public void login() {
-        System.out.println("MainTests:: BEFORE SUITE;  Name: " +
+        System.out.println("MainTests:: BEFORE CLASS;  Name: " +
                 "login" + // (step 1.1.a) Get test method's Name from description;
                 ";  Class: " + getClass().getSimpleName() + // (step 1.1.b)  Get test method's Class name;
                 ";  Thread: " + Thread.currentThread().getName() // (step 1.1.b)  Get test method's Thread;
         );
     }
 
-    // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
+    // (1.e) Add Before/After Test annotation -> (1.f) Modify it to the Before/After Class <- (3) Done in (1.e) & (1.f);
     @AfterClass
     public void logout() {
         System.out.println("MainTests:: AFTER CLASS;  Name: " +
@@ -75,7 +77,7 @@ public class MainTests {    // (step 0.c) This line auto-created, when implement
         );;
     }
 
-    // (step 1.f) Implements the Before/After Suite annotation.
+    // (step 1.f) Implements the Before/After Suite annotation <- (step 3) Has been done in (step 1.f);
     @BeforeSuite
     public void openApp()  {
         System.out.println("MainTests:: BEFORE SUITE;  Name: " +
@@ -85,7 +87,7 @@ public class MainTests {    // (step 0.c) This line auto-created, when implement
         );
     }
 
-    // (step 1.f) Implements the Before/After Suite annotation.
+    // (step 1.f) Implements the Before/After Suite annotation <- (step 3) Has been done in (step 1.f);
     @AfterSuite
     public void closeApp() {
         System.out.println("MainTests:: AFTER SUITE;  Name: " +

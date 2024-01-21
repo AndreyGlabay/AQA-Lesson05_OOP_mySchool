@@ -60,14 +60,17 @@
 
 (2) Зробив testng.xml з 2 тестами.
 (2.1) Розподілив тестові класи між цими двома тестами:
-      * First Test: MainTests; ObjectDataTests;
-      * Second Test: PriorityTests.
+      * TestCase1: MainTests; ObjectDataTests;
+      * TestCase2: PriorityTests.
 (2.2) Заімплементував у тегу <Suite> паралелізм на рівні згідно завдання (Parallel = test),
 (2.3) дослідив поведінку системи у випадку різних значень parallel:
 - (a) classes -> суттєвості класу виконуються у різних потоках;
 - (b) instances -> усі тестові методи у testng.xml "1stTest" виконуються в одному потоці, у у testng.xml "2твTest" - в іншому;
 - (c) methods -> суттєвості методу виконуються у різних потоках;
 - (d) true -> суттєвості методу виконуються у різних потоках.
+
+(3) Методи, анотовані @Before... / @After, згідно завдання (поле BeforeAfter = suite, class) - вже були імплементовані
+    у кроці (1.e) та (1.f).
 
 
 

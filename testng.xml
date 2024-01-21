@@ -6,15 +6,15 @@
 <!-- suite name="mySchoolSuite" thread-count="4" parallel="methods" -->      <!-- (2.3) Discover parallel = "methods" -->
 <!-- suite name="mySchoolSuite" thread-count="4" parallel="true" -->         <!-- (2.3) Discover parallel = "true" -->
 
-    <test name="1stTest::mySchoolFunctionalTests"> <!-- (step 2) Create First test -->
+    <test name="TestCase1::mySchoolFunctionalTests"> <!-- (step 2) Create TestCase1 -->
         <classes>
-            <class name="com.example.school.tests.MainTests"/>  <!-- (2.1) This Test Class distributes to this Test -->
-            <class name="com.example.school.tests.ObjectDataTests"/> <!-- (2.1) This Test Class distributes to this Test -->
+            <class name="com.example.school.tests.MainTests"/>  <!-- (2.1) This Test Class distributes to TestCase1 -->
+            <class name="com.example.school.tests.ObjectDataTests"/> <!-- (2.1) This Test Class distributes to TestCase1 -->
         </classes>
     </test>
-    <test name="2ndTest::mySchoolPriorityTests"> <!-- (step 2) Create Second test -->
+    <test name="TestCase2::mySchoolPriorityTests"> <!-- (step 2) Create TestCase2 -->
         <classes>
-            <class name="com.example.school.tests.PriorityTests"/> <!-- (2.1) This Test Class distributes to this Test -->
+            <class name="com.example.school.tests.PriorityTests"/> <!-- (2.1) This Test Class distributes to TestCase2 -->
         </classes>
     </test>
 </suite>

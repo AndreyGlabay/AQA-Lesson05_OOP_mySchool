@@ -2,15 +2,15 @@ package com.example.school.tests; // (step 1) Auto-created, when implemented Obj
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
 
 import org.testng.asserts.SoftAssert;
 import static org.testng.Assert.assertTrue;
 
 import java.util.Objects;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
 
 public class ObjectDataTests {
     @DataProvider // (step 1.b) Implement data provider, for using tests from it;
@@ -96,7 +96,7 @@ public class ObjectDataTests {
         );
     }
 
-    // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
+    // (1.e) Add Before/After Test annotation -> (1.f) Modify it to the Before/After Class <- (3) Done in (1.e) & (1.f);
     @BeforeClass
     public void preConditions() {
         System.out.println("ObjectDataTests:: BEFORE CLASS;  Name: " +
@@ -106,7 +106,7 @@ public class ObjectDataTests {
         );
     }
 
-    // (step 1.e) Add Before/After Test annotation -> (step 1.f) Modify it to the Before/After Class.
+    // (1.e) Add Before/After Test annotation -> (1.f) Modify it to the Before/After Class <- (3) Done in (1.e) & (1.f);
     @AfterClass
     public void postConditions() {
         System.out.println("ObjectDataTests:: AFTER CLASS;  Name: " +
@@ -116,7 +116,7 @@ public class ObjectDataTests {
         );
     }
 
-    // (step 1.f) Implements the Before/After Suite annotation.
+    // (step 1.f) Implements the Before/After Suite annotation <- (step 3) Has been done in (step 1.f);
     @BeforeSuite
     public void openPage() {
         System.out.println("ObjectDataTests:: BEFORE SUITE;  Name: " +
@@ -126,7 +126,7 @@ public class ObjectDataTests {
         );
     }
 
-    // (step 1.f) Implements the Before/After Suite annotation.
+    // (step 1.f) Implements the Before/After Suite annotation <- (step 3) Has been done in (step 1.f);
     @AfterSuite
     public void closePage() {
         System.out.println("ObjectDataTests:: AFTER SUITE;  Name: " +
