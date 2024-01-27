@@ -1,47 +1,38 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd"> <!-- (step 2) Create testng.xml with 2 tests -->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd">
 
-<suite name="mySchoolSuite" verbose="2" thread-count="4" parallel="tests">  <!-- (2.2) Implements parallel = "test" -->
-<!-- suite name="mySchoolSuite" thread-count="4" parallel="classes" -->      <!-- (2.3) Discover parallel = "classes" -->
-<!-- suite name="mySchoolSuite" thread-count="4" parallel="instances" -->    <!-- (2.3) Discover parallel = "instances" -->
-<!-- suite name="mySchoolSuite" thread-count="4" parallel="methods" -->      <!-- (2.3) Discover parallel = "methods" -->
-<!-- suite name="mySchoolSuite" thread-count="4" parallel="true" -->         <!-- (2.3) Discover parallel = "true" -->
+<suite name="mySchoolSuite" verbose="2" thread-count="4" parallel="tests">  <!-- Discover parallel = "test" -->
+<!-- suite name="mySchoolSuite" thread-count="4" parallel="classes" -->      <!-- Discover parallel = "classes" -->
+<!-- suite name="mySchoolSuite" thread-count="4" parallel="instances" -->    <!-- Discover parallel = "instances" -->
+<!-- suite name="mySchoolSuite" thread-count="4" parallel="methods" -->      <!-- Discover parallel = "methods" -->
+<!-- suite name="mySchoolSuite" thread-count="4" parallel="true" -->         <!-- Discover parallel = "true" -->
 
-    <test name="TestCase1::mySchoolFunctionalTests"> <!-- (step 2) Create TestCase1 -->
+    <test name="TestCase1::mySchoolFunctionalTests">
         <groups>
             <run>
-                <include name="group0"/> <!-- (step 4.a) Run test methods, included in the "group0" -->
-                <include name="group1"/> <!-- (step 4.a) Run test methods, included in the "group1" -->
-                <!-- exclude name="group1"/ --> <!-- (step 4.b) Skip test methods, included in the "group1" -->
+                <include name="group0"/>
+                <include name="group1"/>
+
             </run>
         </groups>
         <classes>
-            <class name="com.example.school.tests.MainTests"/>  <!-- (2.1) This Test Class distributes to TestCase1 -->
-            <class name="com.example.school.tests.ObjectDataTests"/> <!-- (2.1) This Test Class distributes to TestCase1 -->
+            <class name="com.example.school.tests.MainTests"/>
+            <class name="com.example.school.tests.ObjectDataTests"/>
         </classes>
     </test>
-    <test name="TestCase2::mySchoolPriorityTests"> <!-- (step 2) Create TestCase2 -->
+    <test name="TestCase2::mySchoolPriorityTests">
         <groups>
             <run>
-                <include name="group0"/> <!-- (step 4.a) Run test methods, included in the "group0" -->
-                <include name="groupA"/> <!-- (step 4.a) Run test methods, included in the "groupA" -->
-                <include name="groupB"/> <!-- (step 4.a) Run test methods, included in the "groupB" -->
-                <!-- exclude name="groupB"/ --> <!-- (step 4.b) Skip test methods, included in the "groupB" -->
+                <include name="group0"/>
+                <include name="groupA"/>
+                <include name="groupB"/>
             </run>
             <dependencies>
-                <!--(step 4.c) Run tests in groupA only after success run groupB tests:
-                               "PriorityTests:: Name:test_B3/2/1"  will be run first, and only after it tets
-                               "PriorityTests::Name:test_A2/1" will be executed -->
                 <group name="groupA" depends-on="groupB"/>
-
-                <!--(step 4.d) Run tests in groupC only after success run of group1 tests:
-                                group1 has 2 negative tests, which will be fail,
-                                so groupC (which consist of 4 test methods) will not be executed
-                                - there is total tests run: 30 instead of 34-->
                 <group name="groupC" depends-on="group1"/>
             </dependencies>
         </groups>
         <classes>
-            <class name="com.example.school.tests.PriorityTests"/> <!-- (2.1) This Test Class distributes to TestCase2 -->
+            <class name="com.example.school.tests.PriorityTests"/>
         </classes>
     </test>
 </suite>
