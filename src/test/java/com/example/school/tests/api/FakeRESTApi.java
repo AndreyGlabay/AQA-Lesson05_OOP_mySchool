@@ -24,8 +24,9 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
         try (Response response = client.newCall(request).execute()) { // (1.j) Make possibility for request execution;
             int code = response.code(); // (1.k) Initiate var and create assertion for check response code;
             Assert.assertEquals(code, 200, "ER: response code = 200, AR: response code = " + code);
+//            assert response.body() != null; //(1.k.1) IDEA suggestion;
             var body = response.body().string(); // (1.k) Initiate var and create assertion for check response body;
-            Assert.assertTrue(body.contains("Last Name 72"), "Value \"Last Name 72\" is missing");
+            Assert.assertTrue(body.contains("Last Name 72"), "Value \"Last Name 72\" is not found");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
