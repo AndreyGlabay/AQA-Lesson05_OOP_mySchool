@@ -1,4 +1,3 @@
-<!-- (Step 0.a) Add pom.xml-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -8,20 +7,22 @@
     <artifactId>mySchool</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!-- (Step 0.d) Add TestNG plugin -->
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
-    <!-- (Step 0.c) Add manually tag <build> for Maven can find source -->
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
         <testSourceDirectory>src/test/java</testSourceDirectory>
     </build>
 
-    <!-- (Step 0.b) Add dependency from Maven repository -->
     <dependencies>
+        <dependency> <!-- (step 1.g) Implements OkHTTP Client and make Maven re-build -->
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.12.0</version>
+        </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
