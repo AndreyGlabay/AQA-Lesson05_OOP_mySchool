@@ -30,7 +30,7 @@
 - (n) На рівні тестового класу "Authors" заімплементував 4 змінних відносно з Authors - GET -JSON scheme;
 - (o) До pom.xml імплементував залежність через Мавен JSON Object бібліотеки, та зробив ре-білд Мавен;
 - (p) До pom.xml імплементував залежність через Мавен Jackson-core, -databind, -annotations бібліотеки, та зробив ре-білд;
-
+- (q) Class Authors: анатував "поля-змінні" як "@JsonProperty", додав аксессори та toString;
 
 
 
