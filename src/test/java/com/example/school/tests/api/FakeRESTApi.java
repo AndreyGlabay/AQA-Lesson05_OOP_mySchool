@@ -17,7 +17,7 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
     OkHttpClient client = new OkHttpClient.Builder().build(); // (1.h) Implement new object - instance of OkHTTPClient;
 
     @Test
-    public void authors() { // (1.d) Create test method "authors()";
+    public void authors() { // (1.d) Create test method "authors()" for method GET;
         final String endpointName = "/Authors"; // (1.e) Initiate var "endpointName" = endpoint acc. to the task;
         String url = apiUrl + endpointName; // (1.f) Initiate var "url", which consist of api and endpoint;
 
@@ -42,4 +42,23 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
             throw new RuntimeException(e);
         }
     }
+
+    @Test
+    public void authorsPost() { // (2.a) Implement test method "authorsPost()" for method POST;
+        final String endpointName = "/Authors"; // (1.e) Initiate var "endpointName" = endpoint acc. to the task;
+        String url = apiUrl + endpointName; // (1.f) Initiate var "url", which consist of api and endpoint;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
