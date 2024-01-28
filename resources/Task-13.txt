@@ -4,8 +4,9 @@
     - Variant = Author;
 
 (2) Імплементувати 3 тести на різні методи HTTP.
-- (2.1) 2 тести зробити за допомогою Jackson,
-- (2.2) один - з використанням JSONObject.
+
+(2.1) 2 тести зробити за допомогою Jackson,
+(2.2) один - з використанням JSONObject.
 
 (3) У кожному тесті мусить бути принаймні один Asserion.
 
@@ -31,18 +32,23 @@
 - (n) На рівні тестового класу "Authors" заімплементував 4 змінних відносно з "Authors-GET-scheme";
 - (o) До pom.xml імплементував залежність через Мавен JSON Object бібліотеки, та зробив ре-білд Мавен;
 - (p) До pom.xml імплементував залежність через Мавен Jackson-core, -databind, -annotations бібліотеки, та зробив ре-білд;
-- (q) Class Authors: анатував "поля-змінні" як "@JsonProperty", додав аксессори та toString;
+- (q) Class Authors: використовуючи Jackson, анатував "поля-змінні" як "@JsonProperty", додав аксессори та toString;
 - (r) Class "FakeRESTApi"/method "authors()"/block "try": зробив змінну для маппінга;
 - (s) Class "FakeRESTApi"/method "authors()"/block "try": зробив парсінг DTO;
 - (t) Class "FakeRESTApi"/method "authors()"/block "try": зховав у коменти змінну та ассершн який перевіряє наявність даних
       у респонс боді - тому що виникає конфлікт, коли далі я намагаюсь парсити респонс боді, а цей стрім вже використовувався
       та був зачинен (залишев як нагадування що до такої ішью у майбутньому);
 
+(2) Class "FakeRESTApi":
+- Зробив 1-й тестовий метод "authors()"  - зроблено у step 1.d - за допомогою Jackson;
+- Зробив 2-й тестовий метод "authorsPost()" - поки пустий - буде використовувати Jackson;
+- Зробив 3-й тестовий метод "authorsDelete()" - поки пустий - буде використовувати Jackson;
+
 (2.1)
 - (a) У пакеті "dto" зробив новий java клас "AuthorsPost", щоб зробити ДТО для сутності "Authors-POST-scheme";
-- (b) На рівні тестового класу "Authors" заімплементував 4 змінних відносно з "Authors-POST-scheme";
-- (c)
-- (d)
+- (b) На рівні тестового класу "AuthorsPost" заімплементував 4 змінних відносно з "Authors-POST-scheme";
+- (c) Class AuthorsPost: використовуючи Jackson, анатував "поля-змінні" як "@JsonProperty", додав аксессори та toString;
+- (d) Class "FakeRESTApi"/method "authors()": створив ObjectMapper щоб перетворити Java code у JSON;
 - (e)
 - (f)
 - (g)
@@ -52,8 +58,8 @@
 
 ....................................................
 (2.2)
-- (a) У пакеті "dto" зробив новий java клас "AuthorsPost", щоб зробити ДТО для сутності "Authors-DELETE-scheme";
-- (b) На рівні тестового класу "Authors" заімплементував 4 змінних відносно з "Authors-DELETE-scheme";
+- (a) У пакеті "dto" зробив новий java клас "AuthorsDelete", щоб зробити ДТО для сутності "Authors-DELETE-scheme";
+- (b) На рівні тестового класу "AuthorsDelete" заімплементував 4 змінних відносно з "Authors-DELETE-scheme";
 - (c)
 - (d)
 - (e)

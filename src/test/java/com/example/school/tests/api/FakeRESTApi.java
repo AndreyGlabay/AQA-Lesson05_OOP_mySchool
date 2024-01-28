@@ -16,7 +16,7 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
     final String apiUrl = "https://fakerestapi.azurewebsites.net/api/v1"; // (1.c) Create var = Copy URL from the resource;
     OkHttpClient client = new OkHttpClient.Builder().build(); // (1.h) Implement new object - instance of OkHTTPClient;
 
-    @Test
+    @Test (testName = "TestCase1_Jackson") // (step 2) Implement 1st test -  be realised with Jackson - done in step 1;
     public void authors() { // (1.d) Create test method "authors()" for method GET;
         final String endpointName = "/Authors"; // (1.e) Initiate var "endpointName" = endpoint acc. to the task;
         String url = apiUrl + endpointName; // (1.f) Initiate var "url", which consist of api and endpoint;
@@ -43,10 +43,24 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
         }
     }
 
-    @Test
-    public void authorsPost() { // (2.a) Implement test method "authorsPost()" for method POST;
-        final String endpointName = "/Authors"; // (1.e) Initiate var "endpointName" = endpoint acc. to the task;
-        String url = apiUrl + endpointName; // (1.f) Initiate var "url", which consist of api and endpoint;
+    @Test (testName = "TestCase2_Jackson")      // (step 2) Implement 2nd test -  be realised with Jackson
+    public void authorsPost() {                 // (2.a) Implement test method "authorsPost()" for method POST;
+        final String endpointName = "/Authors"; // (2.b) Initiate var "endpointName" = endpoint acc. to the task;
+        String url = apiUrl + endpointName;     // (2.c) Initiate var "url", which consist of api and endpoint;
+        ObjectMapper javaToJson = new ObjectMapper(); // () Implement ObjectMapper for convert java to JSON
+
+    }
+
+
+
+
+
+
+
+    @Test (testName = "TestCase3_JsonObject") // (step 2) Implement 3rd test -  be realised with JsonObject;
+    public void authorsDelete() { // (2.a) Implement test method "authorsPost()" for method POST;
+        final String endpointName = "/Authors"; // (2.b) Initiate var "endpointName" = endpoint acc. to the task;
+        String url = apiUrl + endpointName; // (2.c) Initiate var "url", which consist of api and endpoint;
 
     }
 
