@@ -31,6 +31,15 @@
 - (o) До pom.xml імплементував залежність через Мавен JSON Object бібліотеки, та зробив ре-білд Мавен;
 - (p) До pom.xml імплементував залежність через Мавен Jackson-core, -databind, -annotations бібліотеки, та зробив ре-білд;
 - (q) Class Authors: анатував "поля-змінні" як "@JsonProperty", додав аксессори та toString;
+- (r) Class "FakeRESTApi"/method "authors()"/block "try": зробив змінну для маппінга;
+- (s) Class "FakeRESTApi"/method "authors()"/block "try": зробив парсінг DTO;
+- (t)
+- (u)
+- (v)
+- (w)
+- (x)
+- (y)
+- (z)
 
 
 

@@ -1,5 +1,8 @@
 package com.example.school.tests.api; // (step 1.a) Create new package "api"
 
+import com.example.school.tests.api.dto.Authors;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.testng.Assert;
@@ -27,6 +30,10 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
 //            assert response.body() != null; //(1.k.1) IDEA suggestion;
             var body = response.body().string(); // (1.k) Initiate var and create assertion for check response body;
             Assert.assertTrue(body.contains("Last Name 72"), "Value \"Last Name 72\" is not found");
+            var mapper = new ObjectMapper(); // (1.r) Add new var, put to it ObjectMapper() for response array parsing;
+            mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+            var authors = mapper.readValue(response.body().string(), Authors[].class); // (1.s) Parse DTO "Authors";
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
