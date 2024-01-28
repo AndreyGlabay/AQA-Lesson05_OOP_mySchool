@@ -18,7 +18,7 @@
     </build>
 
     <dependencies>
-        <dependency> <!-- (step 1.g) Implements OkHTTP Client and make Maven re-build -->
+        <dependency> <!-- (step 1.g) Implements OkHTTP3 library and make Maven re-build -->
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>4.12.0</version>
