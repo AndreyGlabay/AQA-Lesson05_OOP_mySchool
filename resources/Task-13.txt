@@ -11,7 +11,12 @@
 --------------------------------------------------------------------------------------------------------------------
 
 (1)
-- У пакеті test/java/com.example.school.tests - створив новий пакет "api";
-- У пакеті "/api" створив новий java клас "FakeRESTApi"
+- (a) У пакеті test/java/com.example.school.tests - створив новий пакет "api";
+- (b) У пакеті "/api" створив новий java клас "FakeRESTApi"
+- (c) За адресою https://fakerestapi.azurewebsites.net/index.html обрав сутність "Authors" -> метод GET -> Copy URL ->
+      -> у тестовому класі "FakeRESTApi" зробив змінну "apiUrl" типу "String", як значення помістив до неї скопійований URL;
+- (d) у тестовому класі "FakeRESTApi" зробив змінну "endpointName", та помістив до неї ендпоінт згідно із завданням;
+- (e) зробив змінну "url" яка скаладається з апі та ендпоінту;
 
-За адресою https://fakerestapi.azurewebsites.net/index.html обираю сутність "Authors"
+
+
