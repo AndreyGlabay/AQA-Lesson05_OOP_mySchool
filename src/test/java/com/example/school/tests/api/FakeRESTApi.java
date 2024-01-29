@@ -52,7 +52,6 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
         String url = apiUrl + endpointName;     // (2.1.e) Initiate var "url", which consist of api and endpoint;
         ObjectMapper javaToJson = new ObjectMapper(); // (2.1.f) Implement ObjectMapper for convert java to JSON;
 
-
         try {
             AuthorsPost newId100500 = new AuthorsPost(); // (2.1.g) Make the new Object = instance of Class AuthorsPost;
             newId100500.setId(100500);
@@ -69,39 +68,37 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
 
             try (Response response = client.newCall(request).execute()) { // (2.1.j) Execute POST request;
                 int code = response.code();
-                // (3) Check that response code is 200;
+                // (3) Check that response code is 200 (according to Swagger);
                 Assert.assertEquals(code, 200, "ER: response code = 200, AR: response code = " + code);
                 assert response.body() != null;
                 String responseBody = response.body().string();
                 System.out.println("Response Body: " + responseBody);
             }
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-
-
-
-
-
-
     @Test (testName = "TestCase3_JsonObject")       // (step 2) Implement 3rd test -  be realised with JsonObject;
     public void authorsDelete() {                   // (step 2) Implement test method "authorsPost()" for method POST;
-        final String endpointName = "/Authors";     // (2.2.d) Initiate var "endpointName" = endpoint acc. to the task;
-        String url = apiUrl + endpointName;         // (2.1.e) Initiate var "url", which consist of api and endpoint;
+        final String endpointName = "/Authors/27";  // (2.2.a) Initiate var "endpointName" = endpoint acc. to the task;
+        String url = apiUrl + endpointName;         // (2.2.b) Initiate var "url", which consist of api and endpoint;
+        String jsonRequestBody = "";                // (2.2.c) Initiate var "jsonRequestBody", which empty content;
 
+        Request request = new Request.Builder()     // (2.2.d) Create new DELETE request;
+                .url(url)
+                .method("DELETE", RequestBody.create(jsonRequestBody, MediaType.get("application/json")))
+                .header("accept", "*/*")
+                .build();
+
+        try (Response response = client.newCall(request).execute()) { // (2.1.e) Execute DELETE request;
+            int code = response.code();
+            // (3) Check that response code is 200 (according to Swagger);
+            Assert.assertEquals(code, 200, "ER: response code = 200, AR: response code = " + code);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
