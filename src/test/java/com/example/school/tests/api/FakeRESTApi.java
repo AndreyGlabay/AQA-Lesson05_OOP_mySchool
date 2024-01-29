@@ -12,9 +12,7 @@ import org.testng.annotations.Test;
 import okhttp3.OkHttpClient; // (1.g) Implement OkHTTP3 library;
 import okhttp3.RequestBody;
 import okhttp3.MediaType;
-
 import java.io.IOException;
-import java.util.Arrays;
 
 public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
     final String apiUrl = "https://fakerestapi.azurewebsites.net/api/v1"; // (1.c) Create var = Copy URL from the resource;
@@ -35,6 +33,7 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
             // (3.1.a) Check that response code is 200;
             Assert.assertEquals(code, 200, "ER: response code = 200, AR: response code = " + code);
             assert response.body() != null; //(1.k.1) IDEA suggestion;
+            System.out.println("GET: TestCase1_Jackson: Check that response code is 200");
 
             // (!) (step 1.t) Hide next 2 lines (step 1.k) to comments due to conflict: read the response body twice -
             //                - is impossible: after first time - stream will be closed;
@@ -52,9 +51,12 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
 
             // (3.1.b) Check that response body contain value "42"
             Assert.assertTrue(responseBody.contains("42"), "Response body doesn't have value 42");
+            System.out.println("GET: TestCase1_Jackson: Check that response body contain value \"42\"");
 
             // (3.1.c) Check that response body contain value "Last Name 276"
-            Assert.assertTrue(responseBody.contains("Last Name 276"), "esponse body doesn't have value Last Name 276");
+            Assert.assertTrue(responseBody.contains("Last Name 276"), "Response body value \"Last Name 276\" missing");
+            System.out.println("GET: TestCase1_Jackson: Check that response body contain value \"Last Name 276\"");
+            System.out.println();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -89,15 +91,19 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
                 assert response.body() != null;
                 String responseBody = response.body().string();
                 System.out.println("Response Body: " + responseBody);
+                System.out.println("POST: TestCase2_Jackson: Check that response code is 200");
 
-                // (3.2.b) Check that response header "Content-Type" is present
+                // (3.2.b) Check that response header "content-type" is present
                 Headers headers = response.headers();
                 boolean acceptHeaderPresent = headers.names().contains("content-type");
                 Assert.assertTrue(acceptHeaderPresent, "Header \"content-type\" is missing!");
+                System.out.println("POST: TestCase2_Jackson: Check that response header \"content-type\" is present");
 
                 // (3.2.с) Check that response header "server" has value "Kestrel"
                 boolean acceptHeaderValue = headers.values("server").contains("Kestrel");
                 Assert.assertTrue(acceptHeaderValue, "In the header \"server\" value is wrong or missing!");
+                System.out.println("POST: TestCase2_Jackson: Check that response header \"server\" has value \"Kestrel\"");
+                System.out.println();
             }
 
         } catch (IOException e) {
@@ -122,15 +128,19 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
             // (3.3.a) Check that response code is 200 (according to Swagger);
             int code = response.code();
             Assert.assertEquals(code, 200, "ER: response code = 200, AR: response code = " + code);
+            System.out.println("DELETE: TestCase3_JsonObject: Check that response code is 200");
 
-            // (3.3.b) Check that response message is "Success" (according to Swagger);
+            // (3.3.b) Check that response message is "OK" (according to Swagger);
             String responseMessage = response.message();
             Assert.assertTrue(responseMessage.contains("OK"), "Response message doesn't contain \"OK\"");
+            System.out.println("DELETE: TestCase3_JsonObject: Check that response message is \"OK\" (according to Swagger);");
 
             // (3.3.с) Check that response header "content-length" has value "0"
             Headers headers = response.headers();
             boolean acceptHeaderValue = headers.values("content-length").contains("0");
             Assert.assertTrue(acceptHeaderValue, "In the header \"content-length\" value is wrong or missing!");
+            System.out.println("DELETE: TestCase3_JsonObject: Check that response header \"content-length\" = \"0\"");
+            System.out.println();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
