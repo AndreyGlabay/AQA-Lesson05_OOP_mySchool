@@ -4,13 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 // (2.1.a) In the "dto" package: create new java-class "AuthorsPost" for make DTO for the entity;
 public class AuthorsPost {
-    @JsonProperty ("id")
+    @JsonProperty
     int id;
-    @JsonProperty ("idBook")
+    @JsonProperty
     int idBook;
-    @JsonProperty ("firstName")
+    @JsonProperty
     String firstName;
-    @JsonProperty ("lastName")
+    @JsonProperty
     String lastName;
 
 

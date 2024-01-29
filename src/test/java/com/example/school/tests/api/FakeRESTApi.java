@@ -4,6 +4,7 @@ import com.example.school.tests.api.dto.Authors;
 import com.example.school.tests.api.dto.AuthorsPost;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import okhttp3.Headers;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.testng.Assert;
@@ -30,16 +31,30 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
                 .build();
         try (Response response = client.newCall(request).execute()) { // (1.j) Make possibility for request execution;
             int code = response.code(); // (1.k) Initiate var and create assertion for check response code;
+
+            // (3.1.a) Check that response code is 200;
             Assert.assertEquals(code, 200, "ER: response code = 200, AR: response code = " + code);
             assert response.body() != null; //(1.k.1) IDEA suggestion;
+
             // (!) (step 1.t) Hide next 2 lines (step 1.k) to comments due to conflict: read the response body twice -
             //                - is impossible: after first time - stream will be closed;
             // var responseBody = response.body().string(); // (1.k) Initiate var and create assertion for check response body;
             // Assert.assertTrue(responseBody.contains("Last Name 72"), "Value \"Last Name 72\" is not found");
+
+            // (3.1.b) To avoid attempt double-read the stream - lets put response.body() to the var "responseBody"
+            String responseBody = response.body().string();
+
             var mapper = new ObjectMapper(); // (1.r) Add new var, put to it ObjectMapper() for response array parsing;
             mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-            var authors = mapper.readValue(response.body().string(), Authors[].class); // (1.s) Parse DTO "Authors";
-            System.out.println(authors);
+            var authors = mapper.readValue(responseBody, Authors[].class); // (1.s) Parse DTO "Authors";
+            System.out.println("Response Body: " + authors);
+            System.out.println("Response Body: " + responseBody);
+
+            // (3.1.b) Check that response body contain value "42"
+            Assert.assertTrue(responseBody.contains("42"), "Response body doesn't have value 42");
+
+            // (3.1.c) Check that response body contain value "Last Name 276"
+            Assert.assertTrue(responseBody.contains("Last Name 276"), "esponse body doesn't have value Last Name 276");
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -68,11 +83,21 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
 
             try (Response response = client.newCall(request).execute()) { // (2.1.j) Execute POST request;
                 int code = response.code();
-                // (3) Check that response code is 200 (according to Swagger);
+
+                // (3.2.a) Check that response code is 200 (according to Swagger);
                 Assert.assertEquals(code, 200, "ER: response code = 200, AR: response code = " + code);
                 assert response.body() != null;
                 String responseBody = response.body().string();
                 System.out.println("Response Body: " + responseBody);
+
+                // (3.2.b) Check that response header "Content-Type" is present
+                Headers headers = response.headers();
+                boolean acceptHeaderPresent = headers.names().contains("content-type");
+                Assert.assertTrue(acceptHeaderPresent, "Header \"content-type\" is missing!");
+
+                // (3.2.с) Check that response header "server" has value "Kestrel"
+                boolean acceptHeaderValue = headers.values("server").contains("Kestrel");
+                Assert.assertTrue(acceptHeaderValue, "In the header \"server\" value is wrong or missing!");
             }
 
         } catch (IOException e) {
@@ -93,9 +118,19 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
                 .build();
 
         try (Response response = client.newCall(request).execute()) { // (2.1.e) Execute DELETE request;
+
+            // (3.3.a) Check that response code is 200 (according to Swagger);
             int code = response.code();
-            // (3) Check that response code is 200 (according to Swagger);
             Assert.assertEquals(code, 200, "ER: response code = 200, AR: response code = " + code);
+
+            // (3.3.b) Check that response message is "Success" (according to Swagger);
+            String responseMessage = response.message();
+            Assert.assertTrue(responseMessage.contains("OK"), "Response message doesn't contain \"OK\"");
+
+            // (3.3.с) Check that response header "content-length" has value "0"
+            Headers headers = response.headers();
+            boolean acceptHeaderValue = headers.values("content-length").contains("0");
+            Assert.assertTrue(acceptHeaderValue, "In the header \"content-length\" value is wrong or missing!");
 
         } catch (IOException e) {
             throw new RuntimeException(e);
