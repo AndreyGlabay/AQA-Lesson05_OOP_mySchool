@@ -4,14 +4,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 // (2.1.a) In the "dto" package: create new java-class "AuthorsPost" for make DTO for the entity;
 public class AuthorsPost {
-    @JsonProperty
+    @JsonProperty ("id")
     int id;
-    @JsonProperty
+    @JsonProperty ("idBook")
     int idBook;
-    @JsonProperty
-    String firstNAme;
-    @JsonProperty
+    @JsonProperty ("firstName")
+    String firstName;
+    @JsonProperty ("lastName")
     String lastName;
+
 
     // (2.1.b) Generate accessors and toString();
     public int getId() {
@@ -31,11 +32,11 @@ public class AuthorsPost {
     }
 
     public String getFirstNAme() {
-        return firstNAme;
+        return firstName;
     }
 
-    public void setFirstNAme(String firstNAme) {
-        this.firstNAme = firstNAme;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -51,7 +52,7 @@ public class AuthorsPost {
         return "AuthorsPost{" +
                 "id=" + id +
                 ", idBook=" + idBook +
-                ", firstNAme='" + firstNAme + '\'' +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
     }

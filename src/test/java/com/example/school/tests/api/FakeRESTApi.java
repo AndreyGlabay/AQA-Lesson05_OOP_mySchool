@@ -1,6 +1,7 @@
 package com.example.school.tests.api; // (step 1.a) Create new package "api"
 
 import com.example.school.tests.api.dto.Authors;
+import com.example.school.tests.api.dto.AuthorsPost;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.Request;
@@ -8,6 +9,8 @@ import okhttp3.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import okhttp3.OkHttpClient; // (1.g) Implement OkHTTP3 library;
+import okhttp3.RequestBody;
+import okhttp3.MediaType;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -44,11 +47,37 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
     }
 
     @Test (testName = "TestCase2_Jackson")      // (step 2) Implement 2nd test -  be realised with Jackson
-    public void authorsPost() {                 // (2.a) Implement test method "authorsPost()" for method POST;
-        final String endpointName = "/Authors"; // (2.b) Initiate var "endpointName" = endpoint acc. to the task;
-        String url = apiUrl + endpointName;     // (2.c) Initiate var "url", which consist of api and endpoint;
-        ObjectMapper javaToJson = new ObjectMapper(); // () Implement ObjectMapper for convert java to JSON
+    public void authorsPost() {                 // (step 2) Implement test method "authorsPost()" for method POST;
+        final String endpointName = "/Authors"; // (2.1.d) Initiate var "endpointName" = endpoint acc. to the task;
+        String url = apiUrl + endpointName;     // (2.1.e) Initiate var "url", which consist of api and endpoint;
+        ObjectMapper javaToJson = new ObjectMapper(); // (2.1.f) Implement ObjectMapper for convert java to JSON;
 
+
+        try {
+            AuthorsPost newId100500 = new AuthorsPost(); // (2.1.g) Make the new Object = instance of Class AuthorsPost;
+            newId100500.setId(100500);
+            newId100500.setIdBook(100500);
+            newId100500.setFirstName("John");
+            newId100500.setLastName("Doe");
+            byte[] requestBodyBytes = javaToJson.writeValueAsBytes(newId100500);;// (2.1.h) Convert Object to byte code;
+            Request request = new Request.Builder() // (2.1.i) Create new POST request;
+                    .url(url)
+                    .header("accept", "text/plain; v=1.0")
+                    .header("Content-Type", "application/json; v=1.0")
+                    .post(RequestBody.create(MediaType.parse("application/json"), requestBodyBytes))
+                    .build();
+
+            try (Response response = client.newCall(request).execute()) { // (2.1.j) Execute POST request;
+                int code = response.code();
+                // (3) Check that response code is 200;
+                Assert.assertEquals(code, 200, "ER: response code = 200, AR: response code = " + code);
+                assert response.body() != null;
+                String responseBody = response.body().string();
+                System.out.println("Response Body: " + responseBody);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
@@ -57,10 +86,10 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
 
 
 
-    @Test (testName = "TestCase3_JsonObject") // (step 2) Implement 3rd test -  be realised with JsonObject;
-    public void authorsDelete() { // (2.a) Implement test method "authorsPost()" for method POST;
-        final String endpointName = "/Authors"; // (2.b) Initiate var "endpointName" = endpoint acc. to the task;
-        String url = apiUrl + endpointName; // (2.c) Initiate var "url", which consist of api and endpoint;
+    @Test (testName = "TestCase3_JsonObject")       // (step 2) Implement 3rd test -  be realised with JsonObject;
+    public void authorsDelete() {                   // (step 2) Implement test method "authorsPost()" for method POST;
+        final String endpointName = "/Authors";     // (2.2.d) Initiate var "endpointName" = endpoint acc. to the task;
+        String url = apiUrl + endpointName;         // (2.1.e) Initiate var "url", which consist of api and endpoint;
 
     }
 
