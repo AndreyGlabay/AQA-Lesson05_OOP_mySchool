@@ -18,7 +18,9 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
     final String apiUrl = "https://fakerestapi.azurewebsites.net/api/v1"; // (1.c) Create var = Copy URL from the resource;
     OkHttpClient client = new OkHttpClient.Builder().build(); // (1.h) Implement new object - instance of OkHTTPClient;
 
-    @Test (testName = "TestCase1_Jackson") // (step 2) Implement 1st test -  be realised with Jackson - done in step 1;
+    // (step 2) Implement 1st test -  be realised with Jackson - done in step 1;
+    // (step 6.a) On the annotation level assign test to the group "group_Api_1" for realise test run order in testng.xml;
+    @Test (testName = "TestCase1_Jackson", priority = 1, groups = {"group_Api_1"})
     public void authors() { // (1.d) Create test method "authors()" for method GET;
         final String endpointName = "/Authors"; // (1.e) Initiate var "endpointName" = endpoint acc. to the task;
         String url = apiUrl + endpointName; // (1.f) Initiate var "url", which consist of api and endpoint;
@@ -63,7 +65,9 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
         }
     }
 
-    @Test (testName = "TestCase2_Jackson")      // (step 2) Implement 2nd test -  be realised with Jackson
+    // (step 2) Implement 2nd test -  be realised with Jackson;
+    // (step 6.a) On the annotation level assign test to the group "group_Api_2" for realise test run order in testng.xml;
+    @Test (testName = "TestCase2_Jackson", priority = 2, groups = {"group_Api_2"})
     public void authorsPost() {                 // (step 2) Implement test method "authorsPost()" for method POST;
         final String endpointName = "/Authors"; // (2.1.d) Initiate var "endpointName" = endpoint acc. to the task;
         String url = apiUrl + endpointName;     // (2.1.e) Initiate var "url", which consist of api and endpoint;
@@ -111,7 +115,9 @@ public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
         }
     }
 
-    @Test (testName = "TestCase3_JsonObject")       // (step 2) Implement 3rd test -  be realised with JsonObject;
+    // (step 2) Implement 3rd test -  be realised with JsonObject;
+    // (step 6.a) On the annotation level assign test to the group "group_Api_3" for realise test run order in testng.xml;
+    @Test (testName = "TestCase3_JsonObject", priority = 1, groups = {"group_Api_3"})
     public void authorsDelete() {                   // (step 2) Implement test method "authorsPost()" for method POST;
         final String endpointName = "/Authors/27";  // (2.2.a) Initiate var "endpointName" = endpoint acc. to the task;
         String url = apiUrl + endpointName;         // (2.2.b) Initiate var "url", which consist of api and endpoint;

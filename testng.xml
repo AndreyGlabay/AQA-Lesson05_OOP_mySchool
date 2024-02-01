@@ -9,9 +9,8 @@
     <test name="TestCase1::mySchoolFunctionalTests">
         <groups>
             <run>
-                <include name="group0"/>
-                <include name="group1"/>
-
+                <exclude name="group0"/> <!-- (step 6.b) realise test execution only for API tests -->
+                <exclude name="group1"/> <!-- (step 6.b) realise test execution only for API tests -->
             </run>
         </groups>
         <classes>
@@ -22,9 +21,9 @@
     <test name="TestCase2::mySchoolPriorityTests">
         <groups>
             <run>
-                <include name="group0"/>
-                <include name="groupA"/>
-                <include name="groupB"/>
+                <exclude name="group0"/> <!-- (step 6.b) realise test execution only for API tests -->
+                <exclude name="groupA"/> <!-- (step 6.b) realise test execution only for API tests -->
+                <exclude name="groupB"/> <!-- (step 6.b) realise test execution only for API tests -->
             </run>
             <dependencies>
                 <group name="groupA" depends-on="groupB"/>
@@ -33,6 +32,22 @@
         </groups>
         <classes>
             <class name="com.example.school.tests.PriorityTests"/>
+        </classes>
+    </test>
+    <test name="TestCaseApi::mySchoolApiTests">
+        <groups>
+            <run>
+                <include name="group_Api_1"/> <!-- (step 6.b) realise test execution only for API tests -->
+                <include name="group_Api_2"/> <!-- (step 6.b) realise test execution only for API tests -->
+                <include name="group_Api_3"/> <!-- (step 6.b) realise test execution only for API tests -->
+            </run>
+            <dependencies>
+                <group name="group_Api_2" depends-on="group_Api_1"/> <!-- (step 6.c) realise test execution order -->
+                <group name="group_Api_3" depends-on="group_Api_2"/> <!-- (step 6.c) realise test execution order -->
+            </dependencies>
+        </groups>
+        <classes>
+            <class name="com.example.school.tests.api.FakeRESTApi"/>
         </classes>
     </test>
 </suite>
