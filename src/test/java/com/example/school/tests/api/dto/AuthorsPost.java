@@ -5,13 +5,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 // (2.1.a) In the "dto" package: create new java-class "AuthorsPost" for make DTO for the entity;
 public class AuthorsPost {
     @JsonProperty
-    int id;
+    private int id; // (step 5) restrict access to the field, with access modifier "private";
     @JsonProperty
-    int idBook;
+    private int idBook; // (step 5) restrict access to the field, with access modifier "private";
     @JsonProperty
-    String firstName;
+    private String firstName; // (step 5) restrict access to the field, with access modifier "private";
     @JsonProperty
-    String lastName;
+    private String lastName; // (step 5) restrict access to the field, with access modifier "private";
 
 
     // (2.1.b) Generate accessors and toString();

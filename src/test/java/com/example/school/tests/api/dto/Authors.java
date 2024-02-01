@@ -6,13 +6,13 @@ public class Authors { // (step 1.m) In the "dto" package: create new java-class
     // (step 1.n) implement variables according to the /Authors-GET-scheme;
     // (step 1.q) annotate variables with "@JsonProperty", add accessors, add toString;
     @JsonProperty
-    int id;
+    private int id; // (step 5) restrict access to the field, with access modifier "private";
     @JsonProperty
-    int idBook;
+    private int idBook; // (step 5) restrict access to the field, with access modifier "private";
     @JsonProperty
-    String firstName;
+    private String firstName; // (step 5) restrict access to the field, with access modifier "private";
     @JsonProperty
-    String lastName;
+    private String lastName; // (step 5) restrict access to the field, with access modifier "private";
 
     public int getId() {
         return id;
