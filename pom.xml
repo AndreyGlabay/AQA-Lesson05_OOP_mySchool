@@ -10,6 +10,7 @@
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
+        <jackson.version>2.16.1</jackson.version> <!-- (step 4) Move version's num from the 3 x <dependencies> -->
     </properties>
 
     <build>
@@ -31,17 +32,17 @@
         <dependency> <!-- (step 1.p) Implements Jackson core library and re-build Maven -->
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.16.1</version>
+            <version>${jackson.version}</version> <!-- (step 4) Move version's num to the <properties> -->
         </dependency>
         <dependency> <!-- (step 1.p) Implements Jackson databind library and re-build Maven -->
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.16.1</version>
+            <version>${jackson.version}</version> <!-- (step 4) Move version's num to the <properties> -->
         </dependency>
         <dependency> <!-- (step 1.p) Implements Jackson annotations library and re-build Maven -->
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.16.1</version>
+            <version>${jackson.version}</version>  <!-- (step 4) Move version's num to the <properties> -->
         </dependency>
 
         <dependency>
