@@ -1,39 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd">
 
-<suite name="mySchoolSuite" verbose="2" thread-count="4" parallel="tests">  <!-- Discover parallel = "test" -->
-<!-- suite name="mySchoolSuite" thread-count="4" parallel="classes" -->      <!-- Discover parallel = "classes" -->
-<!-- suite name="mySchoolSuite" thread-count="4" parallel="instances" -->    <!-- Discover parallel = "instances" -->
-<!-- suite name="mySchoolSuite" thread-count="4" parallel="methods" -->      <!-- Discover parallel = "methods" -->
-<!-- suite name="mySchoolSuite" thread-count="4" parallel="true" -->         <!-- Discover parallel = "true" -->
+<!-- (step 6.d) Modify this testng.xml: remove all settings for the previous task  -->
 
-    <test name="TestCase1::mySchoolFunctionalTests">
-        <groups>
-            <run>
-                <exclude name="group0"/> <!-- (step 6.b) realise test execution only for API tests -->
-                <exclude name="group1"/> <!-- (step 6.b) realise test execution only for API tests -->
-            </run>
-        </groups>
-        <classes>
-            <class name="com.example.school.tests.MainTests"/>
-            <class name="com.example.school.tests.ObjectDataTests"/>
-        </classes>
-    </test>
-    <test name="TestCase2::mySchoolPriorityTests">
-        <groups>
-            <run>
-                <exclude name="group0"/> <!-- (step 6.b) realise test execution only for API tests -->
-                <exclude name="groupA"/> <!-- (step 6.b) realise test execution only for API tests -->
-                <exclude name="groupB"/> <!-- (step 6.b) realise test execution only for API tests -->
-            </run>
-            <dependencies>
-                <group name="groupA" depends-on="groupB"/>
-                <group name="groupC" depends-on="group1"/>
-            </dependencies>
-        </groups>
-        <classes>
-            <class name="com.example.school.tests.PriorityTests"/>
-        </classes>
-    </test>
+<suite name="mySchoolApiTests" verbose="2" >
     <test name="TestCaseApi::mySchoolApiTests">
         <groups>
             <run>
@@ -51,4 +20,3 @@
         </classes>
     </test>
 </suite>
-
