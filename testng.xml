@@ -16,7 +16,7 @@
             </dependencies>
         </groups>
         <classes>
-            <class name="com.example.school.tests.api.FakeRESTApi"/>
+            <class name="com.example.school.tests.api.FakeRestApiTests"/> <!--(7) Rename Test Class to "FakeRestApiTests"-->
         </classes>
     </test>
 </suite>

@@ -14,7 +14,7 @@ import okhttp3.RequestBody;
 import okhttp3.MediaType;
 import java.io.IOException;
 
-public class FakeRESTApi { // (step 1.b) Create new test class "FakeRESTApi"
+public class FakeRestApiTests { // (1.b) Create new test class "FakeRESTApi" -> (7) Rename it to "FakeRestApiTests";
     final String apiUrl = "https://fakerestapi.azurewebsites.net/api/v1"; // (1.c) Create var = Copy URL from the resource;
     OkHttpClient client = new OkHttpClient.Builder().build(); // (1.h) Implement new object - instance of OkHTTPClient;
 
