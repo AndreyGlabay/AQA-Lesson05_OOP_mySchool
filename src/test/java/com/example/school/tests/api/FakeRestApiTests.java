@@ -61,7 +61,7 @@ public class FakeRestApiTests { // (1.b) Create new test class "FakeRESTApi" -> 
             System.out.println();
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            Assert.fail(e.toString()); // (step 8) Change "throw new IOException(e)" on "Assert.fail(e.toString())"
         }
     }
 
@@ -111,7 +111,7 @@ public class FakeRestApiTests { // (1.b) Create new test class "FakeRESTApi" -> 
             }
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            Assert.fail(e.toString()); // (step 8) Change "throw new IOException(e)" on "Assert.fail(e.toString())"
         }
     }
 
@@ -149,7 +149,7 @@ public class FakeRestApiTests { // (1.b) Create new test class "FakeRESTApi" -> 
             System.out.println();
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            Assert.fail(e.toString()); // (step 8) Change "throw new IOException(e)" on "Assert.fail(e.toString())"
         }
     }
 }

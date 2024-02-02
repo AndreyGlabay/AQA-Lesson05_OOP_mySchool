@@ -101,3 +101,6 @@
 - (d) testng.xml: видалив усе зайве, що залишалось з попереднього завдання.
 
 (7) Test Class "FakeRESTApi": перейменував клас відповідно regex у "FakeRestApiTests"
+
+(8) Test Class "FakeRestApiTests", all 3 of 3 test methods: у блоках TRY-CATCH змінив "throw new IOException(e)"
+    на "Assert.fail(e.toString())".
