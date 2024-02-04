@@ -85,7 +85,7 @@ public class FakeRestApiTests { // (1.b) Create new test class "FakeRESTApi" -> 
                     .url(url)
                     .header("accept", "text/plain; v=1.0")
                     .header("Content-Type", "application/json; v=1.0")
-                    .post(RequestBody.create(MediaType.parse("application/json"), requestBodyBytes))
+                    .post(RequestBody.create(requestBodyBytes, MediaType.parse("application/json")))
                     .build();
 
             try (Response response = client.newCall(request).execute()) { // (2.1.j) Execute POST request;
