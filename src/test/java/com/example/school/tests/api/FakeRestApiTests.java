@@ -13,6 +13,7 @@ import okhttp3.OkHttpClient; // (1.g) Implement OkHTTP3 library;
 import okhttp3.RequestBody;
 import okhttp3.MediaType;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class FakeRestApiTests { // (1.b) Create new test class "FakeRESTApi" -> (7) Rename it to "FakeRestApiTests";
     final String apiUrl = "https://fakerestapi.azurewebsites.net/api/v1"; // (1.c) Create var = Copy URL from the resource;
@@ -48,8 +49,8 @@ public class FakeRestApiTests { // (1.b) Create new test class "FakeRESTApi" -> 
             var mapper = new ObjectMapper(); // (1.r) Add new var, put to it ObjectMapper() for response array parsing;
             mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
             var authors = mapper.readValue(responseBody, Authors[].class); // (1.s) Parse DTO "Authors";
-            System.out.println("Response Body: " + authors);
-            System.out.println("Response Body: " + responseBody);
+            System.out.println("Response Body: " + Arrays.toString(authors)); // (step 10) Change "(... + authors);" ->
+            // -> to the "(... + Arrays.toString(authors));" for get actual values, but not only the link to the Array.
 
             // (3.1.b) Check that response body contain value "42"
             Assert.assertTrue(responseBody.contains("42"), "Response body doesn't have value 42");

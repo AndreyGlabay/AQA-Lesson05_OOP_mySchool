@@ -104,3 +104,11 @@
 
 (8) Test Class "FakeRestApiTests", all 3 of 3 test methods: у блоках TRY-CATCH змінив "throw new IOException(e)"
     на "Assert.fail(e.toString())".
+------------------------------------------------------------------------------------------------------------------------
+(ADDITIONAL-ADDITIONAL)
+
+(9) Оновив зміст файлу .gitignore.
+
+(10) Test Class "FakeRestApiTests" / tets method "authors()": (L52) змiнив  "System.out.println("Response Body: " + authors);",
+     який виводив лише посилання на масив -> на -> "System.out.println("Response Body: " + Arrays.toString(authors));",
+     що виведе зміст масиву.
