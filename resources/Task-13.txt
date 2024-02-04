@@ -109,10 +109,10 @@
 
 (9) Оновив зміст файлу .gitignore.
 
-(10) Test Class "FakeRestApiTests" / tets method "authors()": (L52) змiнив  "System.out.println("Response Body: " + authors);",
+(10) Test Class "FakeRestApiTests" / test method "authors()": (L52) змiнив  "System.out.println("Response Body: " + authors);",
      який виводив лише посилання на масив -> на -> "System.out.println("Response Body: " + Arrays.toString(authors));",
      що виведе зміст масиву.
 
-(11) Test Class "FakeRestApiTests" / tets method "authorsPost()": (L88) змінив місцями "MediaType.parse("application/json")"
+(11) Test Class "FakeRestApiTests" / test method "authorsPost()": (L88) змінив місцями "MediaType.parse("application/json")"
      та "requestBodyBytes" -> ".post(RequestBody.create(requestBodyBytes, MediaType.parse("application/json")))",
      тому що у новій імплементації методу параметри помінялись місцями: (byte, MediaType).
