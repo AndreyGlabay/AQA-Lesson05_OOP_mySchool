@@ -15,14 +15,23 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.logging.Level;
+import java.util.logging.Logger; // import java.util.logging (automatically)
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
     private static final String FILE_NAME = "resources/students.csv";
 
+    // (1.1) Implements logging: as variable for have a possibility to write data to it;
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
+
     static String[] readFileUsingScanner(String fileName){
         LinkedList<String> data = new LinkedList<>();
+
+        // (1.1) Implements construction, which allows to write data to the var "logger";
+        logger.log(Level.CONFIG, "Going to read data from: " + fileName);
+
         var file = new File(fileName);
         Scanner scanner = null;
         try {
