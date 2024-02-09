@@ -61,7 +61,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 2.1 - LinkedList implementation");
+        System.out.println("LINKED LIST implementation");
         System.out.println();
 
         System.out.println("STUDENTS: " + students);
@@ -69,7 +69,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 2.2 - Stream for all elements implementation");
+        System.out.println("STREAM for all elements implementation");
         System.out.println();
 
         System.out.println("Elements in the Stream :");
@@ -79,7 +79,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 2.3 - One general Stack implementation");
+        System.out.println("ONE GENERAL STACK implementation");
         System.out.println();
 
         Stack<Student> studentStack = new Stack<>();
@@ -92,7 +92,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 2.4 - Multiple-Stacks implementation");
+        System.out.println("MULTIPLY-STACKS implementation");
         System.out.println();
 
         Stack<Student> pmStack = new Stack<>();
@@ -122,7 +122,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 3 - Transform Stack Collections to the Streams for resolve TASK 3.1, 3.2, 3.3");
+        System.out.println("Transform STACK Collections to the STREAMS");
         System.out.println();
 
         Stream<Student> pmStream = pmStack.stream();
@@ -130,7 +130,7 @@ public class Main {
         Stream<Student> uiuxStream = uiuxStack.stream();
         Stream<Student> qaStream = qaStack.stream();
 
-        System.out.println("TASK 3.1 - Streams' Sorting");
+        System.out.println("Streams' Sorting");
         System.out.println();
         System.out.println("PM Students Stream Sorting: ");
         System.out.println();
@@ -143,7 +143,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 3.2 - Streams' Filtering");
+        System.out.println("Streams' Filtering");
         System.out.println();
         System.out.println("All Students Stream Filtering: ");
         System.out.println();
@@ -156,7 +156,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("TASK 3.3 - Streams' Mapping");
+        System.out.println("Streams' Mapping");
         System.out.println();
         System.out.println("Map for Dev Students: ");
         System.out.println();
@@ -198,21 +198,29 @@ public class Main {
                     student = new PM(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
                             Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[6], pieces[7],
                             Boolean.parseBoolean(pieces[8]));
+                    // (1.1.c) Implements logging for each object type with different log-levels (skipping CONFIG);
+                    logger.log(Level.SEVERE, "Create PM student: " + student);
                     break;
                 case "dev":
                     student = new Dev(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
                             Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[6], pieces[7],
                             Boolean.parseBoolean(pieces[8]));
+                    // (1.1.c) Implements logging for each object type with different log-levels (skipping CONFIG);
+                    logger.log(Level.WARNING, "Create Dev student: " + student);
                     break;
                 case "uiux":
                     student = new UIUX(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
                             Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[6], pieces[7],
                             Boolean.parseBoolean(pieces[8]));
+                    // (1.1.c) Implements logging for each object type with different log-levels (skipping CONFIG);
+                    logger.log(Level.INFO, "Create UI/UX student: " + student);
                     break;
                 case "qa":
                     student = new QA(Integer.parseInt(pieces[0]), pieces[1], pieces[2], pieces[3],
                             Boolean.parseBoolean(pieces[4]), Integer.parseInt(pieces[5]), pieces[6], pieces[7],
                             Boolean.parseBoolean(pieces[8]));
+                    // (1.1.c) Implements logging for each object type with different log-levels (skipping CONFIG);
+                    logger.log(Level.FINE, "Create QA student: " + student);
                     break;
             }
 
