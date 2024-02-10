@@ -23,8 +23,7 @@ import java.util.stream.Stream;
 public class Main {
     private static final String FILE_NAME = "resources/students.csv";
 
-    // (1.1) Implements logging: as variable for have a possibility to write data to it;
-    private static final Logger logger = Logger.getLogger(Main.class.getName());
+    private static Logger logger; // (1.1) Implements logging: as variable for have a possibility to write data to it;
 
     static String[] readFileUsingScanner(String fileName){
         LinkedList<String> data = new LinkedList<>();
@@ -54,6 +53,12 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
+
+        System.setProperty("java.util.logging.config.file", "resources/logging.properties"); // (1.1) Use config file;
+        logger = Logger.getLogger(Main.class.getName()); // (1.1) Initiate var "logger";
+        logger.log(Level.CONFIG, "Going to read data from file: " + FILE_NAME); // (1.1.a) Make process beginning ->
+        // -> marker, for reading data from the FILE_NAME (CSV-file) with Level = CONFIG;
+
         List<Student> students = new LinkedList<>();
         String[] data = readFileUsingScanner(FILE_NAME);
         createStudentObjects(data, students);

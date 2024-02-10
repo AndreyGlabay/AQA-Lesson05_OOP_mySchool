@@ -51,12 +51,12 @@ PARAMETERS:
 
 (1.1) У класі Main імплементував логування за допомогою java.util.loggin:
       - Створив у статичному контексті змінну "logger";
+      - У методі main(): ініціював змінну "logger";
       - За допомогою конструкції "logger.log(Level.XXX, "xxxxx");" додав можливість запису даних до змінної "logger";
+      - Заімплементував змінну оточення: key = java.util.logging.config.file; value = absolute path to the logging.property;
+      - Викорастав конфігураційний файл за допомогою "Sysytem.setProperty()";
 
-
-Заімплементував змінну оточення: key = java.util.logging.config.file; value = absolute path to the logging.property;
-
-(1.1.a)
+(1.1.a) зробив маркер початку процесу із іменем файлу, що зчитується (рівень CONFIG);
 
 (1.1.b)
 
@@ -67,7 +67,10 @@ PARAMETERS:
         - для типу "QA"   - Рівень логування = FINE;
 (1.1.d)
 
+(1.2) Імплементувати виведення логів на консоль та у файл, мінімальний рівень, що виводиться - згідно
+      полей consoleLevel та fileLevel відповідньо.
 
+(1.3) Імплементувати ротацію файлів логу, розмір файла та кількість файлів - поля fileSize та numFiles відповідньо.
 
 
 

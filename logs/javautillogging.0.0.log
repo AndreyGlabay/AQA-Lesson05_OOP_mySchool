@@ -1,0 +1,38 @@
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 357,  Name= Yara,  Phone= +17505151357,  Email= yara@probe.com,  Previously Finished This School? = true -> discount = 10% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'A2_PRE_INTERMEDIATE',  Weekends Suitable? = false };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 358,  Name= Zane,  Phone= +17505151358,  Email= zane@probe.com,  Previously Finished This School? = false -> discount = 0% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'C2_FLUENT',  Weekends Suitable? = true };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 359,  Name= Aria,  Phone= +17505151359,  Email= aria@probe.com,  Previously Finished This School? = true -> discount = 10% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'A1_BASIC',  Weekends Suitable? = true };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 360,  Name= Bryce,  Phone= +17505151360,  Email= bryce@probe.com,  Previously Finished This School? = false -> discount = 0% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'B2_UPPER_INTERMEDIATE',  Weekends Suitable? = false };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 361,  Name= Caleb,  Phone= +17505151361,  Email= caleb@probe.com,  Previously Finished This School? = false -> discount = 0% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'A1_BASIC',  Weekends Suitable? = true };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 362,  Name= Diana,  Phone= +17505151362,  Email= diana@probe.com,  Previously Finished This School? = true -> discount = 10% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'C1_ADVANCED',  Weekends Suitable? = false };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 363,  Name= Evan,  Phone= +17505151363,  Email= evan@probe.com,  Previously Finished This School? = false -> discount = 0% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'B1_INTERMEDIATE',  Weekends Suitable? = false };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 364,  Name= Fiona,  Phone= +17505151364,  Email= fiona@probe.com,  Previously Finished This School? = false -> discount = 0% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'C2_FLUENT',  Weekends Suitable? = true };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 365,  Name= Grant,  Phone= +17505151365,  Email= grant@probe.com,  Previously Finished This School? = true -> discount = 10% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'C1_ADVANCED',  Weekends Suitable? = false };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 366,  Name= Holly,  Phone= +17505151366,  Email= holly@probe.com,  Previously Finished This School? = false -> discount = 0% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'A2_PRE_INTERMEDIATE',  Weekends Suitable? = true };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 367,  Name= Ian,  Phone= +17505151367,  Email= ian@probe.com,  Previously Finished This School? = true -> discount = 10% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'B1_INTERMEDIATE',  Weekends Suitable? = true };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 368,  Name= Jenna,  Phone= +17505151368,  Email= jenna@probe.com,  Previously Finished This School? = false -> discount = 0% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'A1_BASIC',  Weekends Suitable? = false };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 369,  Name= Kevin,  Phone= +17505151369,  Email= kevin@probe.com,  Previously Finished This School? = true -> discount = 10% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'C2_FLUENT',  Weekends Suitable? = false };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 370,  Name= Leah,  Phone= +17505151370,  Email= leah@probe.com,  Previously Finished This School? = false -> discount = 0% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'A2_PRE_INTERMEDIATE',  Weekends Suitable? = true };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 371,  Name= Mia,  Phone= +17505151371,  Email= mia@probe.com,  Previously Finished This School? = false -> discount = 0% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'B2_UPPER_INTERMEDIATE',  Weekends Suitable? = false };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 372,  Name= Nathan,  Phone= +17505151372,  Email= nathan@probe.com,  Previously Finished This School? = true -> discount = 10% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'C1_ADVANCED',  Weekends Suitable? = true };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 373,  Name= Olivia,  Phone= +17505151373,  Email= olivia@probe.com,  Previously Finished This School? = true -> discount = 10% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'B2_UPPER_INTERMEDIATE',  Weekends Suitable? = false };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 374,  Name= Patrick,  Phone= +17505151374,  Email= patrick@probe.com,  Previously Finished This School? = false -> discount = 0% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'A2_PRE_INTERMEDIATE',  Weekends Suitable? = false };
+Feb 10, 2024 7:49:14 PM Main createStudentObjects
+INFO: Create UI/UX student: UIUX-Student { id= 375,  Name= Quincy,  Phone= +17505151375,  Email= quincy@probe.com,  Previously Finished This School? = false -> discount = 0% };   IT-Field = 'UIUX';  Info for English classes: { English Level= 'C1_ADVANCED',  Weekends Suitable? = true };
