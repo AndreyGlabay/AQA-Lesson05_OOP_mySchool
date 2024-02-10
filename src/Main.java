@@ -232,6 +232,6 @@ public class Main {
             students.add(student);
         }
         // (1.1.b) Implements marker for the writing data to the var "logger" ending (logging level = CONFIG);
-        logger.log(Level.CONFIG, "Finished reading data from file: " + FILE_NAME + ". Imported " + students.size());
+        logger.log(Level.CONFIG, "Finished reading data from file: " + FILE_NAME + "; Imported " + students.size());
     }
 }
