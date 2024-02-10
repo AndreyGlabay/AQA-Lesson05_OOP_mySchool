@@ -54,7 +54,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        System.setProperty("java.util.logging.config.file", "resources/logging.properties"); // (1.1) Use config file;
+        System.setProperty("java.util.logging.config.file", System.getenv("CONFIG_FILENAME")); // (1.1.d) Pass ->
+        // -> the config file name using env var according to the task (configName = CONFIG_FILENAME);
         logger = Logger.getLogger(Main.class.getName()); // (1.1) Initiate var "logger";
         logger.log(Level.CONFIG, "Going to read data from file: " + FILE_NAME); // (1.1.a) Make process beginning ->
         // -> marker, for reading data from the FILE_NAME (CSV-file) with Level = CONFIG;
