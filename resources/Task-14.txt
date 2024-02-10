@@ -53,6 +53,9 @@ PARAMETERS:
       - Створив у статичному контексті змінну "logger";
       - За допомогою конструкції "logger.log(Level.XXX, "xxxxx");" додав можливість запису даних до змінної "logger";
 
+
+Заімплементував змінну оточення: key = java.util.logging.config.file; value = absolute path to the logging.property;
+
 (1.1.a)
 
 (1.1.b)
