@@ -28,7 +28,7 @@ public class Main {
     static String[] readFileUsingScanner(String fileName){
         LinkedList<String> data = new LinkedList<>();
 
-        // (1.1) Implements construction, which allows to write data to the var "logger";
+        // (1.1.a) Implements marker for the writing data to the var "logger" beginning (logging level = CONFIG);
         logger.log(Level.CONFIG, "Going to read data from: " + fileName);
 
         var file = new File(fileName);
@@ -229,8 +229,9 @@ public class Main {
                     logger.log(Level.FINE, "Create QA student: " + student);
                     break;
             }
-
             students.add(student);
         }
+        // (1.1.b) Implements marker for the writing data to the var "logger" ending (logging level = CONFIG);
+        logger.log(Level.CONFIG, "Finished reading data from file: " + FILE_NAME + ". Imported " + students.size());
     }
 }
