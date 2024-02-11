@@ -91,7 +91,12 @@ PARAMETERS:
       - (b) У пакеті "com.example.school.tests" зробив тестовий клас "AnalyticsTest"
       - (c) Тестовий клас "AnalyticsTest": заімплементував новий OkHttpClient
       - (d) Тестовий клас "AnalyticsTest": заімплементував новий WireMockServer
-      - (e)
+      - (e) Тестовий клас "AnalyticsTest": створив @BeforeClass та @AfterClass анотації.
+      - (f)
+      - (g)
+      - (h)
+      - (i)
+      - (j)
 
 (2.2) Використати метод urlEqualTo() для матчингу URL, що викликається. URL вигадати самостійно.
       - (a)
