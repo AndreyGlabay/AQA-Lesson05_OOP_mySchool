@@ -22,12 +22,9 @@ public class Main {
 
     private static Logger logger; // (1.1) Implements logging: as variable for have a possibility to write data to it;
 
-    static String[] readFileUsingScanner(String fileName){
+    static String[] readFileUsingScanner(){
         LinkedList<String> data = new LinkedList<>();
-
-
-
-        var file = new File(fileName);
+        var file = new File(Main.FILE_NAME);
         Scanner scanner = null;
         try {
             scanner = new Scanner(file);
@@ -58,31 +55,13 @@ public class Main {
         // -> for reading data from the FILE_NAME (CSV-file) with Level = CONFIG;
 
         List<Student> students = new LinkedList<>();
-        String[] data = readFileUsingScanner(FILE_NAME);
+        String[] data = readFileUsingScanner();
         createStudentObjects(data, students);
         Stream<Student> studentStream = students.stream();
-
-        System.out.println();
-        System.out.println("****************************************************************************************");
-        System.out.println("LINKED LIST");
-        System.out.println();
-
-        System.out.println("STUDENTS: " + students);
-        System.out.println("TOTAL: " + students.size());
-
-        System.out.println();
         System.out.println("****************************************************************************************");
         System.out.println("STREAM");
-        System.out.println();
-
-        System.out.println("Elements in the Stream :");
-        System.out.println();
         Stream<String> lines = Files.lines(Paths.get(FILE_NAME));
         lines.forEach(System.out::println);
-
-        System.out.println();
-        System.out.println("****************************************************************************************");
-
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
