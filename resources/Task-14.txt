@@ -89,7 +89,7 @@ PARAMETERS:
 (2.1) За прикладом з лекції (HJAQALesson23) створити тестовий клас, що використовує мок-сервіс за допомогою WireMock.
       - (a) У діректорії src/test/java зробив новий пакет "com.example.school.tests"
       - (b) У пакеті "com.example.school.tests" зробив тестовий клас "AnalyticsTest"
-      - (c)
+      - (c) Тестовий клас "AnalyticsTest": заімплементував новий OkHttpClient
       - (d)
       - (e)
 
