@@ -92,7 +92,7 @@ PARAMETERS:
       - (c) Тестовий клас "AnalyticsTest": заімплементував новий OkHttpClient
       - (d) Тестовий клас "AnalyticsTest": заімплементував новий WireMockServer
       - (e) Тестовий клас "AnalyticsTest": створив @BeforeClass та @AfterClass анотації.
-      - (f)
+      - (f) Аннотація @BeforeClass: заімплементував старт wireMockServer;
       - (g)
       - (h)
       - (i)

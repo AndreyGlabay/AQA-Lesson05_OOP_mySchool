@@ -12,11 +12,12 @@ public class AnalyticsTest { // (2.1.b) In the package "com.example.school.tests
             = new WireMockServer(new WireMockConfiguration().port(9098));//(2.1.d)Implements new WireMockServer;
 
 
-    @BeforeClass // (2.1.e) Implements BeforeClass annotation
+    @BeforeClass // (2.1.e) Implements @BeforeClass annotation
     public void beforeClass(){
+        wireMockServer.start(); // (2.1.f) Implements start of wireMockServer;
 
     }
-    @AfterClass // (2.1.e) Implements AfterClass annotation
+    @AfterClass // (2.1.e) Implements @AfterClass annotation
     public void afterClass(){
 
     }
