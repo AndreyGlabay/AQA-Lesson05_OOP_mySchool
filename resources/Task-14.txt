@@ -94,7 +94,7 @@ PARAMETERS:
       - (e) Тестовий клас "AnalyticsTest": створив @BeforeClass та @AfterClass анотації.
       - (f) Аннотація @BeforeClass: заімплементував старт wireMockServer;
       - (g) Аннотація @BeforeClass: заімплементував конфігурацію за допомогою сінглтону використовуючи номер порта.
-      - (h)
+      - (h) Аннотація @AfterClass: заімплементував зупинку wireMockServer;
       - (i)
       - (j)
 

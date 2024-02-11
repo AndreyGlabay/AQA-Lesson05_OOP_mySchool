@@ -22,6 +22,7 @@ public class AnalyticsTest { // (2.1.b) In the package "com.example.school.tests
     }
     @AfterClass // (2.1.e) Implements @AfterClass annotation
     public void afterClass(){
+        wireMockServer.stop(); // (2.1.f) Implements stop of wireMockServer;
 
     }
 }
