@@ -90,7 +90,7 @@ PARAMETERS:
       - (a) У діректорії src/test/java зробив новий пакет "com.example.school.tests"
       - (b) У пакеті "com.example.school.tests" зробив тестовий клас "AnalyticsTest"
       - (c) Тестовий клас "AnalyticsTest": заімплементував новий OkHttpClient
-      - (d)
+      - (d) Тестовий клас "AnalyticsTest": заімплементував новий WireMockServer
       - (e)
 
 (2.2) Використати метод urlEqualTo() для матчингу URL, що викликається. URL вигадати самостійно.
