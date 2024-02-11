@@ -25,8 +25,7 @@ public class Main {
     static String[] readFileUsingScanner(String fileName){
         LinkedList<String> data = new LinkedList<>();
 
-        // (1.1.a) Implements marker for the writing data to the var "logger" beginning (logging level = CONFIG);
-        logger.log(Level.CONFIG, "Going to read data from: " + fileName);
+
 
         var file = new File(fileName);
         Scanner scanner = null;
@@ -54,8 +53,9 @@ public class Main {
         System.setProperty("java.util.logging.config.file", System.getenv("CONFIG_FILENAME")); // (1.1.d) Pass ->
         // -> the config file name using env var according to the task (configName = CONFIG_FILENAME);
         logger = Logger.getLogger(Main.class.getName()); // (1.1) Initiate var "logger";
-        logger.log(Level.CONFIG, "Going to read data from file: " + FILE_NAME); // (1.1.a) Make process beginning ->
-        // -> marker, for reading data from the FILE_NAME (CSV-file) with Level = CONFIG;
+        logger.setLevel(Level.CONFIG); // (1.1) Implements logger level before BEGIN and END markers;
+        logger.log(Level.CONFIG, "Going to read data from file \"" + FILE_NAME + "\"");//(1.1.a) Make BEGIN marker ->
+        // -> for reading data from the FILE_NAME (CSV-file) with Level = CONFIG;
 
         List<Student> students = new LinkedList<>();
         String[] data = readFileUsingScanner(FILE_NAME);
@@ -123,6 +123,7 @@ public class Main {
             students.add(student);
         }
         // (1.1.b) Implements marker for the writing data to the var "logger" ending (logging level = CONFIG);
-        logger.log(Level.CONFIG, "Finished reading data from file: " + FILE_NAME + "; Imported " + students.size());
+        logger.log(Level.CONFIG, "Finished reading data from file \"" + FILE_NAME +
+                "\";\t Imported: " + students.size() + " objects.");
     }
 }
