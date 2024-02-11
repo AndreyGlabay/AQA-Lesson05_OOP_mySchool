@@ -11,14 +11,11 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
-import java.util.Stack;
 import java.util.logging.Level;
-import java.util.logging.Logger; // import java.util.logging (automatically)
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.logging.Logger; // import java.util.logging (automatically)
 
 public class Main {
     private static final String FILE_NAME = "resources/students.csv";
@@ -67,7 +64,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("LINKED LIST implementation");
+        System.out.println("LINKED LIST");
         System.out.println();
 
         System.out.println("STUDENTS: " + students);
@@ -75,7 +72,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("STREAM for all elements implementation");
+        System.out.println("STREAM");
         System.out.println();
 
         System.out.println("Elements in the Stream :");
@@ -85,113 +82,7 @@ public class Main {
 
         System.out.println();
         System.out.println("****************************************************************************************");
-        System.out.println("ONE GENERAL STACK implementation");
-        System.out.println();
 
-        Stack<Student> studentStack = new Stack<>();
-        studentStack.addAll(students);
-        System.out.println("All elements in the 1 Stack :");
-        System.out.println();
-        while (!studentStack.isEmpty()) {
-            System.out.println(studentStack.pop());
-        }
-
-        System.out.println();
-        System.out.println("****************************************************************************************");
-        System.out.println("MULTIPLY-STACKS implementation");
-        System.out.println();
-
-        Stack<Student> pmStack = new Stack<>();
-        Stack<Student> devStack = new Stack<>();
-        Stack<Student> uiuxStack = new Stack<>();
-        Stack<Student> qaStack = new Stack<>();
-
-        for (Student student : students) {
-            if (student instanceof PM) {
-                pmStack.push(student);
-            } else if (student instanceof Dev) {
-                devStack.push(student);
-            } else if (student instanceof UIUX) {
-                uiuxStack.push(student);
-            } else if (student instanceof QA) {
-                qaStack.push(student);
-            }
-        }
-
-        System.out.println("Elements divided to the 4 Stacks:");
-        System.out.println();
-
-        System.out.println("PM Stack: " + pmStack);
-        System.out.println("Dev Stack: " + devStack);
-        System.out.println("UIUX Stack: " + uiuxStack);
-        System.out.println("QA Stack: " + qaStack);
-
-        System.out.println();
-        System.out.println("****************************************************************************************");
-        System.out.println("Transform STACK Collections to the STREAMS");
-        System.out.println();
-
-        Stream<Student> pmStream = pmStack.stream();
-        Stream<Student> devStream = devStack.stream();
-        Stream<Student> uiuxStream = uiuxStack.stream();
-        Stream<Student> qaStream = qaStack.stream();
-
-        System.out.println("Streams' Sorting");
-        System.out.println();
-        System.out.println("PM Students Stream Sorting: ");
-        System.out.println();
-
-        pmStream
-                .sorted((s1, s2) -> (int) (s1.getStudentId() - s2.getStudentId()))
-                .skip(7)
-                .limit(13)
-                .forEach(System.out::println);
-
-        System.out.println();
-        System.out.println("****************************************************************************************");
-        System.out.println("Streams' Filtering");
-        System.out.println();
-        System.out.println("All Students Stream Filtering: ");
-        System.out.println();
-
-        studentStream
-                .filter(student -> student.getStudentId() % 2 != 0)
-                .skip(20)
-                .limit(24)
-                .forEach(System.out::println);
-
-        System.out.println();
-        System.out.println("****************************************************************************************");
-        System.out.println("Streams' Mapping");
-        System.out.println();
-        System.out.println("Map for Dev Students: ");
-        System.out.println();
-
-        Map<Integer, String> devMap = devStream.collect(Collectors.toMap(
-                Student::getStudentId,
-                Student::getStudentName
-        ));
-        devMap.forEach((key, value) -> System.out.println("ID = " + key + " -> Name = " + value));
-
-        System.out.println();
-        System.out.println("Map for UI/UX Students: ");
-        System.out.println();
-
-        Map<Integer, String> uiuxMap = uiuxStream.collect(Collectors.toMap(
-                Student::getStudentId,
-                student -> student.getStudentName() + " by phone: " + student.getStudentPhone()
-        ));
-        uiuxMap.forEach((key, value) -> System.out.println("ID = " + key + " -> Call: " + value));
-
-        System.out.println();
-        System.out.println("Map for QA Students: ");
-        System.out.println();
-
-        Map<Integer, String> qaMap = qaStream.collect(Collectors.toMap(
-                Student::getStudentId,
-                student -> student.getStudentName() + " on address: " + student.getStudentMail()
-        ));
-        qaMap.forEach((key, value) -> System.out.println("ID = " + key + " -> Mail to: " + value));
     }
 
     private  static void createStudentObjects(String[] data, List<Student> students) {
