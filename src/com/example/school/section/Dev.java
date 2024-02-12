@@ -4,7 +4,7 @@ import com.example.school.additional.EnglishCourse;
 import com.example.school.additional.EnglishGroup;
 
 public class Dev extends Student implements EnglishCourse {
-    String fieldDev;
+    public String ITField;
     String englishLevel;
     boolean weekendIsSuitable;
 
@@ -15,27 +15,13 @@ public class Dev extends Student implements EnglishCourse {
             String studentMail,
             boolean previouslyFinishedThisSchool,
             int discount,
+            String ITField,
             String englishLevel,
             boolean weekendIsSuitable) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
+        this.ITField = ITField;
         this.englishLevel = englishLevel;
         this.weekendIsSuitable = weekendIsSuitable;
-    }
-
-    public String getFieldDev() {
-        return fieldDev;
-    }
-
-    public void setFieldDev(String fieldDev) {
-        this.fieldDev = fieldDev;
-    }
-
-    @Override
-    public void message(){
-        System.out.println("There are available Courses: ");
-        System.out.println("   1201.Software Developer (Java);");
-        System.out.println("   1202.Software Developer (JavaScript);");
-        System.out.println("   1203.Software Developer (Python);");
     }
 
     @Override
@@ -48,20 +34,9 @@ public class Dev extends Student implements EnglishCourse {
         System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
     }
 
-//     ************ HIDE THIS PART TO COMMENTS - TASK ABOUT DIFF STRING BUILDERS USAGE ************
-//    @Override // Generates String.Builder using 3rd variant "StringBuffer"
-//    public String toString() {
-//        final StringBuffer sb = new StringBuffer("Dev{");
-//        sb.append("fieldDev='").append(fieldDev).append('\'');
-//        sb.append(", englishLevel='").append(englishLevel).append('\'');
-//        sb.append(", weekendIsSuitable=").append(weekendIsSuitable);
-//        sb.append('}');
-//        return sb.toString();
-//    }
-
     @Override
     public String toString() {
-        return "Dev-" + super.toString() + "Info for English classes: { " +
+        return "Dev-" + super.toString() + "IT-Field = '" + ITField +  '\'' + ";  Info for English classes: { " +
                 "English Level= '" + englishLevel + '\'' +
                 ",  Weekends Suitable? = " + weekendIsSuitable +
                 " };";

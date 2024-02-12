@@ -4,7 +4,7 @@ import com.example.school.additional.EnglishCourse;
 import com.example.school.additional.EnglishGroup;
 
 public class QA extends Student implements EnglishCourse {
-    String fieldQA;
+    public String ITField;
     String englishLevel;
     boolean weekendIsSuitable;
 
@@ -15,29 +15,14 @@ public class QA extends Student implements EnglishCourse {
             String studentMail,
             boolean previouslyFinishedThisSchool,
             int discount,
+            String ITField,
             //String fieldQA,
             String englishLevel,
             boolean weekendIsSuitable) {
         super(studentId, studentName, studentPhone, studentMail, previouslyFinishedThisSchool, discount);
+        this.ITField = ITField;
         this.englishLevel = englishLevel;
         this.weekendIsSuitable = weekendIsSuitable;
-    }
-
-    public String getFieldQA() {
-        return fieldQA;
-    }
-
-    public void setFieldQA(String fieldQA) {
-        this.fieldQA = fieldQA;
-    }
-
-    @Override
-    public void message(){
-        System.out.println("There are available Courses: ");
-        System.out.println("   1400.com.example.school.section.QA Engineer Manual;");
-        System.out.println("   1401.AQA Engineer (Java);");
-        System.out.println("   1402.AQA Engineer (JavaScript);");
-        System.out.println("   1403.AQA Engineer (Python);");
     }
 
     @Override
@@ -50,19 +35,9 @@ public class QA extends Student implements EnglishCourse {
         System.out.println("Welcome to " + EnglishGroup.Group_4 + "! Your lessons will be each Sunday 6:00-7:00 PM PST");
     }
 
-//     ************ HIDE THIS PART TO COMMENTS - TASK ABOUT DIFF STRING BUILDERS USAGE ************
-//    @Override // Generates String.Builder using 2nd variant "String Concat (+) and super.toString()"
-//    public String toString() {
-//        return "QA{" +
-//                "\n\t fieldQA='" + fieldQA + '\'' +
-//                ",\n\t englishLevel='" + englishLevel + '\'' +
-//                ",\n\t weekendIsSuitable=" + weekendIsSuitable +
-//                "\n\t} " + "\n\t" + super.toString();
-//    }
-
     @Override
     public String toString() {
-        return "QA-" + super.toString() + "Info for English classes: { " +
+        return "QA-" + super.toString() + "IT-Field = '" + ITField +  '\'' + ";  Info for English classes: { " +
                 "English Level= '" + englishLevel + '\'' +
                 ",  Weekends Suitable? = " + weekendIsSuitable +
                 " };";
